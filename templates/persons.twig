@@ -1,0 +1,43 @@
+{% extends "templates/base.twig" %}
+
+
+{% block content %}
+    <div class="page page--persons">
+        {% for group in groups %}
+
+            <div class="page__header" style="background-image: url({{ group.image }});" id="{{ group.id }}"></div>
+            <div class="wrap container-fluid" role="document">
+                <div class="row persons">
+                    {% for person in group.get_posts({'orderby': 'menu_order', 'order':'ASC' ,'posts_per_page': -1}) %}
+                    {#{{ dump() }}#}
+                    <a class="person" href="#" data-details_id="{{ person.id }}"
+                       style="order: {{ loop.index %3? loop.index %3 : 3 }}">
+
+                        <div class="person__image">
+                            <img class="person__image" src="{{ TimberImage(person.thumb).src }}"
+                                 alt="{{ person.title }}">
+                        </div>
+                        <div class="person__title">{{ person.title }}</div>
+                        <div class="person__office">{{ person.office }}</div>
+                        {#<div class="details details--mobile" data-id="{{ person.id }}">#}
+                        {#{% include "templates/_person-details.twig" %}#}
+                        {#</div>#}
+                    </a>
+                    {% if  loop.index % 3 == 0 %}
+                </div>
+                <div class="row persons">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="row" style="display: none!important">
+                    {% for person in group.get_posts({'orderby': 'menu_order', 'order':'ASC','posts_per_page': -1}) %}
+                        <div class="details details--desktop" data-id="{{ person.id }}">
+                            {% include "templates/_person-details.twig" %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

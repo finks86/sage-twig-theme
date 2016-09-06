@@ -1,0 +1,140 @@
+//.persons {
+//  display: flex;
+//  flex-direction: row;
+//  flex-wrap: wrap;
+//}
+
+.person {
+  @include make-sm-column(4);
+  display: flex;
+  flex-direction: column;
+  color: $black;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  transition: all 0.5s ease-in;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+    opacity: 0.8;
+    .person__title {
+      color: $purple;
+    }
+  }
+  &:active, &:focus {
+    color: $black;
+    text-decoration: none;
+  }
+  &__title {
+    @include font-size(3);
+    font-family: $font-din-bold;
+  }
+  &__image {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    img {
+      max-width: 195px;
+    }
+  }
+  &__office {
+
+  }
+
+}
+
+.details {
+  display: block;
+  position: relative;
+  float: left;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  &__image {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(4);
+    max-width: 100%;
+    width: 80%;
+    display: inherit;
+  }
+  &__infos {
+    @include make-sm-column(6);
+  }
+  &__title {
+    @include font-size(3);
+    font-family: $font-din-bold;
+    margin-top: 10px;
+  }
+  &__birthday {
+  }
+  &__quote {
+    @include font-size(2.4);
+    font-family: $font-din-bold;
+    background-color: $yellow;
+    color: $blue;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 5px 10px;
+  }
+  &__close {
+    position: absolute;
+    right: 32px;
+    top: 70px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: #333;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+  }
+  &__social {
+    margin-top: 40px;
+    a {
+      font-size: 13px;
+      display: inline-block;
+      background: #d9dadb;
+      color: white;
+      margin-right: 15px;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      border-radius: 13px;
+    }
+  }
+}
+//
+@include breakpoint(mobile-max) {
+  .details {
+    &--desktop {
+      display: none !important;
+    }
+  }
+}
+
+@include breakpoint(phablet) {
+  .details {
+    &--mobile {
+      display: none !important;
+    }
+    &__infos {
+      padding-left: 45px;
+    }
+  }
+}

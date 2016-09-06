@@ -1,0 +1,115 @@
+{% extends "templates/base.twig" %}
+
+
+{% block content %}
+
+    {% for post in posts %}
+        <div class="teaser" style="background-image: url({{ post.thumbnail.src }})">
+            <div class="container-fluid">
+                <div class="teaser__inner">
+                    <div class="teaser__sub1">{{ post.get_field('header_subtitle1') }}</div>
+                    <div class="teaser__headline">{{ post.post_title }}</div>
+                    <div class="teaser__sub2">{{ post.get_field('header_subtitle2') }}</div>
+                    <a class="teaser__button"
+                       href="{{ post.get_field('button_link') }}">{{ post.get_field('button_text') }}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap container-fluid" role="document">
+
+            <div class="hcontent">
+                <div class="hcontent__left">
+
+                    <div class="hcontent__subtitle">
+                        {{ post.get_field('subtitle') }}
+                    </div>
+                    <div class="hcontent__title">
+                        {{ post.get_field('title') }}
+                    </div>
+                    <div class="hcontent__short-desc">
+                        {{ post.get_field('short_desc') }}
+                    </div>
+                </div>
+                <div class="hcontent__right">
+                    <div class="hcontent__text">
+                        {{ post.content }}
+                    </div>
+                </div>
+                <div class="hcontent__counter">
+                    <span class="counter__number animateNumber">
+                        {{ date(post.elaction_date | date('Y-m-d')).diff(date()).days }}
+                    </span><span class="counter__title">Tage <br> bis zur <br> Wahl</span>
+                </div>
+            </div>
+            <div class="hwrapper">
+                <div class="hdonation" id="donate">
+                    <div class="hdonation__image">
+                        <img src="{{ theme.link }}/dist/images/banner_spende.jpg">
+                    </div>
+                    <div class="hdonation__text">
+                        <div class="hdonation__title">
+                            Unterstützen Sie die FDP Neukölln
+                        </div>
+
+                        <div class="hdonation__subtitle">
+                            Unser Ziel ist klar: Wir wollen den Wiedereinzug in das Abgeordnetenhaus sowie die
+                            Bezirksverordnetenversammlung von Neukölln schaffen. Dafür werden wir mit einem engagierten
+                            Team in den kommenden Wochen kämpfen.
+                        </div>
+                        <div class="hdonation__content">
+                            Ein guter Wahlkampf kostet Geld. Bitte, unterstützen Sie uns dabei. Wir bitten Sie herzlich
+                            um eine Spende auf unser Spendenkonto. Jede Summe, egal ob groß oder klein, trägt zum
+                            Gelingen unseres Wahlkampfes bei.
+                            <br><br>
+                            Helfen Sie uns, damit im Berliner Parlament und der Bezirksverordnetenversammlung von
+                            Neukölln endlich wieder eine liberale Stimme vertreten ist.
+                            <br>
+                            {#<a href="https://ssl.fdp.de/buergerfonds/spendenportal/" class="hdonation__donate"><i#}
+                            {#class="fa fa-caret-right" aria-hidden="true"></i>#}
+                            {#Zum allgemeinem Spendenportal der FDP</a>#}
+                        </div>
+                        <div class="hdonation__infos">
+                            <strong>Kontoangaben</strong><br>
+                            FDP Bezirksverband Neukölln<br>
+                            Konto: 0532130100<br>
+                            BLZ: 100 100 10<br>
+                            IBAN: DE02100100100532130100<br>
+                            {#BIC: DRESDEFF370<br>#}
+                            Postbank
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hfb">
+                    <div id="fb-root"></div>
+                    <script>(function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=596531860371615";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                    <div class="fb-page" data-href="https://www.facebook.com/FDP-Neuk%C3%B6lln-516973065149820/"
+                         data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                         data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/FDP-Neuk%C3%B6lln-516973065149820/"
+                                    class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/FDP-Neuk%C3%B6lln-516973065149820/">FDP Neukölln</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#{{ dump(post.thumbnail.src) }}#}
+
+        {#<div class="page-header">#}
+        {#<h1>{{ post.title }}</h1>#}
+        {#</div>#}
+
+
+    {% endfor %}
+
+{% endblock %}

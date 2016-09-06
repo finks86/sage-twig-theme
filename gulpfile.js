@@ -85,9 +85,9 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    .pipe(function() {
-      return gulpif('*.less', less());
-    })
+    // .pipe(function() {
+    //   return gulpif('*.less', less());
+    // })
     .pipe(function() {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
@@ -97,19 +97,19 @@ var cssTasks = function(filename) {
       }));
     })
     .pipe(concat, filename)
-    .pipe(autoprefixer, {
-      browsers: [
-        'last 2 versions',
-        'android 4',
-        'opera 12'
-      ]
-    })
-    .pipe(cssNano, {
-      safe: true
-    })
-    .pipe(function() {
-      return gulpif(enabled.rev, rev());
-    })
+    // .pipe(autoprefixer, {
+    //   browsers: [
+    //     'last 2 versions',
+    //     'android 4',
+    //     'opera 12'
+    //   ]
+    // })
+    // .pipe(cssNano, {
+    //   safe: true
+    // })
+    // .pipe(function() {
+    //   return gulpif(enabled.rev, rev());
+    // })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
         sourceRoot: 'assets/styles/'
@@ -126,23 +126,24 @@ var cssTasks = function(filename) {
 // ```
 var jsTasks = function(filename) {
   return lazypipe()
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.init());
-    })
+    // .pipe(function() {
+    //   return gulpif(enabled.maps, sourcemaps.init());
+    // })
     .pipe(concat, filename)
-    .pipe(uglify, {
-      compress: {
-        'drop_debugger': enabled.stripJSDebug
-      }
-    })
+    // .pipe(uglify, {
+    //   compress: {
+    //     'drop_debugger': enabled.stripJSDebug
+    //   }
+    // })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: 'assets/scripts/'
-      }));
-    })();
+    // .pipe(function() {
+    //   return gulpif(enabled.maps, sourcemaps.write('.', {
+    //     sourceRoot: 'assets/scripts/'
+    //   }));
+    // })
+    ();
 };
 
 // ### Write to rev manifest

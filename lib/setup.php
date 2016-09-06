@@ -28,8 +28,9 @@ function setup()
     // Register wp_nav_menu() menus
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus([
-        'primary' => __('Primary Navigation', 'sage'),
-        'footer' => __('Footer Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
+
     ]);
 
     // Enable post thumbnails
@@ -37,7 +38,6 @@ function setup()
     // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
     // http://codex.wordpress.org/Function_Reference/add_image_size
     add_theme_support('post-thumbnails');
-
     // Enable post formats
     // http://codex.wordpress.org/Post_Formats
     add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
@@ -112,3 +112,103 @@ function assets()
 }
 
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+/*
+* Creating a function to create our CPT
+*/
+
+function persons()
+{
+
+// Set UI labels for Custom Post Type
+    $labels = array(
+        'name' => _x('Personen', 'Post Type General Name', 'twentythirteen'),
+        'singular_name' => _x('Person', 'Post Type Singular Name', 'twentythirteen'),
+        'menu_name' => __('Personen', 'twentythirteen'),
+//		'parent_item_colon'   => __( 'Parent Movie', 'twentythirteen' ),
+//		'all_items'           => __( 'All Movies', 'twentythirteen' ),
+//		'view_item'           => __( 'View Movie', 'twentythirteen' ),
+//		'add_new_item'        => __( 'Add New Movie', 'twentythirteen' ),
+//		'add_new'             => __( 'Add New', 'twentythirteen' ),
+//		'edit_item'           => __( 'Edit Movie', 'twentythirteen' ),
+//		'update_item'         => __( 'Update Movie', 'twentythirteen' ),
+//		'search_items'        => __( 'Search Movie', 'twentythirteen' ),
+//		'not_found'           => __( 'Not Found', 'twentythirteen' ),
+//		'not_found_in_trash'  => __( 'Not found in Trash', 'twentythirteen' ),
+    );
+
+// Set other options for Custom Post Type
+
+    $args = array(
+        'label' => __('persons', 'twentythirteen'),
+        'description' => __('Personen', 'twentythirteen'),
+        'labels' => $labels,
+        // Features this CPT supports in Post Editor
+        'supports' => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'page-attributes'),
+        // You can associate this CPT with a taxonomy or custom taxonomy.
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */
+        'taxonomies' => array('genres'),
+
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'menu_position' => 3,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'page',
+    );
+
+    // Registering your Custom Post Type
+    register_post_type('persons', $args);
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
+
+add_action('init', __NAMESPACE__ . '\\persons', 0);
+
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action('init', __NAMESPACE__ . '\\create_topics_hierarchical_taxonomy', 0);
+
+//create a custom taxonomy name it topics for your posts
+
+function create_topics_hierarchical_taxonomy()
+{
+
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+
+    $labels = array(
+        'name' => _x('Gruppen', 'taxonomy general name'),
+        'singular_name' => _x('Gruppe', 'taxonomy singular name'),
+
+    );
+
+// Now register the taxonomy
+
+    register_taxonomy('groups', array('persons'), array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_in_menu' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'group'),
+    ));
+
+}
+

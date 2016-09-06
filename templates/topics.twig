@@ -1,0 +1,21 @@
+{% extends "templates/base.twig" %}
+
+
+{% block content %}
+    <div class="page">
+        {% for post in posts %}
+            {% for page in post.children %}
+                {#{{ dump(page) }}#}
+                
+                <div class="page__header" style="background-image: url({{ page.thumbnail.src }});">
+                </div>
+                <div class="wrap container-fluid" role="document">
+                    <div class="row" id="{{ page.id }}">
+                        {% include "templates/_page-row.twig" %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        {% endfor %}
+    </div>
+{% endblock %}

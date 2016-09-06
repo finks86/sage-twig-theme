@@ -1,0 +1,132 @@
+.banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  position: fixed;
+  /* height: 102px; */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: white;
+  top: 0;
+  z-index: 100;
+
+}
+
+.nav .nav-drop {
+  display: none;
+  padding: 0;
+  background: white;
+  position: absolute;
+  padding: 15px;
+  margin-left: -15px;
+  padding-right: 30px;
+  padding-top: 40px;
+  text-align: left;
+  &__item {
+    font-weight: bold;
+    list-style: none;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include std-stransition;
+    &:hover {
+      a {
+        text-decoration: none;
+        color: $purple;
+      }
+    }
+  }
+}
+
+.brand {
+  background: url('../images/logo-FDP.png') no-repeat;
+  background-size: cover;
+  float: left;
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 120px;
+  height: 45px;
+  text-indent: -9999px;
+}
+
+.nav {
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  ul {
+    padding: 0;
+  }
+  &__item {
+    display: inline-block;
+    padding: 10px 25px;
+    width: 100%;
+    @include std-stransition;
+    &.current-menu-item .nav__link {
+      color: $purple;
+    }
+    &--donate {
+      border: 2px solid $purple;
+      border-radius: 3px;
+      padding: 8px 25px;
+      .nav__link {
+        color: $purple;
+      }
+      &:hover {
+        background: $purple;
+        .nav__link {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+  &__link {
+    color: $blue;
+    font-family: $font-calib;
+    font-weight: bold;
+    @include std-stransition;
+    &:hover {
+      color: $purple;
+      text-decoration: none;
+
+    }
+  }
+
+}
+
+.navbar-toggle .icon-bar {
+  background: grey;
+}
+
+@include breakpoint(phablet) {
+  .banner {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+  .nav {
+    float: right;
+    &__item {
+      padding: 10px 10px;
+      width: auto;
+      &:hover {
+        > .nav-drop {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(tablet) {
+  .nav {
+    &__item {
+      padding: 10px 25px;
+      &--donate {
+        padding: 8px 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+
+<a href="#" class="details__close"></a>
+<img class="details__image" src="{{ person.thumbnail.src }}" alt="{{ person.title }}">
+<div class="details__infos">
+    <div class="details__title">{{ person.post_title }}</div>
+    {% if person.birthday %}
+        <div class="details__birthday">{{ person.birthday }}</div>
+    {% endif %}
+
+    {% if person.quote %}
+        <div class="details__quote">"{{ person.quote }}"</div>
+    {% endif %}
+
+    <div class="details__social">
+        {% if person.fb %}
+            <a class="social__fb" href="{{ person.fb }}">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        {% if person.twitter %}
+            <a class="social__twitter" href="{{ person.twitter }}">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        {% if person.mail %}
+            <a class="social__mail" href="{{ person.mail }}">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        {% if person.linked %}
+            <a class="social__linked" href="{{ person.linked }}">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+        {% endif %}
+        {% if person.xing %}
+            <a class="social__xing" href="{{ person.xing }}">
+                <i class="fa fa-xing" aria-hidden="true"></i>1
+            </a>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,41 @@
+{% extends "templates/base.twig" %}
+
+
+{% block content %}
+    <div class="page">
+        {% for post in posts %}
+            <div class="page__header" style="background-image: url({{ post.thumbnail.src }});"></div>
+            {% for page in post.children %}
+                <div class="wrap container-fluid" role="document">
+                    <div class="row">
+                        {% if loop.index0 == 0 %}
+                            <a class="page__links" href="#comments">
+                                <i class="glyphicon glyphicon-triangle-right"></i>Fragen Sie uns, was Sie interessiert.
+                            </a>
+                        {% endif %}
+                        {% include "templates/_page-row.twig" %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        {% endfor %}
+        <div class="page__contact" id="comments">
+            <div class="page--faq__image">
+                <img src="{{ theme.link }}/dist/images/faq.jpg" alt="Kommentar abgeben">
+            </div>
+            <div class="page--faq__content">
+                <div class="page__title">
+                    Sie haben Fragen? Wir geben Antworten.
+                </div>
+                <p><strong>
+                        Über unser Formular können Sie uns Fragen und Kommentare hinterlassen. Wir werden diese direkt
+                        beantworten und ggf. hier online stellen. Ihre E-Mail Adresse wird selbstverständlich nicht
+                        veröffentlicht.
+                    </strong></p>
+                {{ contact }}
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

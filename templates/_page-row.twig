@@ -1,0 +1,15 @@
+<div class="page__col">
+    <div class="page__tag">{{ page.tag }}</div>
+    <div class="page__title">{{ page.post_title }}</div>
+    {% if page.short_desc %}
+        {% autoescape false %}
+            <div class="page__subheader">{{ page.short_desc |  raw | nl2br }}</div>
+        {% endautoescape %}
+    {% endif %}
+
+</div>
+<div class="page__col">
+    <div class="page__content">
+        {{ page.content }}
+    </div>
+</div>

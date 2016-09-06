@@ -7,3 +7,65 @@ $sidebar-sm-columns:    4;
 
 // Colors
 $brand-primary:         #27ae60;
+
+$black: #58585a;
+$blue: #009fe3;
+$purple: #e6007e;
+$yellow: #ffed05;
+
+$font-calib: 'Calibri';
+
+$border-color: #e3e4e4;
+
+@mixin std-stransition {
+  transition: all 0.2s ease-in;
+}
+
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: $sizeValue * 14 +px;
+  line-height: $sizeValue * 1.4 + rem;
+}
+
+@mixin retina-image($file, $type, $size) {
+  background-image: url($file + '.' + $type);
+  background-repeat: no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    & {
+      background-image: url($file + '_2x.' + $type);
+      background-size: $size;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+//Breakpoints
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $screen-lg-min) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if $point ==  phablet {
+    @media (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if $point ==  mobile {
+    @media (min-width: $screen-xs-min) {
+      @content;
+    }
+  } @else if $point ==  mobile-max {
+    @media (max-width: $screen-xs-max) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $point) {
+      @content;
+    }
+  }
+
+}

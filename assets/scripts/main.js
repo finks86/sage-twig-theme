@@ -1,77 +1,108 @@
-/* ========================================================================
- * DOM-based Routing
- * Based on http://goo.gl/EUTi53 by Paul Irish
- *
- * Only fires on body classes that match. If a body class contains a dash,
- * replace the dash with an underscore when adding it to the object below.
- *
- * .noConflict()
- * The routing is enclosed within an anonymous function so that you can
- * always reference jQuery with $, even when in .noConflict() mode.
- * ======================================================================== */
+// Load Events
+var $ = jQuery;
+$(document).ready(function () {
 
-(function($) {
+    $('.details').hide();
 
-  // Use this variable to set up the common and page specific functions. If you
-  // rename this variable, you will also need to rename the namespace below.
-  var Sage = {
-    // All pages
-    'common': {
-      init: function() {
-        // JavaScript to be fired on all pages
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
-      }
-    }
-  };
+    $('.person').click(function (e) {
+        e.preventDefault();
+        var that = $(this);
+        var container = that.parent();
+        $('.persons .details').slideUp(400, function () {
+          $(this).detach();
+        })
 
-  // The routing fires all common scripts, followed by the page specific scripts.
-  // Add additional events for more control over timing e.g. a finalize event
-  var UTIL = {
-    fire: function(func, funcname, args) {
-      var fire;
-      var namespace = Sage;
-      funcname = (funcname === undefined) ? 'init' : funcname;
-      fire = func !== '';
-      fire = fire && namespace[func];
-      fire = fire && typeof namespace[func][funcname] === 'function';
 
-      if (fire) {
-        namespace[func][funcname](args);
-      }
-    },
-    loadEvents: function() {
-      // Fire common init JS
-      UTIL.fire('common');
+        if (!that.hasClass('open')) {
+            $('.person').removeClass('open');
+            var detail = $('*[data-id="' + that.data('details_id') + '"]');
+            var newDetail = detail.clone();
+            var newDetailMobile = detail.clone().removeClass('details--desktop').addClass('details--mobile')
 
-      // Fire page-specific init JS, and then finalize JS
-      $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
-        UTIL.fire(classnm);
-        UTIL.fire(classnm, 'finalize');
-      });
+            container.append(newDetail);
+            that.append(newDetailMobile);
 
-      // Fire common finalize JS
-      UTIL.fire('common', 'finalize');
-    }
-  };
+            newDetail.slideDown(400);
+            newDetailMobile.slideDown(400);
+            that.addClass('open');
 
-  // Load Events
-  $(document).ready(UTIL.loadEvents);
+        } else {
+            that.removeClass('open');
+        }
 
-})(jQuery); // Fully reference jQuery after this point.
+        // if (person.hasClass('open')) {
+        //     // person.slideUp();
+        //     person.removeClass('open');
+        //
+        // } else {
+        //     // console.log(person.offset().top);
+        //     // $('html, body').animate({
+        //     //     scrollTop: person.offset().top
+        //     // }, 500);
+        //     person.slideDown(400);
+        //     person.addClass('open');
+        // }
+
+
+    });
+
+    $(window).resize(function () {
+        $('.details').removeClass('open').slideUp();
+    });
+
+    $(document).on('click','.details__close', function (e) {
+        e.preventDefault();
+        console.log('ASd');
+        $('.persons .details').slideUp(400, function () {
+            $(this).parents('.person').removeClass('open');
+        });
+    });
+
+
+    $.fn.isOnScreen = function () {
+
+        var win = $(window);
+
+        var viewport = {
+            top: win.scrollTop(),
+            left: win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height();
+
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+    };
+
+    $(window).scroll(function () {
+        // console.log($('.animateNumber').isOnScreen());
+
+        $.each($('.animateNumber'), function (key, numField) {
+            // console.log($(numField).isOnScreen());
+            if ($(numField).isOnScreen() && !$(numField).hasClass('counted')) {
+
+                var number = $(numField).text().match(/\d+/);
+                // var number = $(numField);
+                // console.log(number);
+                $(numField).addClass('counted');
+                $(numField).animateNumber({
+                        number: number,
+                        // color: 'green', // require jquery.color
+                        // 'font-size': '50px',
+
+                        easing: 'linear', // require jquery.easing
+
+                    }, 1000,
+                    function () {
+                        // $(numField).addClass('counted');
+                    });
+            }
+        });
+
+    });
+});
+

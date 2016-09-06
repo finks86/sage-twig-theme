@@ -1,8 +1,13 @@
 {
   "dependencies": {
     "main.js": {
+      "bower": ["jquery.easing"],
+      "bower": ["jquery-animateNumber"],
+      "bower": ["bootstrap-sass"],
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "scripts/jquery.animateNumber.min.js",
+        "./assets/javascripts/bootstrap/dropdown.js"
       ],
       "main": true
     },
@@ -22,6 +27,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://localhost"
   }
 }

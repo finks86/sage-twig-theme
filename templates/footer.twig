@@ -1,7 +1,27 @@
 <footer class="content-info">
-    <div class="container">
-        {{ function('dynamic_sidebar', 'sidebar-footer') }}
+    <div class="container-fluid">
+        <div class="share">
+            <a href="https://www.facebook.com/FDP-Neuk%C3%B6lln-516973065149820/" class="share-icon fb"><i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/fdp" class="share-icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://plus.google.com/+FDP/posts" class="share-icon gplus"><i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+
+        </div>
     </div>
+
+    <nav class="nav-footer">
+        <ul>
+            {% for item in menu_footer.get_items %}
+                <li class="nav-footer__item {{ item.classes | join(' ') }}"><a class="nav-footer__link"
+                                                                               href="{{ item.get_link }}">{{ item.title }}</a>
+
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
 </footer>
 
 {{ function('wp_footer') }}

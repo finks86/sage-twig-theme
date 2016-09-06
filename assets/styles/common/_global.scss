@@ -1,1 +1,19 @@
 
+body {
+  @include font-size(1.6);
+  font-family: $font-calib;
+  color: $black;
+  margin-top: 102px;
+}
+
+a {
+  color: $blue;
+  &:hover, &:focus, &:active {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
