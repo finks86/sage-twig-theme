@@ -29,7 +29,7 @@
     @media (min-width: $screen-md-min) {
       @content;
     }
-  } @else if $point ==  phablet {
+  } @else if point ==  phablet {
     @media (min-width: $screen-sm-min) {
       @content;
     }

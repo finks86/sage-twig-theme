@@ -2,16 +2,20 @@
 
 {% block content %}
 
-    {% for post in posts %}
+    {% for page in pages %}
 
-        {% include "templates/content.twig" with {post: post}  %}
+        {% include "templates/content.twig" with {post: page}  %}
 
     {% endfor %}
 
-{% endblock %}
-
-{% block sidebar %}
-
-    {% include "templates/sidebar.twig" %}
+    <div class="section contact">
+        {{ contact }}
+    </div>
 
 {% endblock %}
+
+{#{% block sidebar %}#}
+
+    {#{% include "templates/sidebar.twig" %}#}
+
+{#{% endblock %}#}

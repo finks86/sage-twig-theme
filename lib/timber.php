@@ -28,6 +28,19 @@ class TwigSageTheme extends TimberSite {
         /* Add extra data */
         $context['foo'] = 'I am some other typical value set in your functions.php file, unrelated to the menu';
 
+        $context['contact'] = do_shortcode('[contact-form-7 id="4" title="Kontaktformular 1"]');
+
+        $args = array(
+            // Get all posts
+            'posts_per_page' => -1,
+            'post_type' => 'page',
+            // Order by meta value first, then order by post date
+            'orderby' => array(
+                'menu_order' => 'DESC',
+            ),
+        );
+
+        $context['pages'] =  Timber::get_posts( $args );
         /* Menu */
         $context['menu'] = new TimberMenu('primary_navigation');
 
