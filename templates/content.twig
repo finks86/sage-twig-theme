@@ -1,3 +1,19 @@
-<article id= {{ page.id }}>
-    {{ dump(page) }}
+<article id= "article-{{ page.id }}" class="clearfix">
+    <div class="left-container">
+        <h2>{{ page.post_title }}</h2>
+        <div><p>{{ page.post_content }}</p></div>
+    </div>
+    {% if page.get_field('images') is defined  %}
+        <div class="right-container">
+        {% for image in page.get_field('images')%}
+
+                <div class="rax-image-right">
+                    <img src="{{ image["image"] }}" alt="">
+                </div>
+                {% if not loop.last %}
+                    <div class="rax-cross"></div>
+                {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
 </article>
