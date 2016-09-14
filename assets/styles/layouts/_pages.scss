@@ -1,6 +1,14 @@
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+  }
 article{
-  padding:40px 60px;
+  padding:50px 0px;
+  min-height:1024px;
 
+  .container{
+      max-width: 680px;
+    }
   h2{
     color: $red;
     font-weight: bold;
@@ -19,9 +27,16 @@ article{
   &#article-2,&#article-18{
       background-color: $blue;
   }
+  &#article-2{
+    .left-container{
+      div{
+        margin-top: 80px;
+        }
+      }
+    }
+
 
   &#article-7{
-    background-image: url('../../../../uploads/2016/09/Map1.jpg');
     -webkit-background-size: cover;
     background-size:cover;
     background-repeat: no-repeat;
@@ -32,21 +47,34 @@ article{
 
   &#article-10{
     background-color: #5669A0;
-    background-image: url('../../../../uploads/2016/09/Infografik.png');
     background-size:100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
     p,h3,span{
       color: #fff;
     }
-
+    h3{
+      font-size:55px;
+      }
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      }
+    .title-container{
+      display: none;
+      }
     .items-container{
       @include make-xs-column(6);
+      padding-left: 0px;
+      padding-right: 0px;
     }
+    .right-container,.left-container {
+      @include make-xs-column(12);
+      @include make-md-column(6);
+      }
   }
 
   &#article-15{
-    background-image: url('../../../../uploads/2016/09/page2.jpg');
     background-color: $blue;
     -webkit-background-size: 100%;
     background-size:100%;
@@ -92,11 +120,7 @@ article{
   .left-container,.right-container{
     @include make-xs-column(6);
   }
-  .left-container{
-    div{
-      margin-top: 40px;
-    }
-  }
+
   .rax-image-right{
     max-width: 190px;
     margin: 0 auto;
@@ -141,8 +165,13 @@ article{
 }
 .section.contact{
   float: left;
-  padding: 40px 60px;
+  padding: 40px 0px;
   background-color: #EAEAEA;
+
+  .container{
+    max-width: 680px;
+    }
+
   .title-container{
     margin:80px 0;
     }
