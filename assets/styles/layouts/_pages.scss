@@ -1,6 +1,14 @@
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+  }
 article{
-  padding:40px 60px;
+  padding:50px 0px;
+  min-height:1024px;
 
+  .container{
+      max-width: 680px;
+    }
   h2{
     color: $red;
     font-weight: bold;
@@ -19,34 +27,71 @@ article{
   &#article-2,&#article-18{
       background-color: $blue;
   }
+  &#article-2{
+    .left-container{
+      div{
+        margin-top: 80px;
+        }
+      }
+    }
+
 
   &#article-7{
-    background-image: url('../../../../uploads/2016/09/Map1.jpg');
     -webkit-background-size: cover;
     background-size:cover;
     background-repeat: no-repeat;
     .left-container {
       margin: 40px 0;
+      div{
+        margin-top: 80px;
+        }
     }
   }
 
   &#article-10{
     background-color: #5669A0;
-    background-image: url('../../../../uploads/2016/09/Infografik.png');
     background-size:100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
     p,h3,span{
       color: #fff;
     }
-
+    p{
+      strong{
+        color: $blue
+        }
+      }
+    h3{
+      font-size:55px;
+      margin-bottom: 5px;
+      }
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      }
+    .title-container{
+      display: none;
+      }
     .items-container{
       @include make-xs-column(6);
+      padding-left: 0px;
+      padding-right: 0px;
     }
+    .right-container {
+      div{
+        max-width: 300px;
+        margin-top: 80px;
+        float: left;
+        }
+      
+      }
+    .right-container,.left-container {
+      @include make-xs-column(12);
+      @include make-md-column(6);
+      }
   }
 
   &#article-15{
-    background-image: url('../../../../uploads/2016/09/page2.jpg');
     background-color: $blue;
     -webkit-background-size: 100%;
     background-size:100%;
@@ -54,11 +99,21 @@ article{
     background-position-y: bottom;
     .left-container {
       margin: 200px 0;
+      div{
+        margin-top: 70px;
+        }
+      ul{
+        margin-top: 30px;
+          li{
+            padding-left: 10px;
+            }
+        }
     }
+
   }
 
   &#article-18{
-    position: relative;
+
 
     .title-container{
       @include make-xs-column(6);
@@ -67,20 +122,30 @@ article{
       @include make-xs-column(12)
     }
     .row{
-      padding-bottom: 100px;
+      position: relative;
+
+      padding-bottom: 190px;
       }
     .left-container {
       position: absolute;
       width: 88%;
       bottom:40px;
+      span{
+        @include make-xs-column(6);
+        }
       }
+
+    .right-container {
+      margin-top: 70px;
+      }
+
     .person-text{
       display: none;
     }
     .person-image-right{
       float: left;
       max-width:100px;
-      margin-right: 10px;
+      margin-right: 5px;
       img{
         width:100%;
         height:auto;
@@ -92,11 +157,7 @@ article{
   .left-container,.right-container{
     @include make-xs-column(6);
   }
-  .left-container{
-    div{
-      margin-top: 40px;
-    }
-  }
+
   .rax-image-right{
     max-width: 190px;
     margin: 0 auto;
@@ -140,9 +201,13 @@ article{
     }
 }
 .section.contact{
-  float: left;
-  padding: 40px 60px;
+  padding: 40px 0px;
   background-color: #EAEAEA;
+
+  .container{
+    max-width: 680px;
+    }
+
   .title-container{
     margin:80px 0;
     }
@@ -169,7 +234,7 @@ article{
     max-width: 120px;
     float: right;
     }
-  &> div.wpcf7{
+  div.wpcf7{
     margin-left: -15px;
     margin-right: -15px;
   }
