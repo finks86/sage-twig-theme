@@ -1,19 +1,48 @@
 <article id= "article-{{ page.id }}" class="clearfix">
-    <div class="left-container">
-        <h2>{{ page.post_title }}</h2>
-        <div><p>{{ page.post_content }}</p></div>
-    </div>
-    {% if page.get_field('images') is defined  %}
-        <div class="right-container">
-        {% for image in page.get_field('images')%}
+    {% if page.id == '10' %}
+        <div class="title-container"><h2>{{ page.post_title }}</h2></div>
+        <div class="row">
+            <div class="left-container">
+                {% for item in page.get_field('items')%}
+                    {% if loop.first %}
+                        <div class="items-container">
+                    {% elseif loop.index == 4 %}
+                        </div>
+                        <div class="items-container">
+                    {% endif %}
+                    <div>
+                        <h3>{{ item.title }}</h3>
+                        <span>{{ item.subtitle }}</span>
+                    </div>
+                    {% if loop.last %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="right-container">
+                <div><p>{{ page.post_content }}</p></div>
+            </div>
+        </div>
+    {% else %}
+        <div class="row">
+            <div class="left-container">
+                <h2>{{ page.post_title }}</h2>
+                <div><p>{{ page.post_content }}</p></div>
+            </div>
+            {% if page.get_field('images') is defined  %}
+                <div class="right-container">
+                    {% for image in page.get_field('images')%}
 
-                <div class="rax-image-right">
-                    <img src="{{ image["image"] }}" alt="">
+                        <div class="rax-image-right">
+                            <img src="{{ image["image"] }}" alt="">
+                        </div>
+                        {% if not loop.last %}
+                            <div class="rax-cross"></div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                {% if not loop.last %}
-                    <div class="rax-cross"></div>
-                {% endif %}
-        {% endfor %}
+            {% endif %}
         </div>
     {% endif %}
+
 </article>

@@ -1,6 +1,21 @@
 article{
   padding:40px 15px;
 
+  h2{
+    color: $red;
+    font-weight: bold;
+    font-size: 50px;
+    }
+  ul,li,span,p{
+    color: #fff;
+    strong{
+      color: $red;
+      }
+    }
+  p,ul{
+    font-style: italic;
+    }
+
   &#article-2{
       background-color: $blue;
   }
@@ -14,6 +29,22 @@ article{
       margin: 40px 0;
     }
   }
+
+  &#article-10{
+    background-color: #5669A0;
+    background-image: url('../../../../uploads/2016/09/Infografik.png');
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    p,h3,span{
+      color: #fff;
+    }
+
+    .items-container{
+      @include make-xs-column(6);
+    }
+  }
+
   &#article-15{
     background-image: url('../../../../uploads/2016/09/page2.jpg');
     background-color: $blue;
@@ -25,41 +56,25 @@ article{
       margin: 200px 0;
     }
   }
-  &#article-15{
-    background-color: $blue;
+
+
+
+  .left-container,.right-container{
+    @include make-xs-column(6);
   }
-
-
-    .left-container,.right-container{
-      @include make-xs-column(6);
+  .left-container{
+    div{
+      margin-top: 40px;
     }
-    .left-container{
-      div{
-        margin-top: 40px;
-      }
-    }
-    h2{
-        color: $red;
-        font-weight: bold;
-        font-size: 50px;
-    }
-    ul,li,span,p{
-      color: #fff;
-      strong{
-          color: $red;
+  }
+  .rax-image-right{
+    max-width: 190px;
+    margin: 0 auto;
+    img{
+          width:100%;
+          height:auto;
         }
     }
-    p,ul{
-      font-style: italic;
-    }
-    .rax-image-right{
-      max-width: 190px;
-      margin: 0 auto;
-      img{
-            width:100%;
-            height:auto;
-          }
-      }
 
   .rax-cross {
     width: 50px;
