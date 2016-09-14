@@ -72,6 +72,11 @@
   };
 
   // Load Events
-  $(document).ready(UTIL.loadEvents);
+  $(document).ready(function () {
+    $('.navbar-toggler').click(function() {
+      $(this).toggleClass('is-active');
+      $(this).parent().toggleClass('active');
+    });
+  });
 
 })(jQuery); // Fully reference jQuery after this point.

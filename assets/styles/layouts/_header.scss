@@ -1,0 +1,117 @@
+$hamburger-layer-width: 20px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-height: 3px;
+
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+$nav-height: 60px;
+$nav-height-phablet: 100px;
+
+.brand {
+  background: url('../images/logo_next.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 74px;
+  height: 34px;
+  display: inline-block;
+  font-size: 0;
+  transition: all 0.4s cubic-bezier(.25, .5, .55, .95);
+}
+
+.navbar-default {
+  border-bottom: 1px solid $lightgrey;
+  background: transparent;
+  height: $nav-height;
+}
+
+.container-fluid .navbar-header {
+  margin: 0;
+}
+
+.navbar-header {
+  height: $nav-height;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 800;
+
+  h1 {
+    font-size: 0;
+    display: flex;
+    margin: 0 auto 0 0;
+  }
+
+}
+
+.navbar-toggler {
+  display: flex;
+  outline: 0;
+  padding-right: 0;
+  z-index: 120;
+}
+
+.navbar-collapse {
+  background: white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  line-height: 1.78571;
+  z-index: 110;
+  text-align: center;
+  transform: translateY(-100%);
+  transition-property: all;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.25, .5, .55, .95);
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  @include font-size(2.4);
+  color: #303030;
+  text-transform: uppercase;
+}
+
+.navbar-header.active {
+  .navbar-collapse {
+    transform: translateY(0);
+    transition-duration: .6s;
+  }
+  .brand {
+    visibility: hidden;
+  }
+}
+
+@include breakpoint(phablet) {
+  .brand {
+    width: 106px;
+    height: 49px;
+  }
+  .navbar-default {
+    height: $nav-height-phablet;
+  }
+  .navbar-header {
+    height: $nav-height-phablet;
+    padding: 0;
+    .container-fluid & {
+      margin: 0;
+    }
+  }
+}
