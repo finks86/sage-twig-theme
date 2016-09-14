@@ -4,31 +4,37 @@ $hamburger-layer-height: 3px;
 
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
-$nav-height: 60px;
+$nav-height: 100px;
 $nav-height-phablet: 100px;
 
 .brand {
   background: url('../images/logo_next.png') no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 74px;
-  height: 34px;
+  width: 106px;
+  height: 49px;
   display: inline-block;
   font-size: 0;
   transition: all 0.4s cubic-bezier(.25, .5, .55, .95);
 }
 
 .navbar-default {
+  display: flex;
+  background: white;
+  height: $nav-height+1;
+  margin-bottom: 0;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border: 0;
   border-bottom: 1px solid $lightgrey;
-  background: transparent;
-  height: $nav-height;
+  z-index: 10;
 }
 
-.container-fluid .navbar-header {
-  margin: 0;
-}
 
 .navbar-header {
+  max-width: 1170px;
   height: $nav-height;
   display: flex;
   flex-direction: row;
@@ -38,11 +44,10 @@ $nav-height-phablet: 100px;
   padding: 0 15px;
   background: white;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 800;
-
+  left: auto;
+  right: auto;
   h1 {
     font-size: 0;
     display: flex;
@@ -100,15 +105,11 @@ $nav-height-phablet: 100px;
 }
 
 @include breakpoint(phablet) {
-  .brand {
-    width: 106px;
-    height: 49px;
-  }
-  .navbar-default {
-    height: $nav-height-phablet;
-  }
+  //.navbar-default {
+  //  height: $nav-height-phablet;
+  //}
   .navbar-header {
-    height: $nav-height-phablet;
+    //height: $nav-height-phablet;
     padding: 0;
     .container-fluid & {
       margin: 0;
