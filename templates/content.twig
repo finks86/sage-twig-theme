@@ -34,23 +34,28 @@
         </div>
     {% elseif page.id == 18 %}
     <div class="container">
+
         <div class="row">
-            <div class="title-container"><h2>{{ page.post_title }}</h2></div>
+
             <div class="left-container">
+                <div class="title-container"><h2>{{ page.post_title }}</h2></div>
                 <div><p>{{ page.post_content }}</p></div>
             </div>
             {% if page.get_field('person') is defined  %}
                 <div class="right-container">
+                    <div class="person-container">
                     {% for person in page.get_field('person')%}
-                        <div class="person-image-right">
-                            <img src="{{ person.image }}" alt="">
+                        <div class="person-content">
+                            <div class="person-image-right">
+                                <img src="{{ person.image }}" alt="">
+                            </div>
+                            <div class="person-text">
+                                <span> {{ person.name }}</span>
+                                <span> {{ person.ocupation }}</span>
+                            </div>
                         </div>
-                        <div class="person-text">
-                            <span> {{ person.name }}</span>
-                            <span> {{ person.ocupation }}</span>
-                        </div>
-
                     {% endfor %}
+                    </div>
                 </div>
             {% endif %}
         </div>

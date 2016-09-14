@@ -53,6 +53,7 @@ article{
     background-size:100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
+    background-position-x: center;
     p,h3,span{
       color: #fff;
     }
@@ -78,6 +79,7 @@ article{
       padding-right: 0px;
     }
     .right-container {
+      width: 100%;
       div{
         max-width: 300px;
         margin-top: 80px;
@@ -113,39 +115,25 @@ article{
   }
 
   &#article-18{
-
-
-    .title-container{
-      @include make-xs-column(6);
-    }
+    .person-container{
+        width:140px;
+      }
     .right-container,.left-container {
-      @include make-xs-column(12)
+      @include make-xs-column(6)
     }
     .row{
-      position: relative;
-
       padding-bottom: 190px;
-      }
-    .left-container {
-      position: absolute;
-      width: 88%;
-      bottom:40px;
-      span{
-        @include make-xs-column(6);
-        }
       }
 
     .right-container {
       margin-top: 70px;
       }
 
-    .person-text{
-      display: none;
-    }
+    
     .person-image-right{
       float: left;
-      max-width:100px;
-      margin-right: 5px;
+      max-width:120px;
+      margin-right: 4px;
       img{
         width:100%;
         height:auto;
@@ -247,3 +235,47 @@ article{
         }
     }
   }
+@include breakpoint(tablet) {
+   article{
+     h2{
+       font-size: 60px;
+       }
+     .container{
+       max-width: none;
+       }
+     &#article-7{
+       .left-container{
+         margin: 240px 0 0;
+         div{
+           margin-top: 150px;
+           }
+         }
+       }
+     &#article-10{
+       background-color: #fff;
+       background-size: 920px;
+
+       .title-container{
+         display: block;
+         }
+       .right-container{
+         div{
+           margin-top: 22px;
+           }
+         }
+       h3{
+         color: $red;
+         }
+       span{
+         color: $blue;
+         }
+       p{
+         color: #000;
+         strong{
+           color: $red
+           }
+         }
+       }
+    }
+
+}
