@@ -1,5 +1,5 @@
 article{
-  padding:40px 15px;
+  padding:40px 60px;
 
   h2{
     color: $red;
@@ -16,7 +16,7 @@ article{
     font-style: italic;
     }
 
-  &#article-2{
+  &#article-2,&#article-18{
       background-color: $blue;
   }
 
@@ -57,6 +57,36 @@ article{
     }
   }
 
+  &#article-18{
+    position: relative;
+
+    .title-container{
+      @include make-xs-column(6);
+    }
+    .right-container,.left-container {
+      @include make-xs-column(12)
+    }
+    .row{
+      padding-bottom: 100px;
+      }
+    .left-container {
+      position: absolute;
+      width: 88%;
+      bottom:40px;
+      }
+    .person-text{
+      display: none;
+    }
+    .person-image-right{
+      float: left;
+      max-width:100px;
+      margin-right: 10px;
+      img{
+        width:100%;
+        height:auto;
+        }
+      }
+  }
 
 
   .left-container,.right-container{
@@ -101,6 +131,54 @@ article{
         width: 100%;
         }
     }
-
+  .person-image-right{
+      max-width:150px;
+      img{
+          width:100%;
+          height:auto;
+        }
+    }
 }
-
+.section.contact{
+  float: left;
+  padding: 40px 60px;
+  background-color: #EAEAEA;
+  .title-container{
+    margin:80px 0;
+    }
+  h2,label{
+    color: $blue;
+    }
+  h2{
+    font-weight:bold;
+    font-size: 50px;
+    }
+  label{
+    font-weight: normal;
+    }
+  input,textarea{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: normal;
+    }
+  input.wpcf7-submit{
+    border-radius: 0;
+    background-color: $blue;
+    color: #fff;
+    max-width: 120px;
+    float: right;
+    }
+  &> div.wpcf7{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  form{
+      .form-left,.form-right{
+        @include make-xs-column(6);
+        }
+      input,textarea{
+        width:100%;
+        }
+    }
+  }
