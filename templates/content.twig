@@ -1,11 +1,11 @@
-{% if page.thumbnail.src is empty %}
+{% if page.thumbnail.src is empty and page.id != 10 %}
     <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}">
-{% else %}
+{% elseif page.id != 10 %}
     <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}" style="background-image:url( {{ page.thumbnail.src }})">
 {% endif %}
 
     {% if page.id == '10' %}
-
+    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}">
         <div class="container-fluid">
             <div class="row">
                 <div class="title-container"><h2>{{ page.post_title }}</h2></div>
@@ -32,6 +32,9 @@
                     {% endfor %}
                 </div>
             </div>
+        </div>
+        <div class="container-fluid">
+            <div class="background-image-container" style="background-image:url( {{ page.thumbnail.src }})"></div>
         </div>
     {% elseif page.id == 18 %}
     <div class="container-fluid">
