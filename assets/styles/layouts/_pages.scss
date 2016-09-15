@@ -21,8 +21,17 @@ article {
       color: $red;
       }
     }
+
   p, ul {
     font-style: italic;
+    }
+
+  p {
+    font-size: 18px;
+    }
+
+  ul {
+    font-size: 16px;
     }
 
   &.article-2, &.article-18 {
@@ -162,18 +171,15 @@ article {
     .left-container {
       @include make-xs-column-offset(1);
       @include make-xs-column(5);
-
+      margin-top: 120px;
         .text-container {
           margin-top: 140px;
-          max-width: 240px;
+          max-width: 300px;
           }
       }
     .right-container {
       @include make-xs-column-offset(1);
       @include make-xs-column(3)
-      }
-    .row {
-      padding-bottom: 190px;
       }
 
     .right-container {
@@ -185,7 +191,9 @@ article {
             }
         }
       }
-
+    .person-text  {
+        margin:15px 0;
+      }
     .person-image-right {
       max-width: 120px;
 
@@ -245,8 +253,9 @@ article {
   padding: 40px 0px;
   background-color: #EAEAEA;
 
-  .container {
-    max-width: 680px;
+  .form-container{
+      @include make-xs-column-offset(1);
+      @include make-xs-column(10);
     }
 
   .title-container {
@@ -257,10 +266,20 @@ article {
     }
   h2 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 60px;
     }
   label {
     font-weight: normal;
+    width: 100%;
+    font-weight: 600;
+      span{
+          font-weight: normal;
+          &.label-text{
+            font-weight: 600;
+            line-height: 28px;
+            font-size: 14px;
+            }
+        }
     }
   input, textarea {
     border: none;
@@ -280,9 +299,11 @@ article {
     margin-right: -15px;
     }
   form {
-    .form-left, .form-right {
-      @include make-xs-column(6);
-
+    .form-top-input {
+        @include make-xs-column(4);
+      }
+    .form-bottom-input {
+      @include make-xs-column(12);
       }
     input, textarea {
       width: 100%;
