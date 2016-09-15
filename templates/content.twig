@@ -1,8 +1,9 @@
 {% if page.thumbnail.src is empty %}
-    <article id= "article-{{ page.id }}" class="clearfix">
+    <article id= "article-{{ page.id }}" class="clearfix" data-anchor="{{ page.slug }}">
 {% else %}
-    <article id= "article-{{ page.id }}" class="clearfix" style="background-image:url( {{ page.thumbnail.src }})">
+    <article id= "article-{{ page.id }}" class="clearfix" data-anchor="{{ page.slug }}" style="background-image:url( {{ page.thumbnail.src }})">
 {% endif %}
+
     {% if page.id == '10' %}
 
         <div class="container">

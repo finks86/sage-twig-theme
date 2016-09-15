@@ -1,119 +1,128 @@
-.row{
+.row {
   margin-left: 0px;
   margin-right: 0px;
-  }
-article{
-  padding:50px 0px;
-  min-height:1024px;
+}
 
-  .container{
-      max-width: 680px;
-    }
-  h2{
+article {
+  padding: 50px 0px;
+  min-height: 1024px;
+
+  .container {
+    max-width: 680px;
+  }
+  h2 {
     color: $red;
     font-weight: bold;
     font-size: 50px;
-    }
-  ul,li,span,p{
-    color: #fff;
-    strong{
-      color: $red;
-      }
-    }
-  p,ul{
-    font-style: italic;
-    }
-
-  &#article-2,&#article-18{
-      background-color: $blue;
   }
-  &#article-2{
-    .left-container{
-      div{
+  ul, li, span, p {
+    color: #fff;
+    strong {
+      color: $red;
+    }
+  }
+  p, ul {
+    font-style: italic;
+  }
+
+  &#article-2, &#article-18 {
+    background-color: $blue;
+  }
+  &#article-2 {
+    .left-container {
+      div {
         margin-top: 80px;
-        }
       }
     }
+  }
 
-
-  &#article-7{
+  &#article-7 {
     -webkit-background-size: cover;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     .left-container {
       margin: 40px 0;
-      div{
+      div {
         margin-top: 80px;
-        }
+      }
     }
   }
 
-  &#article-10{
+  &#article-10 {
     background-color: #5669A0;
-    background-size:100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
+<<<<<<< HEAD
     background-position-x: center;
     p,h3,span{
+=======
+    p, h3, span {
+>>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
       color: #fff;
     }
-    p{
-      strong{
+    p {
+      strong {
         color: $blue
-        }
       }
-    h3{
-      font-size:55px;
+    }
+    h3 {
+      font-size: 55px;
       margin-bottom: 5px;
-      }
-    span{
+    }
+    span {
       font-size: 18px;
       font-weight: bold;
-      }
-    .title-container{
+    }
+    .title-container {
       display: none;
-      }
-    .items-container{
+    }
+    .items-container {
       @include make-xs-column(6);
       padding-left: 0px;
       padding-right: 0px;
     }
     .right-container {
+<<<<<<< HEAD
       width: 100%;
       div{
+=======
+      div {
+>>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
         max-width: 300px;
         margin-top: 80px;
         float: left;
-        }
-      
       }
-    .right-container,.left-container {
+
+    }
+    .right-container, .left-container {
       @include make-xs-column(12);
       @include make-md-column(6);
-      }
+    }
   }
 
-  &#article-15{
+  &#article-15 {
     background-color: $blue;
     -webkit-background-size: 100%;
-    background-size:100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
     .left-container {
       margin: 200px 0;
-      div{
+      div {
         margin-top: 70px;
-        }
-      ul{
+      }
+      ul {
         margin-top: 30px;
-          li{
-            padding-left: 10px;
-            }
+        li {
+          padding-left: 10px;
         }
+      }
     }
 
   }
 
+<<<<<<< HEAD
   &#article-18{
     .person-container{
         width:140px;
@@ -124,11 +133,35 @@ article{
     .row{
       padding-bottom: 190px;
       }
+=======
+  &#article-18 {
+
+    .title-container {
+      @include make-xs-column(6);
+    }
+    .right-container, .left-container {
+      @include make-xs-column(12)
+    }
+    .row {
+      position: relative;
+
+      padding-bottom: 190px;
+    }
+    .left-container {
+      position: absolute;
+      width: 88%;
+      bottom: 40px;
+      span {
+        @include make-xs-column(6);
+      }
+    }
+>>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
 
     .right-container {
       margin-top: 70px;
-      }
+    }
 
+<<<<<<< HEAD
     
     .person-image-right{
       float: left;
@@ -138,103 +171,139 @@ article{
         width:100%;
         height:auto;
         }
+=======
+    .person-text {
+      display: none;
+    }
+    .person-image-right {
+      float: left;
+      max-width: 100px;
+      margin-right: 5px;
+      img {
+        width: 100%;
+        height: auto;
+>>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
       }
+    }
   }
 
-
-  .left-container,.right-container{
+  .left-container, .right-container {
     @include make-xs-column(6);
   }
 
-  .rax-image-right{
+  .rax-image-right {
     max-width: 190px;
     margin: 0 auto;
-    img{
-          width:100%;
-          height:auto;
-        }
+    img {
+      width: 100%;
+      height: auto;
     }
+  }
 
   .rax-cross {
     width: 50px;
     height: 50px;
     position: relative;
-    margin:40px auto;
-    z-index:1;
-      &:before, &:after{
-          content: "";
-          position: absolute;
-          z-index: -1;
-          background: $red;
-        }
-      &:before {
-        left: 50%;
-        width: 30%;
-        margin-left: -15%;
-        height: 100%;
-        }
-      &:after {
-        top: 50%;
-        height: 30%;
-        margin-top: -15%;
-        width: 100%;
-        }
+    margin: 40px auto;
+    z-index: 1;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: $red;
     }
-  .person-image-right{
-      max-width:150px;
-      img{
-          width:100%;
-          height:auto;
-        }
+    &:before {
+      left: 50%;
+      width: 30%;
+      margin-left: -15%;
+      height: 100%;
     }
+    &:after {
+      top: 50%;
+      height: 30%;
+      margin-top: -15%;
+      width: 100%;
+    }
+  }
+  .person-image-right {
+    max-width: 150px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
-.section.contact{
+
+.section.contact {
   padding: 40px 0px;
   background-color: #EAEAEA;
 
-  .container{
+  .container {
     max-width: 680px;
-    }
+  }
 
-  .title-container{
-    margin:80px 0;
-    }
-  h2,label{
+  .title-container {
+    margin: 80px 0;
+  }
+  h2, label {
     color: $blue;
-    }
-  h2{
-    font-weight:bold;
+  }
+  h2 {
+    font-weight: bold;
     font-size: 50px;
-    }
-  label{
+  }
+  label {
     font-weight: normal;
-    }
-  input,textarea{
+  }
+  input, textarea {
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: normal;
-    }
-  input.wpcf7-submit{
+  }
+  input.wpcf7-submit {
     border-radius: 0;
     background-color: $blue;
     color: #fff;
     max-width: 120px;
     float: right;
-    }
-  div.wpcf7{
+  }
+  div.wpcf7 {
     margin-left: -15px;
     margin-right: -15px;
   }
-  form{
-      .form-left,.form-right{
-        @include make-xs-column(6);
-        }
-      input,textarea{
-        width:100%;
-        }
+  form {
+    .form-left, .form-right {
+      @include make-xs-column(6);
+    }
+    input, textarea {
+      width: 100%;
     }
   }
+}
+
+
+.section--logo {
+  margin: 240px auto;
+  text-align: center;
+  img  {
+    display: inline-block;
+    width: 290px;
+    height: 135px
+  }
+}
+
+@include breakpoint(phablet) {
+
+  .section--logo {
+    margin: 380px auto;
+    img  {
+      display: inline-block;
+      width: 460px;
+      height: 212px
+    }
+  }
+<<<<<<< HEAD
 @include breakpoint(tablet) {
    article{
      h2{
@@ -278,4 +347,6 @@ article{
        }
     }
 
+=======
+>>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
 }

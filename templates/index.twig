@@ -2,6 +2,9 @@
 
 {% block content %}
 
+    <div class="section section--logo">
+        <img src="{{ theme.link }}/dist/images/logo_next_big.png">
+    </div>
     {% for page in pages %}
 
         {% include "templates/content.twig" with {post: page}  %}
