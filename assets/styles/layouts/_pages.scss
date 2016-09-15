@@ -42,15 +42,15 @@ article {
         margin-top: 70px;
       }
     .left-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(6);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(6);
       div {
         margin-top: 80px;
         }
       }
     .right-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(3);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(3);
         margin-top: 60px;
       }
     }
@@ -61,8 +61,8 @@ article {
     background-size: cover;
     background-repeat: no-repeat;
     .left-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(7);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(7);
       margin-top: 250px;
 
       div {
@@ -84,23 +84,23 @@ article {
       }
 
     .title-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(7);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(7);
       div {
         margin-top: 25px;
         }
       }
     .left-container{
-      @include make-xs-column-offset(1);
-      @include make-xs-column(6);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(6);
       margin-bottom: 30px;
       div {
         max-width: 310px;
         }
       }
     .right-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(8);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(8);
       float: none;
       }
 
@@ -126,7 +126,7 @@ article {
 
     .items-container {
 
-      @include make-xs-column(6);
+      @include make-sm-column(6);
       &:nth-of-type(1){
         margin-left: -15px;
         }
@@ -145,8 +145,8 @@ article {
         margin-top: 60px;
       }
     .left-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(6);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(6);
 
       div {
         max-width: 270px;
@@ -169,8 +169,8 @@ article {
 
   &.article-18 {
     .left-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(5);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(5);
       margin-top: 120px;
         .text-container {
           margin-top: 140px;
@@ -178,8 +178,10 @@ article {
           }
       }
     .right-container {
-      @include make-xs-column-offset(1);
-      @include make-xs-column(3)
+      @include make-sm-column-offset(1);
+      @include make-sm-column(3);
+      @include make-md-column-offset(0);
+      @include make-md-column(5);
       }
 
     .right-container {
@@ -254,8 +256,8 @@ article {
   background-color: #EAEAEA;
 
   .form-container{
-      @include make-xs-column-offset(1);
-      @include make-xs-column(10);
+      @include make-sm-column-offset(1);
+      @include make-sm-column(10);
     }
 
   .title-container {
@@ -300,10 +302,10 @@ article {
     }
   form {
     .form-top-input {
-        @include make-xs-column(4);
+        @include make-sm-column(4);
       }
     .form-bottom-input {
-      @include make-xs-column(12);
+      @include make-sm-column(12);
       }
     input, textarea {
       width: 100%;
@@ -336,37 +338,43 @@ article {
 
 @include breakpoint(tablet) {
   article{
-    h2 {
-      font-size: 60px;
-      }
-    .container {
-      max-width: none;
-      }
-
-    &.article-7{
-      .left-container {
-        margin: 240px 0 0;
+    &.article-2 {
+      .row {
+        margin-top: 20px;
+        }
+      .left-container{
         div{
-          margin-top: 150px;
+            margin-top: 110px;
           }
         }
+    }
+    &.article-2 {
+        .left-container{
+            div{
+                margin-top: 250px;
+              }
+          }
       }
 
     &.article-10{
-      background-color: #fff;
-      background-size: 920px;
-
-      .title-container {
-        display: block;
+      .title-container{
+          @include make-md-column(8);
         }
       .right-container {
+        @include make-md-column(6);
         div{
           margin-top: 22px;
           }
         }
-
+      .left-container {
+        margin-top: 50px;
+        float: right !important;
+        @include make-md-column-offset(0);
+        @include make-md-column(4);
+        }
       h3{
         color: $red;
+        font-size: 60px;
         }
       span{
         color: $blue;
@@ -380,4 +388,30 @@ article {
       }
     }
 
+    &.article-18 {
+
+      .right-container {
+          .person-content{
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+
+            .person-image-right{
+              max-width:150px;
+              float: left;
+              }
+
+            .person-text{
+              float: right;
+              margin: 46px 0px;
+
+                span{
+                    font-size: 16px;
+                    line-height: 24px;
+                  }
+              }
+            }
+
+        }
+      }
   }
