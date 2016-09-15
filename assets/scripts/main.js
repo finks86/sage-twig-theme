@@ -77,12 +77,13 @@
             $(this).toggleClass('is-active');
             $(this).parent().toggleClass('active');
         });
+
         var nav_height = $('.navbar-header').height();
         $('.nav-main-link').click(function (e) {
             e.preventDefault();
             var anchor = $(this).attr('href');
 
-            var target = $('*[data-anchor=' + anchor + ']');
+            var target = $('#' + anchor);
 
 
             console.log(target.offset().top, nav_height);
@@ -94,6 +95,18 @@
             }, 500);
 
             return false;
+        });
+
+        //parallax
+        $(window).scroll(function () {
+            var windowTop = $(window).scrollTop();
+            $('.parallax').each(function () {
+                var top = $(this).offset().top;
+                var diff = top - windowTop;
+                if (diff <= 0) {
+                    $(this).find('.background').css({"transform": "translateY(" + diff / 4 + "px)"});
+                }
+            });
         });
 
 

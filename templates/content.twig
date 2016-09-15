@@ -1,88 +1,91 @@
 {% if page.thumbnail.src is empty %}
-    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}">
-{% else %}
-    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}" style="background-image:url( {{ page.thumbnail.src }})">
-{% endif %}
+<article id="{{ page.slug }}" class="article-{{ page.id }} clearfix">
+    {% else %}
+    <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
+        <div class="background" style="background-image:url( {{ page.thumbnail.src }})">
 
-    {% if page.id == '10' %}
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="title-container"><h2>{{ page.post_title }}</h2></div>
-            </div>
-            <div class="row">
-                <div class="left-container">
-                    <div><p>{{ page.post_content }}</p></div>
-                </div>
-                <div class="right-container">
-                    {% for item in page.get_field('items')%}
-                        {% if loop.first %}
-                            <div class="items-container">
-                        {% elseif loop.index == 4 %}
-                            </div>
-                            <div class="items-container">
-                        {% endif %}
-                        <div>
-                            <h3>{{ item.title }}</h3>
-                            <span>{{ item.subtitle }}</span>
-                        </div>
-                        {% if loop.last %}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
         </div>
-    {% elseif page.id == 18 %}
-    <div class="container-fluid">
+        {% endif %}
 
-        <div class="row">
+        {% if page.id == '10' %}
 
-            <div class="left-container">
-                <div class="title-container"><h2>{{ page.post_title }}</h2></div>
-                <div class="text-container"><p>{{ page.post_content }}</p></div>
-            </div>
-            {% if page.get_field('person') is defined  %}
-                <div class="right-container">
-                    <div class="person-container">
-                    {% for person in page.get_field('person')%}
-                        <div class="person-content">
-                            <div class="person-image-right">
-                                <img src="{{ person.image }}" alt="">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="title-container"><h2>{{ page.post_title }}</h2></div>
+                </div>
+                <div class="row">
+                    <div class="left-container">
+                        <div><p>{{ page.post_content }}</p></div>
+                    </div>
+                    <div class="right-container">
+                        {% for item in page.get_field('items') %}
+                            {% if loop.first %}
+                                <div class="items-container">
+                            {% elseif loop.index == 4 %}
+                                </div>
+                                <div class="items-container">
+                            {% endif %}
+                            <div>
+                                <h3>{{ item.title }}</h3>
+                                <span>{{ item.subtitle }}</span>
                             </div>
-                            <div class="person-text">
-                                <span class="person--name"> {{ person.name }}</span>
-                                <span class="person--job"> {{ person.ocupation }}</span>
-                            </div>
-                        </div>
-                    {% endfor %}
+                            {% if loop.last %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-            {% endif %}
-        </div>
-    </div>
-    {% else %}
-        <div class="container-fluid">
-        <div class="row">
-            <div class="left-container">
-                <h2>{{ page.post_title }}</h2>
-                <div><p>{{ page.post_content }}</p></div>
             </div>
-            {% if page.get_field('images') is defined  %}
-                <div class="right-container">
-                    {% for image in page.get_field('images')%}
+        {% elseif page.id == 18 %}
+            <div class="container-fluid">
 
-                        <div class="rax-image-right">
-                            <img src="{{ image["image"] }}" alt="">
+                <div class="row">
+
+                    <div class="left-container">
+                        <div class="title-container"><h2>{{ page.post_title }}</h2></div>
+                        <div class="text-container"><p>{{ page.post_content }}</p></div>
+                    </div>
+                    {% if page.get_field('person') is defined %}
+                        <div class="right-container">
+                            <div class="person-container">
+                                {% for person in page.get_field('person') %}
+                                    <div class="person-content">
+                                        <div class="person-image-right">
+                                            <img src="{{ person.image }}" alt="">
+                                        </div>
+                                        <div class="person-text">
+                                            <span class="person--name"> {{ person.name }}</span>
+                                            <span class="person--job"> {{ person.ocupation }}</span>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
                         </div>
-                        {% if not loop.last %}
-                            <div class="rax-cross"></div>
-                        {% endif %}
-                    {% endfor %}
+                    {% endif %}
                 </div>
-            {% endif %}
-        </div>
-        </div>
-    {% endif %}
+            </div>
+        {% else %}
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="left-container">
+                        <h2>{{ page.post_title }}</h2>
+                        <div><p>{{ page.post_content }}</p></div>
+                    </div>
+                    {% if page.get_field('images') is defined %}
+                        <div class="right-container">
+                            {% for image in page.get_field('images') %}
 
-</article>
+                                <div class="rax-image-right">
+                                    <img src="{{ image["image"] }}" alt="">
+                                </div>
+                                {% if not loop.last %}
+                                    <div class="rax-cross"></div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+
+    </article>
