@@ -1,17 +1,20 @@
 {% if page.thumbnail.src is empty %}
-    <article id= "article-{{ page.id }}" class="clearfix" data-anchor="{{ page.slug }}">
+    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}">
 {% else %}
-    <article id= "article-{{ page.id }}" class="clearfix" data-anchor="{{ page.slug }}" style="background-image:url( {{ page.thumbnail.src }})">
+    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix" data-anchor="{{ page.slug }}" style="background-image:url( {{ page.thumbnail.src }})">
 {% endif %}
 
     {% if page.id == '10' %}
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="title-container"><h2>{{ page.post_title }}</h2></div>
             </div>
             <div class="row">
                 <div class="left-container">
+                    <div><p>{{ page.post_content }}</p></div>
+                </div>
+                <div class="right-container">
                     {% for item in page.get_field('items')%}
                         {% if loop.first %}
                             <div class="items-container">
@@ -28,19 +31,16 @@
                         {% endif %}
                     {% endfor %}
                 </div>
-                <div class="right-container">
-                    <div><p>{{ page.post_content }}</p></div>
-                </div>
             </div>
         </div>
     {% elseif page.id == 18 %}
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
 
             <div class="left-container">
                 <div class="title-container"><h2>{{ page.post_title }}</h2></div>
-                <div><p>{{ page.post_content }}</p></div>
+                <div class="text-container"><p>{{ page.post_content }}</p></div>
             </div>
             {% if page.get_field('person') is defined  %}
                 <div class="right-container">
@@ -51,8 +51,8 @@
                                 <img src="{{ person.image }}" alt="">
                             </div>
                             <div class="person-text">
-                                <span> {{ person.name }}</span>
-                                <span> {{ person.ocupation }}</span>
+                                <span class="person--name"> {{ person.name }}</span>
+                                <span class="person--job"> {{ person.ocupation }}</span>
                             </div>
                         </div>
                     {% endfor %}
@@ -62,7 +62,7 @@
         </div>
     </div>
     {% else %}
-        <div class="container">
+        <div class="container-fluid">
         <div class="row">
             <div class="left-container">
                 <h2>{{ page.post_title }}</h2>

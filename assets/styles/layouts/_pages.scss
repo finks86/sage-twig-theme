@@ -13,7 +13,7 @@ article {
   h2 {
     color: $red;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 60px;
     }
   ul, li, span, p {
     color: #fff;
@@ -25,82 +25,128 @@ article {
     font-style: italic;
     }
 
-  &#article-2, &#article-18 {
+  &.article-2, &.article-18 {
     background-color: $blue;
     }
-  &#article-2 {
+  &.article-2 {
+    .row  {
+        margin-top: 70px;
+      }
     .left-container {
+      @include make-xs-column-offset(1);
+      @include make-xs-column(6);
       div {
         margin-top: 80px;
         }
       }
+    .right-container {
+      @include make-xs-column-offset(1);
+      @include make-xs-column(3);
+        margin-top: 60px;
+      }
     }
 
-  &#article-7 {
+  &.article-7 {
+
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     .left-container {
-      margin: 40px 0;
+      @include make-xs-column-offset(1);
+      @include make-xs-column(7);
+      margin-top: 250px;
+
       div {
+        max-width: 360px;
         margin-top: 80px;
         }
       }
     }
 
-  &#article-10 {
-    background-color: #5669A0;
-    background-size: 100%;
+  &.article-10 {
+    background-color: #fff;
+    background-size: 75%;
     background-repeat: no-repeat;
     background-position-y: bottom;
-    p, h3, span {
-      color: #fff;
+    background-position-x: center;
+
+    .row {
+        margin-top: 10px;
       }
-    p {
-      strong {
-        color: $blue
+
+    .title-container {
+      @include make-xs-column-offset(1);
+      @include make-xs-column(7);
+      div {
+        margin-top: 25px;
         }
       }
-    h3 {
-      font-size: 55px;
-      margin-bottom: 5px;
-      }
-    span {
-      font-size: 18px;
-      font-weight: bold;
-      }
-    .title-container {
-      display: none;
-      }
-    .items-container {
+    .left-container{
+      @include make-xs-column-offset(1);
       @include make-xs-column(6);
-      padding-left: 0px;
-      padding-right: 0px;
+      margin-bottom: 30px;
+      div {
+        max-width: 310px;
+        }
       }
     .right-container {
-      div {
-        max-width: 300px;
-        margin-top: 80px;
-        float: left;
+      @include make-xs-column-offset(1);
+      @include make-xs-column(8);
+      float: none;
+      }
+
+    h3 {
+      color: $red;
+      font-size: 50px;
+      margin-bottom: 5px;
+      }
+
+
+    p {
+      color: #000;
+      strong{
+        color: $red
+        }
+    }
+
+    span {
+      color: $blue;
+      font-size: 17px;
+      font-weight: bold;
+      }
+
+    .items-container {
+
+      @include make-xs-column(6);
+      &:nth-of-type(1){
+        margin-left: -15px;
         }
 
       }
-    .right-container, .left-container {
-      @include make-xs-column(12);
-      @include make-md-column(6);
-      }
+
     }
 
-  &#article-15 {
+  &.article-15 {
     background-color: $blue;
     -webkit-background-size: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
+    .row{
+        margin-top: 60px;
+      }
     .left-container {
-      margin: 200px 0;
+      @include make-xs-column-offset(1);
+      @include make-xs-column(6);
+
       div {
+        max-width: 270px;
         margin-top: 70px;
+        }
+      p{
+        color: $red;
+        font-weight: normal;
+
         }
       ul {
         margin-top: 30px;
@@ -112,39 +158,37 @@ article {
 
     }
 
-  &#article-18 {
+  &.article-18 {
+    .left-container {
+      @include make-xs-column-offset(1);
+      @include make-xs-column(5);
 
-    .title-container {
-      @include make-xs-column(6);
+        .text-container {
+          margin-top: 140px;
+          max-width: 240px;
+          }
       }
-    .right-container, .left-container {
-      @include make-xs-column(12)
+    .right-container {
+      @include make-xs-column-offset(1);
+      @include make-xs-column(3)
       }
     .row {
-      position: relative;
-
       padding-bottom: 190px;
-      }
-    .left-container {
-      position: absolute;
-      width: 88%;
-      bottom: 40px;
-      span {
-        @include make-xs-column(6);
-        }
       }
 
     .right-container {
       margin-top: 70px;
+      span{
+          font-size: 12px;
+          &.person--name{
+              font-weight: bold;
+            }
+        }
       }
 
-    .person-text {
-      display: none;
-      }
     .person-image-right {
-      float: left;
-      max-width: 100px;
-      margin-right: 5px;
+      max-width: 120px;
+
       img {
         width: 100%;
         height: auto;
@@ -152,12 +196,10 @@ article {
       }
     }
 
-  .left-container, .right-container {
-    @include make-xs-column(6);
-    }
+
 
   .rax-image-right {
-    max-width: 190px;
+    max-width: 160px;
     margin: 0 auto;
     img {
       width: 100%;
@@ -166,10 +208,10 @@ article {
     }
 
   .rax-cross {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     position: relative;
-    margin: 40px auto;
+    margin: 20px auto;
     z-index: 1;
     &:before, &:after {
       content: "";
@@ -240,6 +282,7 @@ article {
   form {
     .form-left, .form-right {
       @include make-xs-column(6);
+
       }
     input, textarea {
       width: 100%;
@@ -268,4 +311,52 @@ article {
       height: 212px
       }
     }
+  }
+
+@include breakpoint(tablet) {
+  article{
+    h2 {
+      font-size: 60px;
+      }
+    .container {
+      max-width: none;
+      }
+
+    &.article-7{
+      .left-container {
+        margin: 240px 0 0;
+        div{
+          margin-top: 150px;
+          }
+        }
+      }
+
+    &.article-10{
+      background-color: #fff;
+      background-size: 920px;
+
+      .title-container {
+        display: block;
+        }
+      .right-container {
+        div{
+          margin-top: 22px;
+          }
+        }
+
+      h3{
+        color: $red;
+        }
+      span{
+        color: $blue;
+        }
+      p{
+        color: #000;
+        strong{
+          color: $red
+          }
+        }
+      }
+    }
+
   }
