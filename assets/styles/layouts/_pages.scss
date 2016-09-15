@@ -1,7 +1,7 @@
 .row {
   margin-left: 0px;
   margin-right: 0px;
-}
+  }
 
 article {
   padding: 50px 0px;
@@ -9,32 +9,32 @@ article {
 
   .container {
     max-width: 680px;
-  }
+    }
   h2 {
     color: $red;
     font-weight: bold;
     font-size: 50px;
-  }
+    }
   ul, li, span, p {
     color: #fff;
     strong {
       color: $red;
+      }
     }
-  }
   p, ul {
     font-style: italic;
-  }
+    }
 
   &#article-2, &#article-18 {
     background-color: $blue;
-  }
+    }
   &#article-2 {
     .left-container {
       div {
         margin-top: 80px;
+        }
       }
     }
-  }
 
   &#article-7 {
     -webkit-background-size: cover;
@@ -44,57 +44,52 @@ article {
       margin: 40px 0;
       div {
         margin-top: 80px;
+        }
       }
     }
-  }
 
   &#article-10 {
     background-color: #5669A0;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
-    background-position-x: center;
-
     p, h3, span {
       color: #fff;
-    }
+      }
     p {
       strong {
         color: $blue
+        }
       }
-    }
     h3 {
       font-size: 55px;
       margin-bottom: 5px;
-    }
+      }
     span {
       font-size: 18px;
       font-weight: bold;
-    }
+      }
     .title-container {
       display: none;
-    }
+      }
     .items-container {
       @include make-xs-column(6);
       padding-left: 0px;
       padding-right: 0px;
-    }
+      }
     .right-container {
-
-      width: 100%;
-
       div {
         max-width: 300px;
         margin-top: 80px;
         float: left;
-      }
+        }
 
-    }
+      }
     .right-container, .left-container {
       @include make-xs-column(12);
       @include make-md-column(6);
+      }
     }
-  }
 
   &#article-15 {
     background-color: $blue;
@@ -106,50 +101,46 @@ article {
       margin: 200px 0;
       div {
         margin-top: 70px;
-      }
+        }
       ul {
         margin-top: 30px;
         li {
           padding-left: 10px;
+          }
         }
       }
-    }
 
-  }
+    }
 
   &#article-18 {
 
-    }
-    .person-container {
-      width:140px;
-    }
     .title-container {
       @include make-xs-column(6);
-    }
+      }
     .right-container, .left-container {
       @include make-xs-column(12)
-    }
+      }
     .row {
       position: relative;
 
       padding-bottom: 190px;
-    }
+      }
     .left-container {
       position: absolute;
       width: 88%;
       bottom: 40px;
       span {
         @include make-xs-column(6);
+        }
       }
-    }
 
     .right-container {
       margin-top: 70px;
-    }
+      }
 
     .person-text {
       display: none;
-    }
+      }
     .person-image-right {
       float: left;
       max-width: 100px;
@@ -157,13 +148,13 @@ article {
       img {
         width: 100%;
         height: auto;
+        }
       }
     }
-  }
 
   .left-container, .right-container {
     @include make-xs-column(6);
-  }
+    }
 
   .rax-image-right {
     max-width: 190px;
@@ -171,8 +162,8 @@ article {
     img {
       width: 100%;
       height: auto;
+      }
     }
-  }
 
   .rax-cross {
     width: 50px;
@@ -185,28 +176,28 @@ article {
       position: absolute;
       z-index: -1;
       background: $red;
-    }
+      }
     &:before {
       left: 50%;
       width: 30%;
       margin-left: -15%;
       height: 100%;
-    }
+      }
     &:after {
       top: 50%;
       height: 30%;
       margin-top: -15%;
       width: 100%;
+      }
     }
-  }
   .person-image-right {
     max-width: 150px;
     img {
       width: 100%;
       height: auto;
+      }
     }
   }
-}
 
 .section.contact {
   padding: 40px 0px;
@@ -214,47 +205,47 @@ article {
 
   .container {
     max-width: 680px;
-  }
+    }
 
   .title-container {
     margin: 80px 0;
-  }
+    }
   h2, label {
     color: $blue;
-  }
+    }
   h2 {
     font-weight: bold;
     font-size: 50px;
-  }
+    }
   label {
     font-weight: normal;
-  }
+    }
   input, textarea {
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: normal;
-  }
+    }
   input.wpcf7-submit {
     border-radius: 0;
     background-color: $blue;
     color: #fff;
     max-width: 120px;
     float: right;
-  }
+    }
   div.wpcf7 {
     margin-left: -15px;
     margin-right: -15px;
-  }
+    }
   form {
     .form-left, .form-right {
       @include make-xs-column(6);
-    }
+      }
     input, textarea {
       width: 100%;
+      }
     }
   }
-}
 
 
 .section--logo {
@@ -264,8 +255,8 @@ article {
     display: inline-block;
     width: 290px;
     height: 135px
+    }
   }
-}
 
 @include breakpoint(phablet) {
 
@@ -275,50 +266,6 @@ article {
       display: inline-block;
       width: 460px;
       height: 212px
+      }
     }
   }
-
-@include breakpoint(tablet) {
-   article{
-     h2{
-       font-size: 60px;
-       }
-     .container{
-       max-width: none;
-       }
-     &#article-7{
-       .left-container{
-         margin: 240px 0 0;
-         div{
-           margin-top: 150px;
-           }
-         }
-       }
-     &#article-10{
-       background-color: #fff;
-       background-size: 920px;
-
-       .title-container{
-         display: block;
-         }
-       .right-container{
-         div{
-           margin-top: 22px;
-           }
-         }
-       h3{
-         color: $red;
-         }
-       span{
-         color: $blue;
-         }
-       p{
-         color: #000;
-         strong{
-           color: $red
-           }
-         }
-       }
-    }
-
-}
