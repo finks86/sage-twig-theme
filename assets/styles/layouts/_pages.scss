@@ -2,10 +2,20 @@
   margin-left: 0px;
   margin-right: 0px;
   }
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center center;
+}
 
 article {
   padding: 50px 0px;
   min-height: 1024px;
+  position: relative;
 
   .container {
     max-width: 680px;
