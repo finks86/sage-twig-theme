@@ -53,12 +53,9 @@ article {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: bottom;
-<<<<<<< HEAD
     background-position-x: center;
-    p,h3,span{
-=======
+
     p, h3, span {
->>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
       color: #fff;
     }
     p {
@@ -83,12 +80,10 @@ article {
       padding-right: 0px;
     }
     .right-container {
-<<<<<<< HEAD
+
       width: 100%;
-      div{
-=======
+
       div {
->>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
         max-width: 300px;
         margin-top: 80px;
         float: left;
@@ -122,20 +117,12 @@ article {
 
   }
 
-<<<<<<< HEAD
-  &#article-18{
-    .person-container{
-        width:140px;
-      }
-    .right-container,.left-container {
-      @include make-xs-column(6)
-    }
-    .row{
-      padding-bottom: 190px;
-      }
-=======
   &#article-18 {
 
+    }
+    .person-container {
+      width:140px;
+    }
     .title-container {
       @include make-xs-column(6);
     }
@@ -155,23 +142,11 @@ article {
         @include make-xs-column(6);
       }
     }
->>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
 
     .right-container {
       margin-top: 70px;
     }
 
-<<<<<<< HEAD
-    
-    .person-image-right{
-      float: left;
-      max-width:120px;
-      margin-right: 4px;
-      img{
-        width:100%;
-        height:auto;
-        }
-=======
     .person-text {
       display: none;
     }
@@ -182,7 +157,6 @@ article {
       img {
         width: 100%;
         height: auto;
->>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
       }
     }
   }
@@ -303,7 +277,7 @@ article {
       height: 212px
     }
   }
-<<<<<<< HEAD
+
 @include breakpoint(tablet) {
    article{
      h2{
@@ -347,6 +321,4 @@ article {
        }
     }
 
-=======
->>>>>>> beac0a3a1944647a0aaf0b88f7ca03caf683e43d
 }
