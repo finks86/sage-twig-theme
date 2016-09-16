@@ -187,7 +187,9 @@ article {
       p{
         color: $red;
         font-weight: normal;
-
+        strong {
+            font-family: "AvenirLTStd-Heavy" ;
+          }
         }
       ul {
         margin-top: 30px;
