@@ -21,9 +21,14 @@ article {
     max-width: 680px;
     }
   h2 {
+    font-family: "AvenirLTStd-Heavy";
+    letter-spacing: 1px;
     color: $red;
     font-weight: bold;
     font-size: 60px;
+    }
+  h3{
+    font-family: "AvenirLTStd-Heavy";
     }
   ul, li, span, p {
     color: #fff;
@@ -33,7 +38,7 @@ article {
     }
 
   p, ul {
-    font-style: italic;
+    font-family: "AvenirLTStd-Oblique";
     }
 
   p {
@@ -66,7 +71,12 @@ article {
     }
 
   &.article-7 {
-
+    .background {
+      background-size: 100%;
+      background-color: $blue;
+      background-position: top center;
+      background-repeat: no-repeat;
+      }
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -84,10 +94,7 @@ article {
 
   &.article-10 {
     background-color: #fff;
-    background-size: 75%;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: center;
+    margin-top: -150px;
 
     .row {
         margin-top: 10px;
@@ -129,6 +136,7 @@ article {
         position: absolute;
       }
     h3 {
+      font-family: "AvenirLTStd-Heavy";
       color: $red;
       font-size: 50px;
       margin-bottom: 5px;
@@ -145,7 +153,7 @@ article {
     span {
       color: $blue;
       font-size: 17px;
-      font-weight: bold;
+      font-family: "AvenirLTStd-Heavy";
       }
 
     .items-container {
@@ -192,6 +200,7 @@ article {
     }
 
   &.article-18 {
+    margin-top: -200px;
     .left-container {
       @include make-sm-column-offset(1);
       @include make-sm-column(5);
@@ -212,8 +221,9 @@ article {
       margin-top: 70px;
       span{
           font-size: 12px;
+          font-family: "AvenirLTStd-Oblique";
           &.person--name{
-              font-weight: bold;
+              font-family:"AvenirLTStd-Heavy" ;
             }
         }
       }
@@ -288,14 +298,16 @@ article {
     margin: 80px 0;
     }
   h2, label {
+
     color: $blue;
     }
   h2 {
-    font-weight: bold;
+
+    font-family: "AvenirLTStd-Heavy";
     font-size: 60px;
     }
   label {
-    font-weight: normal;
+    font-family: "AvenirLTStd-Roman";
     width: 100%;
     font-weight: 600;
       span{
@@ -446,7 +458,7 @@ footer{
     }
     &.article-7 {
         .left-container{
-            margin-top: 240px;
+            margin-top: 220px;
             div{
                 max-width: 380px;
                 margin-top: 120px;
@@ -631,7 +643,7 @@ footer{
             }
         }
       &.article-18 {
-
+          margin-top: -100px;
           .left-container {
               margin-top: 0px;
               padding-left: 0px;
