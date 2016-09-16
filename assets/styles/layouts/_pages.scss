@@ -370,13 +370,40 @@ footer{
     .footer-wrapper{
         @include make-sm-column-offset(1);
         @include make-sm-column(10);
-        ul{
-            list-style: none;
-            color: #000;
-            li{
+        padding: 20px 15px;
+
+        .footer-logo{
+            float: left;
+            background: url("../images/logo_next.png") no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 106px;
+            height: 49px;
+          }
+        .nav-footer{
+            @include make-sm-column(5);
+            float: right !important;
+            padding-right: 0px;
+            ul{
+              float: right;
+              list-style: none;
+              color: #000;
+              line-height: 50px;
+
+              li{
                 float: left;
+                padding-left: 15px;
+                a{
+                  font-size: 12px;
+                  color:#000;
+                  &:hover{
+                    color: #000;
+                    }
+                  }
+                }
               }
           }
+
       }
   }
 @include breakpoint(phablet) {
