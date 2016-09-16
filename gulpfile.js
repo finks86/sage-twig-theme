@@ -231,6 +231,10 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
+gulp.task('icons', function() {
+  return gulp.src('./bower_components/fontawesome/fonts/**.*')
+      .pipe(gulp.dest('./dist/fonts'));
+});
 
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.

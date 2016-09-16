@@ -109,6 +109,9 @@
             });
         });
 
+        //initialise fancybox
+        $(".fancybox").fancybox();
+
 
     });
 

@@ -152,7 +152,7 @@ article {
 
     .items-container {
 
-      @include make-sm-column(6);
+      @include make-xs-column(6);
       &:nth-of-type(1){
         margin-left: -15px;
         }
@@ -173,7 +173,7 @@ article {
     .left-container {
       @include make-sm-column-offset(1);
       @include make-sm-column(6);
-
+      @include make-xs-column(9);
       div {
         max-width: 270px;
         margin-top: 70px;
@@ -496,7 +496,7 @@ footer{
             .person-text{
               float: right;
               margin: 46px 0px;
-              width: 60%;
+              width: 55%;
                 span{
                     font-size: 16px;
                     line-height: 24px;
@@ -506,4 +506,177 @@ footer{
 
         }
       }
+  }
+@media (max-width: $screen-sm-min) {
+
+  .section--logo{
+    margin: 100px auto;
+
+    img {
+          width: 137px;
+          height: 63px;
+        }
+    }
+  article{
+      min-height: 0px;
+
+      h2 {
+        font-size:40px;
+        }
+      p  {
+        font-size: 14px;
+        }
+      ul {
+        font-size: 12px
+        }
+      div.background{
+          background-color: $blue;
+          background-size: 100%;
+          background-repeat:no-repeat;
+
+        }
+      &.article-2{
+          .left-container{
+              padding-left: 0px;
+            }
+          .right-container{
+            padding-left: 0px;
+            padding-right: 0px;
+            }
+          .rax-image-right {
+            max-width:80px;
+            margin:0;
+            float: left;
+            }
+
+          .rax-cross{
+            height:16px;
+            width:16px;
+            float: left;
+            margin: 32px 4px;
+            }
+
+        }
+      &.article-7 {
+        .left-container{
+          padding-left: 0px;
+          }
+        div.background {
+          background-position: top center;
+          }
+        .left-container{
+          margin-top:0px;
+            div {
+                margin-top: 60px;
+                margin-bottom: 50px;
+              }
+          }
+        }
+      &.article-10 {
+        margin-top: -80px;
+        min-height: 850px;
+        .title-container,
+        .left-container,
+        .right-container{
+            padding-left: 0px;
+          }
+        .background-image-container {
+            width: 86%;
+            bottom: -190px;
+          }
+          h2 {
+              margin-top:0px;
+            }
+          h3{
+              font-size: 30px;
+            }
+          span {
+              font-size: 12px;
+            }
+          .left-container {
+              div {
+                  margin-top: 30px;
+                }
+            }
+        }
+      &.article-15 {
+          .row{
+              margin-top: 0px;
+            }
+          div.background {
+              background-position: bottom center;
+            }
+          .left-container {
+              margin-bottom: 190px;
+              padding-left: 0px;
+              div{
+                  margin-top: 50px;
+                  ul{
+                      margin-top: 50px;
+                      padding-left: 25px;
+                    }
+                }
+            }
+        }
+      &.article-18 {
+
+          .left-container {
+              margin-top: 0px;
+              padding-left: 0px;
+              .text-container {
+                  margin-top: 50px;
+                  margin-bottom: 50px;
+                  @include make-xs-column(8);
+                  padding-left: 0px;
+                  padding-right: 0px;
+                  p{
+                    font-size: 12px;
+                    }
+                }
+            }
+          .right-container {
+
+              .person-image-right {
+                max-width: 160px;
+                margin: 0 auto;
+                }
+              .person-text {
+                span {
+                  display: block;
+                  width: 100%;
+                  text-align: center;
+                  }
+                }
+            }
+        }
+    }
+    .section.contact{
+        .title-container {
+            margin: 40px 0 60px;
+          }
+        .form-container {
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+        a.download-link {
+            height: 70px;
+          }
+      }
+  footer{
+    .footer-wrapper{
+      padding: 20px 0px;
+      .footer-logo {
+          width: 77px;
+          height: 36px;
+        }
+      nav.nav-footer ul{
+          line-height: 32px;
+          li{
+              a{
+                font-size: 6px;
+                }
+            }
+        }
+      }
+    }
   }
