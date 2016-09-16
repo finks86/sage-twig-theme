@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "main.js": {
+      "bower": [
+        "fancybox"
+      ],
       "files": [
         "scripts/main.js"
       ],

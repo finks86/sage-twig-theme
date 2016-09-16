@@ -1,6 +1,7 @@
 @import "common/variables";
 @import "common/mixins";
 
+@import "../../bower_components/fancybox/source/jquery.fancybox.css";
 
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:    3000px;
