@@ -83,7 +83,7 @@ article {
     .left-container {
       @include make-sm-column-offset(1);
       @include make-sm-column(7);
-      margin-top: 250px;
+      margin-top: 160px;
 
       div {
         max-width: 360px;
@@ -416,6 +416,7 @@ footer{
                 float: left;
                 padding-left: 15px;
                 a{
+                  font-family: "AvenirLTStd-Roman";
                   font-size: 12px;
                   color:#000;
                   &:hover{
@@ -697,6 +698,9 @@ footer{
           }
         a.download-link {
             height: 80px;
+            span {
+                margin: 20px auto;
+              }
           }
       }
   footer{
@@ -723,10 +727,10 @@ footer{
             position: relative;
             bottom: 0;
             height: 200px;
-            width: 1210px;
+            width: 1170px;
             margin: 0 auto;
             .background {
-                background-size: 93%;
+                background-size: 94%;
                 bottom: -1100px;
               }
           }
