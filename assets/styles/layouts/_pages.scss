@@ -11,7 +11,9 @@
   background-size: cover;
   background-position: center center;
 }
-
+.other-pages-container{
+  display: none;
+  }
 article {
   padding: 50px 0px;
   min-height: 1024px;
@@ -71,6 +73,7 @@ article {
     }
 
   &.article-7 {
+    min-height: 1320px;
     .background {
       background-size: 100%;
       background-color: $blue;
@@ -85,9 +88,36 @@ article {
       @include make-sm-column(7);
       margin-top: 160px;
 
-      div {
+      div.main-text-container {
         max-width: 360px;
         margin-top: 80px;
+        }
+      .list-container {
+          .list-row {
+            float: left;
+            font-size: 12px;
+            width: 180px;
+
+            .list-number {
+              float: left;
+              background-color: $red;
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              padding-top: 2px;
+              span{
+                text-align: center;
+                }
+              }
+            .list-text {
+              float: left;
+              }
+            }
+        
+          span {
+              font-family: "AvenirLTStd-Oblique";
+            }
         }
       }
     }
@@ -389,48 +419,7 @@ article {
     height: 135px
     }
   }
-footer{
-    .footer-wrapper{
-        @include make-sm-column-offset(1);
-        @include make-sm-column(10);
-        padding: 20px 15px;
 
-        .footer-logo{
-            float: left;
-            background: url("../images/logo_next.png") no-repeat;
-            background-size: cover;
-            background-position: center center;
-            width: 106px;
-            height: 49px;
-          }
-        .nav-footer{
-            @include make-sm-column(7);
-            @include make-xs-column(8);
-            float: right !important;
-            padding-right: 0px;
-            ul{
-              float: right;
-              list-style: none;
-              color: #000;
-              line-height: 50px;
-              padding-left: 0px;
-              li{
-                float: left;
-                padding-left: 15px;
-                a{
-                  font-family: "AvenirLTStd-Roman";
-                  font-size: 12px;
-                  color:#000;
-                  &:hover{
-                    color: #000;
-                    }
-                  }
-                }
-              }
-          }
-
-      }
-  }
 @include breakpoint(phablet) {
 
   .section--logo {
@@ -462,7 +451,7 @@ footer{
     &.article-7 {
         .left-container{
             margin-top: 220px;
-            div{
+            div.main-text-container{
                 max-width: 380px;
                 margin-top: 120px;
               }
@@ -590,7 +579,7 @@ footer{
           }
         .left-container{
           margin-top:0px;
-            div {
+            div.main-text-container {
                 margin-top: 60px;
                 margin-bottom: 50px;
               }
@@ -705,23 +694,7 @@ footer{
               }
           }
       }
-  footer{
-    .footer-wrapper{
-      padding: 20px 0px;
-      .footer-logo {
-          width: 77px;
-          height: 36px;
-        }
-      nav.nav-footer ul{
-          line-height: 32px;
-          li{
-              a{
-                font-size: 6px;
-                }
-            }
-        }
-      }
-    }
+
   }
   @include breakpoint(desktop) {
     article.article-10 {
@@ -738,4 +711,3 @@ footer{
           }
       }
     }
-

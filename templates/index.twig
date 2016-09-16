@@ -20,6 +20,14 @@
             </div>
         </div>
     </div>
+    <div>
+        {% for page in other_pages %}
+            <div id="other-page-{{ page.id }}">
+            <h2>{{ page.post_title }}</h2>
+            <div><p>{{ page.post_content }}</p></div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
 

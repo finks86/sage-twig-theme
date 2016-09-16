@@ -8,8 +8,34 @@
             </div>
         </div>
 {% endif %}
-
-    {% if page.id == '10' %}
+        {% if page.id == '7' %}
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="left-container">
+                        <h2>{{ page.post_title }}</h2>
+                        <div class="main-text-container"><p>{{ page.post_content }}</p></div>
+                        {% if page.get_field('list') is defined %}
+                            <div class="list-container">
+                                {% for list in page.get_field('list') %}
+                                    <div class="list-row">
+                                        <div class="list-number">
+                                            <span>
+                                                {{ list["number"] }}
+                                            </span>
+                                        </div>
+                                        <div class="list-text">
+                                            <span>
+                                                {{ list["text"] }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+    {% elseif page.id == '10' %}
         <div class="container-fluid">
             <div class="row">
                 <div class="title-container"><h2>{{ page.post_title }}</h2></div>

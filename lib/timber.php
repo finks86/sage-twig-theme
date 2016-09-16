@@ -34,6 +34,7 @@ class TwigSageTheme extends TimberSite {
             // Get all posts
             'posts_per_page' => -1,
             'post_type' => 'page',
+            'post__not_in' => array(74,76),
             // Order by meta value first, then order by post date
             'orderby' => array(
                 'menu_order' => 'DESC',
@@ -41,6 +42,17 @@ class TwigSageTheme extends TimberSite {
         );
 
         $context['pages'] =  Timber::get_posts( $args );
+
+        $args = array(
+            // Get all posts
+            'post_type' => 'page',
+            'post__in' => array(74,76),
+            // Order by meta value first, then order by post date
+            'orderby' => array(
+                'menu_order' => 'DESC',
+            ),
+        );
+        $context['other_pages'] =  Timber::get_posts( $args );
         /* Menu */
         $context['menu'] = new TimberMenu('primary_navigation');
 
