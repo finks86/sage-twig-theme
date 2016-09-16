@@ -1,14 +1,15 @@
-{% if page.thumbnail.src is empty and page.id != 10 %}
+{% if page.thumbnail.src is empty %}
     <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix">
-{% elseif page.id != 10 %}
+{% else %}
         <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
+        <div class="background-container">
             <div class="background" style="background-image:url( {{ page.thumbnail.src }})">
 
             </div>
+        </div>
 {% endif %}
 
     {% if page.id == '10' %}
-    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix">
         <div class="container-fluid">
             <div class="row">
                 <div class="title-container"><h2>{{ page.post_title }}</h2></div>
@@ -37,9 +38,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="background-image-container" style="background-image:url( {{ page.thumbnail.src }})"></div>
-        </div>
+
     {% elseif page.id == 18 %}
     <div class="container-fluid">
 

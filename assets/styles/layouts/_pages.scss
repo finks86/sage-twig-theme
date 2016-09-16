@@ -118,16 +118,14 @@ article {
       float: none;
       }
 
-    .background-image-container {
-        @include make-sm-column-offset(1);
-        @include make-sm-column(10);
-        position: absolute;
-        background-size: 100%;
+    .background {
+        left: 8.3333333333%;
+        right: 8.3333333333%;
+        width: 83.3333333333%;
+        background-size: 92%;
         background-repeat: no-repeat;
         background-position: bottom;
-        height: 700px;
-        width: 100%;
-        bottom: -350px;
+        bottom: -235px;
         position: absolute;
       }
     h3 {
@@ -336,7 +334,18 @@ article {
 
       }
       span{
-        line-height:90px;
+        display: block;
+        max-width: 122px;
+        padding-left: 45px;
+        position: relative;
+        text-align: left;
+        margin: 25px auto;
+
+          i {
+              font-size: 40px;
+              position: absolute;
+              left: 0;
+            }
         }
     }
   div.wpcf7 {
@@ -381,7 +390,8 @@ footer{
             height: 49px;
           }
         .nav-footer{
-            @include make-sm-column(5);
+            @include make-sm-column(7);
+            @include make-xs-column(8);
             float: right !important;
             padding-right: 0px;
             ul{
@@ -389,7 +399,7 @@ footer{
               list-style: none;
               color: #000;
               line-height: 50px;
-
+              padding-left: 0px;
               li{
                 float: left;
                 padding-left: 15px;
@@ -417,6 +427,7 @@ footer{
       }
     }
   }
+
 
 @include breakpoint(tablet) {
   article{
@@ -461,9 +472,7 @@ footer{
         @include make-md-column-offset(0);
         @include make-md-column(4);
         }
-      .background-image-container{
-          bottom: -460px;
-        }
+
       h3{
         color: $red;
         font-size: 60px;
@@ -574,15 +583,18 @@ footer{
         }
       &.article-10 {
         margin-top: -80px;
-        min-height: 850px;
+        min-height: 700px;
         .title-container,
         .left-container,
         .right-container{
             padding-left: 0px;
           }
-        .background-image-container {
-            width: 86%;
-            bottom: -190px;
+        .background {
+            background-color: transparent;
+            bottom: -145px;
+            left: 4.166666%;
+            right: 4.166666%;
+            background-size: 96%;
           }
           h2 {
               margin-top:0px;
@@ -595,7 +607,7 @@ footer{
             }
           .left-container {
               div {
-                  margin-top: 30px;
+                display: none;
                 }
             }
         }
@@ -635,9 +647,21 @@ footer{
                 }
             }
           .right-container {
+              max-width: 290px;
+              padding-left: 0px;
+              .person-container {
+                max-width: 278px;
+                margin: 0 auto;
 
+                }
+              .person-content {
+                float: left;
+                &:nth-of-type(odd) {
+                    margin-right: 20px;
+                  }
+                }
               .person-image-right {
-                max-width: 160px;
+                max-width: 120px;
                 margin: 0 auto;
                 }
               .person-text {
@@ -645,6 +669,7 @@ footer{
                   display: block;
                   width: 100%;
                   text-align: center;
+                  font-size: 10px;
                   }
                 }
             }
@@ -659,7 +684,7 @@ footer{
             padding-right: 0px;
           }
         a.download-link {
-            height: 70px;
+            height: 80px;
           }
       }
   footer{
@@ -680,3 +705,19 @@ footer{
       }
     }
   }
+  @include breakpoint(desktop) {
+    article.article-10 {
+        .background-container {
+            position: relative;
+            bottom: 0;
+            height: 200px;
+            width: 1210px;
+            margin: 0 auto;
+            .background {
+                background-size: 93%;
+                bottom: -1100px;
+              }
+          }
+      }
+    }
+
