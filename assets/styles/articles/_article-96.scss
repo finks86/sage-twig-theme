@@ -1,0 +1,18 @@
+.article-96 {
+  .row {
+    margin-top: 430px;
+    margin-bottom: 160px;
+  }
+  .background {
+    background-position: top right;
+  }
+  .left-container {
+    @include make-sm-column(6);
+    div {
+      margin-top: 35px;
+    }
+    ul {
+      margin-top: 35px;
+    }
+  }
+}

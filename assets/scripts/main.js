@@ -104,7 +104,7 @@
                 var top = $(this).offset().top;
                 var diff = top - windowTop;
                 if (diff <= 0) {
-                    $(this).find('.background').css({"transform": "translateY(" + diff / 4 + "px)"});
+                    $(this).find('.background').css({"transform": "translateY(" + diff / 5 + "px)"});
                 }
             });
         });

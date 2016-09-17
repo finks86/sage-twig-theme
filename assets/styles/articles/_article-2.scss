@@ -1,0 +1,107 @@
+.article-2 {
+  background-color: $blue;
+  .row {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .left-container {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(5);
+    div {
+      margin-top: 65px;
+    }
+  }
+  .right-container {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(3);
+    margin-top: 90px;
+    display: flex;
+  }
+}
+
+
+.rax-image-right {
+  max-width: 80px;
+  margin: 0 auto;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.rax-cross {
+  height: 16px;
+  width: 16px;
+  margin: 32px 4px;
+  position: relative;
+
+  z-index: 1;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: $red;
+  }
+  &:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+  }
+  &:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+  }
+}
+
+
+@include breakpoint(phablet) {
+  .article-2 {
+    .row {
+        margin-top: 185px;
+        margin-bottom: 185px;
+    }
+    .left-container {
+      margin-top: 10px;
+      div {
+        margin-top: 50px;
+      }
+    }
+    .right-container {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+  .rax-image-right {
+    display: block;
+    max-width: 160px;
+    float: none;
+  }
+
+  .rax-cross {
+    width: 35px;
+    height: 35px;
+    margin: 20px auto;
+  }
+}
+
+
+@include breakpoint(tablet) {
+  .article-2 {
+    .row {
+      margin-top: 110px;
+      margin-bottom: 110px;
+    }
+    .left-container {
+      div {
+        margin-top: 110px;
+      }
+    }
+    .right-container {
+      margin-top: 10px;
+    }
+  }
+}

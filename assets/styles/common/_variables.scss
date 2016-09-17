@@ -11,38 +11,12 @@ $brand-primary:         #27ae60;
 $blue: #20335F;
 $red: #FF3C46;
 $yellow: #ffed05;
-
+$purple: #5569A0;
 $lightgrey: #F2F2F2;
 
 //Fonts
 $main-font:  'Open Sans';
 
-//Breakpoints
-@mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (min-width: $screen-lg-min) {
-      @content;
-      }
-    } @else if $point == tablet {
-    @media (min-width: $screen-md-min) {
-      @content;
-      }
-    } @else if $point ==  phablet {
-    @media (min-width: $screen-sm-min) {
-      @content;
-      }
-    } @else if $point ==  mobile {
-    @media (min-width: $screen-xs-min) {
-      @content;
-      }
-    } @else if $point ==  mobile-max {
-    @media (max-width: $screen-xs-max) {
-      @content;
-      }
-    } @else {
-    @media (max-width: $point) {
-      @content;
-      }
-    }
-
-  }
+$font-oblique: 'AvenirLTStd-Oblique';
+$font-heavy: "AvenirLTStd-Heavy";
+$font-black: 'AvenirLTStd-Black';

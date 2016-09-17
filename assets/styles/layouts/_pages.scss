@@ -1,7 +1,10 @@
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
-  }
+@import "./articles/article-2.scss";
+@import "./articles/article-7.scss";
+@import "./articles/article-10.scss";
+@import "./articles/article-15.scss";
+@import "./articles/article-18.scss";
+@import "./articles/article-96.scss";
+
 .background {
   position: absolute;
   top: 0;
@@ -11,361 +14,122 @@
   background-size: cover;
   background-position: center center;
 }
-.other-pages-container{
-  display: none;
-  }
-article {
-  padding: 50px 0px;
-  min-height: 1024px;
-  position: relative;
 
+.other-pages-container {
+  display: none;
+}
+
+article {
+  //padding: 50px 0px;
+  //min-height: 1024px;
+  position: relative;
+  background: $blue;
   .container {
     max-width: 680px;
-    }
+  }
   h2 {
     font-family: "AvenirLTStd-Heavy";
     letter-spacing: 1px;
-    color: $red;
+    color: white;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 30px;
+    max-width: 360px;
+    margin-top: 0;
+    strong {
+      color: $red;
     }
-  h3{
+  }
+  h3 {
     font-family: "AvenirLTStd-Heavy";
-    }
+  }
   ul, li, span, p {
     color: #fff;
     strong {
       color: $red;
-      }
     }
+  }
 
   p, ul {
-    font-family: "AvenirLTStd-Oblique";
-    }
+    font-family: $font-oblique;
+  }
 
   p {
-    font-size: 18px;
-    }
+    font-size: 12px;
+  }
 
   ul {
     font-size: 16px;
-    }
-
-  &.article-2, &.article-18 {
-    background-color: $blue;
-    }
-  &.article-2 {
-    .row  {
-        margin-top: 70px;
-      }
-    .left-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(5);
-      div {
-        margin-top: 80px;
-        }
-      }
-    .right-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(3);
-        margin-top: 60px;
+    padding: 0;
+    li {
+      list-style: none;
+      &:before {
+        content: "• ";
+        margin-right: 10px;
+        color: $red; /* or whatever color you prefer */
       }
     }
-
-  &.article-7 {
-    min-height: 1320px;
-    .background {
-      background-size: 100%;
-      background-color: $blue;
-      background-position: top center;
-      background-repeat: no-repeat;
-      }
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    .left-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(7);
-      margin-top: 160px;
-
-      div.main-text-container {
-        max-width: 360px;
-        margin-top: 80px;
-        }
-      .list-container {
-          .list-row {
-            float: left;
-            font-size: 12px;
-            width: 180px;
-
-            .list-number {
-              float: left;
-              background-color: $red;
-              border-radius: 50%;
-              width: 20px;
-              height: 20px;
-              text-align: center;
-              padding-top: 2px;
-              span{
-                text-align: center;
-                }
-              }
-            .list-text {
-              float: left;
-              }
-            }
-        
-          span {
-              font-family: "AvenirLTStd-Oblique";
-            }
-        }
-      }
-    }
-
-  &.article-10 {
-    background-color: #fff;
-    margin-top: -150px;
-
-    .row {
-        margin-top: 10px;
-      }
-    .container-fluid{
-      position: relative;
-      }
-    .title-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(7);
-      div {
-        margin-top: 25px;
-        }
-      }
-    .left-container{
-      @include make-sm-column-offset(1);
-      @include make-sm-column(6);
-      @include make-md-column-offset(0);
-      @include make-md-column(4);
-      margin-bottom: 30px;
-      div {
-        max-width: 310px;
-        }
-      }
-    .right-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(8);
-      float: none;
-      }
-
-    .background {
-        left: 8.3333333333%;
-        right: 8.3333333333%;
-        width: 83.3333333333%;
-        background-size: 92%;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        bottom: -235px;
-        position: absolute;
-      }
-    h3 {
-      font-family: "AvenirLTStd-Heavy";
-      color: $red;
-      font-size: 50px;
-      margin-bottom: 5px;
-      }
-
-
-    p {
-      color: #000;
-      strong{
-        color: $red
-        }
-    }
-
-    span {
-      color: $blue;
-      font-size: 17px;
-      font-family: "AvenirLTStd-Heavy";
-      }
-
-    .items-container {
-
-      @include make-xs-column(6);
-      &:nth-of-type(1){
-        margin-left: -15px;
-        }
-
-      }
-
-    }
-
-  &.article-15 {
-    background-color: $blue;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    .row{
-        margin-top: 60px;
-      }
-    .left-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(6);
-      @include make-xs-column(9);
-      div {
-        max-width: 270px;
-        margin-top: 70px;
-        }
-      p{
-        color: $red;
-        font-weight: normal;
-        strong {
-            font-family: "AvenirLTStd-Heavy" ;
-          }
-        }
-      ul {
-        margin-top: 30px;
-        li {
-          padding-left: 10px;
-          }
-        }
-      }
-
-    }
+  }
 
   &.article-18 {
-    margin-top: -200px;
-    .left-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(5);
-      margin-top: 120px;
-        .text-container {
-          margin-top: 140px;
-          max-width: 300px;
-          }
-      }
-    .right-container {
-      @include make-sm-column-offset(1);
-      @include make-sm-column(3);
-      @include make-md-column-offset(0);
-      @include make-md-column(5);
-      }
+    background-color: $blue;
+  }
 
-    .right-container {
-      margin-top: 70px;
-      span{
-          font-size: 12px;
-          font-family: "AvenirLTStd-Oblique";
-          &.person--name{
-              font-family:"AvenirLTStd-Heavy" ;
-            }
-        }
-      }
-    .person-text  {
-        margin:15px 0;
-      }
-    .person-image-right {
-      max-width: 120px;
-
-      img {
-        width: 100%;
-        height: auto;
-        }
-      }
-    }
-
-
-
-  .rax-image-right {
-    max-width: 160px;
-    margin: 0 auto;
-    img {
-      width: 100%;
-      height: auto;
-      }
-    }
-
-  .rax-cross {
-    width: 35px;
-    height: 35px;
-    position: relative;
-    margin: 20px auto;
-    z-index: 1;
-    &:before, &:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      background: $red;
-      }
-    &:before {
-      left: 50%;
-      width: 30%;
-      margin-left: -15%;
-      height: 100%;
-      }
-    &:after {
-      top: 50%;
-      height: 30%;
-      margin-top: -15%;
-      width: 100%;
-      }
-    }
   .person-image-right {
     max-width: 150px;
     img {
       width: 100%;
       height: auto;
-      }
     }
   }
+}
 
 .section.contact {
   padding: 40px 0px;
   background-color: #EAEAEA;
 
-  .form-container{
-      @include make-sm-column-offset(1);
-      @include make-sm-column(10);
-    }
+  .form-container {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(10);
+  }
 
   .title-container {
     margin: 80px 0;
-    }
+  }
   h2, label {
-
     color: $blue;
-    }
+  }
   h2 {
-
     font-family: "AvenirLTStd-Heavy";
     font-size: 60px;
-    }
+  }
   label {
     font-family: "AvenirLTStd-Roman";
     width: 100%;
     font-weight: 600;
-      span{
-          font-weight: normal;
-          &.label-text{
-            font-weight: 600;
-            line-height: 28px;
-            font-size: 14px;
-            }
-        }
+    span {
+      font-weight: normal;
+      &.label-text {
+        font-weight: 600;
+        line-height: 28px;
+        font-size: 14px;
+      }
     }
+  }
   input, textarea {
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: normal;
-    }
+  }
   input.wpcf7-submit {
     border-radius: 0;
     background-color: $blue;
     color: #fff;
     max-width: 120px;
     float: right;
-    }
-  a{
-    margin-top:20px;
+  }
+  a {
+    margin-top: 20px;
     display: block;
     width: 100%;
     float: left;
@@ -374,340 +138,85 @@ article {
     color: white;
     text-decoration: none;
     text-align: center;
-    &:hover{
+    &:hover {
 
-      }
-      span{
-        display: block;
-        max-width: 122px;
-        padding-left: 45px;
-        position: relative;
-        text-align: left;
-        margin: 25px auto;
-
-          i {
-              font-size: 40px;
-              position: absolute;
-              left: 0;
-            }
-        }
     }
+    span {
+      display: block;
+      max-width: 122px;
+      padding-left: 45px;
+      position: relative;
+      text-align: left;
+      margin: 25px auto;
+
+      i {
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
   div.wpcf7 {
     margin-left: -15px;
     margin-right: -15px;
-    }
+  }
   form {
     .form-top-input {
-        @include make-sm-column(4);
-      }
+      @include make-sm-column(4);
+    }
     .form-bottom-input {
       @include make-sm-column(12);
-      }
+    }
     input, textarea {
       width: 100%;
-      }
     }
   }
-
-
-.section--logo {
-  margin: 240px auto;
-  text-align: center;
-  img  {
-    display: inline-block;
-    width: 290px;
-    height: 135px
-    }
-  }
+}
 
 @include breakpoint(phablet) {
 
-  .section--logo {
-    margin: 380px auto;
-    img  {
-      display: inline-block;
-      width: 460px;
-      height: 212px
+  article {
+    min-height: 0px;
+
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      font-size: 12px
+    }
+    div.background {
+      background-color: $blue;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+    }
+
+  }
+  .section.contact {
+    .title-container {
+      margin: 40px 0 60px;
+    }
+    .form-container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    a.download-link {
+      height: 80px;
+      span {
+        margin: 20px auto;
       }
     }
   }
-
+}
 
 @include breakpoint(tablet) {
-  article{
-    &.article-2 {
-      .row {
-        margin-top: 20px;
-        }
-      .left-container{
-        div{
-            margin-top: 110px;
-          }
-        }
-      .right-container{
-          margin-top:  10px;
-        }
+
+  article {
+    h2 {
+      font-size: 60px;
     }
-    &.article-7 {
-        .left-container{
-            margin-top: 220px;
-            div.main-text-container{
-                max-width: 380px;
-                margin-top: 120px;
-              }
-          }
-      }
-
-    &.article-10{
-      .title-container{
-          @include make-md-column(8);
-        }
-      .right-container {
-        @include make-md-column(6);
-        div{
-          margin-top: 22px;
-          }
-        }
-      .left-container {
-        margin-top: 50px;
-        float: right !important;
-        margin-right: 8.3333333333%;
-        max-width: none;
-        @include make-md-column-offset(0);
-        @include make-md-column(4);
-        }
-
-      h3{
-        color: $red;
-        font-size: 60px;
-        }
-      span{
-        color: $blue;
-        }
-      p{
-        color: #000;
-        strong{
-          color: $red
-          }
-        }
-      }
-    }
-
-    &.article-18 {
-
-      .right-container {
-          .person-content{
-            float: left;
-            width: 100%;
-            margin-bottom: 10px;
-
-            .person-image-right{
-              max-width:150px;
-              float: left;
-              }
-
-            .person-text{
-              float: right;
-              margin: 46px 0px;
-              width: 55%;
-                span{
-                    font-size: 16px;
-                    line-height: 24px;
-                  }
-              }
-            }
-
-        }
-      }
   }
-@media (max-width: $screen-sm-min) {
-
-  .section--logo{
-    margin: 100px auto;
-
-    img {
-          width: 137px;
-          height: 63px;
-        }
-    }
-  article{
-      min-height: 0px;
-
-      h2 {
-        font-size:40px;
-        }
-      p  {
-        font-size: 14px;
-        }
-      ul {
-        font-size: 12px
-        }
-      div.background{
-          background-color: $blue;
-          background-size: 100%;
-          background-repeat:no-repeat;
-
-        }
-      &.article-2{
-          .left-container{
-              padding-left: 0px;
-            }
-          .right-container{
-            padding-left: 0px;
-            padding-right: 0px;
-            }
-          .rax-image-right {
-            max-width:80px;
-            margin:0;
-            float: left;
-            }
-
-          .rax-cross{
-            height:16px;
-            width:16px;
-            float: left;
-            margin: 32px 4px;
-            }
-
-        }
-      &.article-7 {
-        .left-container{
-          padding-left: 0px;
-          }
-        div.background {
-          background-position: top center;
-          }
-        .left-container{
-          margin-top:0px;
-            div.main-text-container {
-                margin-top: 60px;
-                margin-bottom: 50px;
-              }
-          }
-        }
-      &.article-10 {
-        margin-top: -80px;
-        min-height: 700px;
-        .title-container,
-        .left-container,
-        .right-container{
-            padding-left: 0px;
-          }
-        .background {
-            background-color: transparent;
-            bottom: -145px;
-            left: 4.166666%;
-            right: 4.166666%;
-            background-size: 96%;
-          }
-          h2 {
-              margin-top:0px;
-            }
-          h3{
-              font-size: 30px;
-            }
-          span {
-              font-size: 12px;
-            }
-          .left-container {
-              div {
-                display: none;
-                }
-            }
-        }
-      &.article-15 {
-          .row{
-              margin-top: 0px;
-            }
-          div.background {
-              background-position: bottom center;
-            }
-          .left-container {
-              margin-bottom: 190px;
-              padding-left: 0px;
-              div{
-                  margin-top: 50px;
-                  ul{
-                      margin-top: 50px;
-                      padding-left: 25px;
-                    }
-                }
-            }
-        }
-      &.article-18 {
-          margin-top: -100px;
-          .left-container {
-              margin-top: 0px;
-              padding-left: 0px;
-              .text-container {
-                  margin-top: 50px;
-                  margin-bottom: 50px;
-                  @include make-xs-column(8);
-                  padding-left: 0px;
-                  padding-right: 0px;
-                  p{
-                    font-size: 12px;
-                    }
-                }
-            }
-          .right-container {
-              max-width: 290px;
-              padding-left: 0px;
-              .person-container {
-                max-width: 278px;
-                margin: 0 auto;
-
-                }
-              .person-content {
-                float: left;
-                &:nth-of-type(odd) {
-                    margin-right: 20px;
-                  }
-                }
-              .person-image-right {
-                max-width: 120px;
-                margin: 0 auto;
-                }
-              .person-text {
-                span {
-                  display: block;
-                  width: 100%;
-                  text-align: center;
-                  font-size: 10px;
-                  }
-                }
-            }
-        }
-    }
-    .section.contact{
-        .title-container {
-            margin: 40px 0 60px;
-          }
-        .form-container {
-            padding-left: 0px;
-            padding-right: 0px;
-          }
-        a.download-link {
-            height: 80px;
-            span {
-                margin: 20px auto;
-              }
-          }
-      }
-
-  }
-  @include breakpoint(desktop) {
-    article.article-10 {
-        .background-container {
-            position: relative;
-            bottom: 0;
-            height: 200px;
-            width: 1170px;
-            margin: 0 auto;
-            .background {
-                background-size: 94%;
-                bottom: -1100px;
-              }
-          }
-      }
-    }
+}
