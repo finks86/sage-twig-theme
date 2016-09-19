@@ -158,6 +158,10 @@
     }
   }
   @media (max-width: $screen-sm-min) {
-    background: #fff;
+    background-color: #fff;
+    .background {
+      background-color: #fff;
+      }
+
     }
 }

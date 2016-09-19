@@ -1,0 +1,57 @@
+.article-118 {
+  overflow: hidden;
+  .background {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-position: 80% 30%;
+    background-size: 29%;
+    }
+
+  .row {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    }
+ .left-container {
+   @include make-sm-column-offset(1);
+   @include make-sm-column(5);
+   @include make-xs-column(8);
+
+   div {
+      margin-top: 70px;
+      p {
+          margin-bottom: 30px;
+        }
+     }
+   }
+  @include breakpoint(desktop) {
+    .background {
+        background-position: 80% 90%;
+      }
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .row {
+      margin-top: 35px;
+      margin-bottom: 110px;
+      }
+      .background-container {
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        right: -30%;
+        top: -22%;
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        filter: FlipV;
+        -ms-filter: "FlipV";
+        .background {
+          max-width: 400px;
+          background-position: center;
+          background-size: 75%;
+          }
+        }
+    }
+
+}
