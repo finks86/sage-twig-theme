@@ -1,0 +1,60 @@
+.article-105 {
+  background-color: white;
+  color: white;
+  .row {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .title-container {
+    max-width:175px;
+     h2 {
+        color: $blue;
+       strong {
+         color: $red;
+         }
+       }
+      margin-bottom: 80px;
+    }
+  .products {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(10);
+
+    .product-list {
+      width:20%;
+      float: left;
+      color: #fff;
+
+      &:nth-of-type(odd) {
+        background-color: #5569A0;
+        }
+      &:nth-of-type(even) {
+        background-color: #20335F;
+        }
+      }
+      .product-item {
+
+        height:80px;
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+        font-family: 'AvenirLTStd-Black';
+        display: table;
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 10px;
+          }
+        }
+
+    }
+
+  @include breakpoint(tablet) {
+    .products {
+        .product-item {
+          span {
+              font-size: 14px;
+            }
+          }
+      }
+    }
+}

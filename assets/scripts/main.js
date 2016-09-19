@@ -97,6 +97,24 @@
             return false;
         });
 
+
+        //navbar slide
+        var navbarHeight = $('.navbar').height();
+        var iScrollPos = 0;
+        $(window).on('scroll', function (e) {
+            e.preventDefault();
+            var iCurScrollPos = $(window).scrollTop();
+            if (iCurScrollPos > iScrollPos && $(this).scrollTop() >= navbarHeight) {
+                $('.navbar').addClass('navbar--hidden');
+            } else if (iCurScrollPos < $(document).height() - $(window).height()) {
+                $('.navbar').removeClass('navbar--hidden');
+            }
+            iScrollPos = iCurScrollPos;
+
+
+        });
+
+
         //parallax
         $(window).scroll(function () {
             var windowTop = $(window).scrollTop();
@@ -104,7 +122,7 @@
                 var top = $(this).offset().top;
                 var diff = top - windowTop;
                 if (diff <= 0) {
-                    $(this).find('.background').css({"transform": "translateY(" + diff / 4 + "px)"});
+                    $(this).find('.background').css({"transform": "translateY(" + diff / 5 + "px)"});
                 }
             });
         });

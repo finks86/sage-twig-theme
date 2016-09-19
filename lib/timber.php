@@ -36,9 +36,9 @@ class TwigSageTheme extends TimberSite {
             'post_type' => 'page',
             'post__not_in' => array(74,76),
             // Order by meta value first, then order by post date
-            'orderby' => array(
-                'menu_order' => 'DESC',
-            ),
+            'orderby' => 'menu_order',
+
+            'order' => 'ASC'
         );
 
         $context['pages'] =  Timber::get_posts( $args );

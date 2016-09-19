@@ -92,15 +92,15 @@ body {
     }
   }
 .container-fluid {
-  max-width: 1200px;
+  max-width: 960px;
 }
-
-@include breakpoint(tablet){
-  .row{
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-  }
+//
+//@include breakpoint(tablet){
+//  .row{
+//      margin-left: 0px;
+//      margin-right: 0px;
+//    }
+//  }
 
 @include breakpoint(phablet) {
 

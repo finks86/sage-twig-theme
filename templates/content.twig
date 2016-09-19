@@ -1,23 +1,18 @@
 {% if page.thumbnail.src is empty %}
-    <article id= "{{ page.id }}" class="article-{{ page.id }} clearfix">
-{% else %}
-        <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
-        <div class="background-container">
-            <div class="background" style="background-image:url( {{ page.thumbnail.src }})">
-
-            </div>
-        </div>
-{% endif %}
+<article id="{{ page.slug }}" class="article-{{ page.id }} clearfix">
+    {% else %}
+    <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
+        <div class="background" style="background-image:url( {{ page.thumbnail.src }})"></div>
+        {% endif %}
         {% if page.id == '7' %}
             <div class="container-fluid">
                 <div class="row">
                     <div class="left-container">
-                        <h2>{{ page.post_title }}</h2>
+                        <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
                         <div class="main-text-container"><p>{{ page.post_content }}</p></div>
                         {% if page.get_field('list') is defined %}
                             <div class="list-container">
                                 {% for list in page.get_field('list') %}
-
                                         {% if loop.first %}
                                             <div class="list-row">
                                         {% elseif loop.index == 6 %}
@@ -37,51 +32,53 @@
                                                 </div>
                                             </div>
                                         {% if loop.last %}
-                                    </div>
-                                {% endif %}
+                                        </div>
+                                        {% endif %}
                                 {% endfor %}
                             </div>
                         {% endif %}
                     </div>
                 </div>
             </div>
-    {% elseif page.id == '10' %}
-        <div class="container-fluid">
-            <div class="row">
-                <div class="title-container"><h2>{{ page.post_title }}</h2></div>
+        {% elseif page.id == '10' %}
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="title-container">
+                        <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
+                    </div>
+
+                    {#<div class="left-container">#}
+                        {#<div><p>{{ page.post_content }}</p></div>#}
+                    {#</div>#}
+                    <div class="right-container">
+                        {% for item in page.get_field('items') %}
+                            {% if loop.first %}
+                                <div class="items-container">
+                            {% elseif loop.index == 4 %}
+                                </div>
+                                <div class="items-container">
+                            {% endif %}
+                            <div>
+                                <h3>{{ item.title }}</h3>
+                                <span class="item__label">{{ item.subtitle }}</span>
+                            </div>
+                            {% if loop.last %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
 
-            <div class="row">
-                <div class="left-container">
-                    <div><p>{{ page.post_content }}</p></div>
-                </div>
-                <div class="right-container">
-                    {% for item in page.get_field('items') %}
-                        {% if loop.first %}
-                            <div class="items-container">
-                        {% elseif loop.index == 4 %}
-                            </div>
-                            <div class="items-container">
-                        {% endif %}
-                        <div>
-                            <h3>{{ item.title }}</h3>
-                            <span>{{ item.subtitle }}</span>
-                        </div>
-                        {% if loop.last %}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-    {% elseif page.id == 18 %}
-    <div class="container-fluid">
+        {% elseif page.id == 18 %}
+            <div class="container-fluid">
 
                 <div class="row">
 
                     <div class="left-container">
-                        <div class="title-container"><h2>{{ page.post_title }}</h2></div>
+                        <div class="title-container">
+                            <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
+                        </div>
                         <div class="text-container"><p>{{ page.post_content }}</p></div>
                     </div>
                     {% if page.get_field('person') is defined %}
@@ -103,11 +100,13 @@
                     {% endif %}
                 </div>
             </div>
+        {% elseif page.id == 105 %}
+            {% include "templates/page-105.twig" %}
         {% else %}
             <div class="container-fluid">
                 <div class="row">
                     <div class="left-container">
-                        <h2>{{ page.post_title }}</h2>
+                        <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
                         <div><p>{{ page.post_content }}</p></div>
                     </div>
                     {% if page.get_field('images') is defined %}

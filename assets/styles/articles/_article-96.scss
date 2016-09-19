@@ -1,0 +1,29 @@
+.article-96 {
+  .row {
+    margin-top: 430px;
+    margin-bottom: 160px;
+  }
+  .background {
+    background-position: top right;
+  }
+  .left-container {
+    @include make-sm-column(6);
+    @include make-sm-column-offset(1);
+    div {
+      margin-top: 35px;
+    }
+    ul {
+      margin-top: 35px;
+    }
+  }
+  @include breakpoint(phablet) {
+    .row {
+      margin-top: 360px;
+    }
+  }
+  @include breakpoint(tablet) {
+    .row {
+      margin-top: 460px;
+    }
+  }
+}

@@ -30,11 +30,15 @@ $nav-height-phablet: 100px;
   border: 0;
   border-bottom: 1px solid $lightgrey;
   z-index: 10;
+  transition: all 600ms ease 0s;
+  &.navbar--hidden {
+    transform: translateY(-101px);
+  }
 }
 
 
 .navbar-header {
-  max-width: 1170px;
+  max-width: 960px;
   height: $nav-height;
   display: flex;
   flex-direction: row;
@@ -110,7 +114,6 @@ $nav-height-phablet: 100px;
   //}
   .navbar-header {
     //height: $nav-height-phablet;
-    padding: 0;
     .container-fluid & {
       margin: 0;
     }
