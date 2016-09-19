@@ -1,0 +1,43 @@
+.article-112 {
+  background-color: #EAEAEA;
+  h2, p, ul li {
+    color: $blue
+    }
+  .row {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    }
+  .background{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    background-position: 95% 40%;
+    background-size: 40%;
+    }
+  .left-container {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(6);
+    h2 {
+      margin-bottom: 200px;
+      }
+    ul {
+      margin-top: 40px;
+      }
+    }
+  @include breakpoint(tablet) {
+    .background{
+      background-position: 95% 90%;
+      background-size: 36%;
+      }
+    }
+  @media (max-width: $screen-sm-min) {
+    p, ul li {
+      font-style: 12px;
+      }
+    .background {
+      max-width: 400px;
+      margin: 0 auto;
+      background-position: center 45%;
+      }
+    }
+}
