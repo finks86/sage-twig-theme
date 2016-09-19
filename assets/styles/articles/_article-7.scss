@@ -25,9 +25,13 @@
       font-size: 12px;
       width: 180px;
       list-style: none;
-      margin-bottom: 8px;
       font-family: $font-oblique;
+      .list-content {
+        float: left;
+        margin-bottom: 10px;
+        }
       .list-number {
+        float: left;
         display: inline-block;
         background-color: $red;
         border-radius: 50%;
@@ -39,6 +43,10 @@
         font-family: $font-black;
         margin-right: 10px;
       }
+      .list-text {
+          float: left;
+          padding-top: 3px;
+        }
     }
 
     span {

@@ -1,0 +1,44 @@
+.article-122 {
+
+  .background {
+    top: 60px;
+    background-size: cover;
+    max-width: 1200px;
+    margin:0 auto;
+    }
+
+  .row {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    }
+  .left-container {
+    @include make-sm-column-offset(1);
+    @include make-sm-column(5);
+    @include make-xs-column(8);
+
+    div {
+      margin-top: 70px;
+      p {
+        margin-bottom: 30px;
+        }
+      }
+    }
+  @include breakpoint(tablet) {
+    .background.hidden-xs {
+        background-position-x: 41%;
+      }
+    }
+
+  @include breakpoint(desktop) {
+    .background.hidden-xs {
+      background-position-x: 25%;
+      }
+    }
+  @media (max-width: $screen-sm-min) {
+    .background.visible-xs {
+      background-size: 110%;
+      background-position: 40% 30%;
+      max-width: 550px;
+      }
+  }
+}
