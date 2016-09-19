@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="products">
+            
+        
+        {% for item in page.get_field('items') %}
+
+            {% for product in item.products %}
+                {{ product.title }}
+
+            {% endfor %}
+        {% endfor %}
+        </div>
+    </div>
+</div>

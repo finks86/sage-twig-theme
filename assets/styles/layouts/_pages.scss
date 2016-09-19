@@ -4,6 +4,7 @@
 @import "./articles/article-15.scss";
 @import "./articles/article-18.scss";
 @import "./articles/article-96.scss";
+@import "./articles/article-105.scss";
 
 .background {
   position: absolute;
@@ -35,6 +36,7 @@ article {
     font-size: 30px;
     max-width: 360px;
     margin-top: 0;
+    margin-bottom: 0;
     strong {
       color: $red;
     }
@@ -55,6 +57,7 @@ article {
 
   p {
     font-size: 12px;
+    margin-bottom: 0;
   }
 
   ul {
@@ -185,7 +188,7 @@ article {
       font-size: 18px;
     }
     ul {
-      font-size: 12px
+      font-size: 18px
     }
     div.background {
       background-color: $blue;

@@ -51,6 +51,7 @@
     color: $red;
     font-size: 30px;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   p {
@@ -69,6 +70,9 @@
   .items-container {
 
     @include make-xs-column(6);
+    div {
+      margin-bottom: 20px;
+    }
     .item__label {
       color: $purple;
       font-size: 12px;
@@ -132,9 +136,6 @@
     }
     .right-container {
       @include make-md-column(6);
-      div {
-        margin-top: 22px;
-      }
     }
     .left-container {
       margin-top: 50px;
@@ -148,7 +149,6 @@
     h3 {
       color: $red;
       font-size: 60px;
-      margin-top: 25px;
     }
     p {
       color: #000;
@@ -157,18 +157,5 @@
       }
     }
   }
-  //
-  //@include breakpoint(desktop) {
-  //  .background-container {
-  //    position: relative;
-  //    bottom: 0;
-  //    height: 200px;
-  //    width: 1170px;
-  //    margin: 0 auto;
-  //    .background {
-  //      background-size: 94%;
-  //      bottom: -1100px;
-  //    }
-  //  }
-  //}
+
 }
