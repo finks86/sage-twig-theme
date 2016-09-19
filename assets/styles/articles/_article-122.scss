@@ -25,7 +25,7 @@
     }
   @include breakpoint(tablet) {
     .background.hidden-xs {
-        background-position-x: 41%;
+        background-position-x: 33%;
       }
     }
 
@@ -36,9 +36,17 @@
     }
   @media (max-width: $screen-sm-min) {
     .background.visible-xs {
-      background-size: 110%;
-      background-position: 40% 30%;
+      background-size: 115%;
+      background-position: 55% 46%;
       max-width: 550px;
       }
   }
+  @media (min-width: 380px) and (max-width: $screen-sm-min) {
+    .background.visible-xs {
+      background-size: 100%;
+      background-position: 39% 39%;
+      max-width: 350px;
+      left: 110px;
+      }
+    }
 }

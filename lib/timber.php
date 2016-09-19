@@ -63,7 +63,7 @@ class TwigSageTheme extends TimberSite {
         $context['display_sidebar'] = Setup\display_sidebar();
 
         $context['sidebar_primary'] = Timber::get_widgets('sidebar-primary');
-
+        $context['options'] = get_fields('options');
         return $context;
 
     }

@@ -104,4 +104,9 @@
       margin-top: 10px;
     }
   }
+  @media (max-width: $screen-sm-min) {
+      .rax-cross {
+        margin: 26px 4px;
+        }
+    }
 }

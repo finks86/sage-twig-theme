@@ -28,7 +28,11 @@
         background-position: 70% 90%;
       }
   }
-
+  @include breakpoint(tablet) {
+    .background {
+      background-position: 77% 90%;
+      }
+    }
   @media (max-width: $screen-sm-min) {
     .row {
       margin-top: 35px;
@@ -39,7 +43,7 @@
         height: 1000px;
         position: absolute;
         right: -30%;
-        top: -22%;
+        top: -34%;
         -moz-transform: scaleY(-1);
         -o-transform: scaleY(-1);
         -webkit-transform: scaleY(-1);

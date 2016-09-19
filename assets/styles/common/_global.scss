@@ -90,6 +90,13 @@ body {
   h2, p, ul, span {
     color: #000;
     }
+  h2{
+    font-size: 40px;
+    }
+  p, ul li, span {
+    font-family: "AvenirLTStd-Roman";
+    font-size: 12px;
+    }
   }
 .container-fluid {
   max-width: 960px;

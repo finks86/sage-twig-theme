@@ -9,7 +9,6 @@
         <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
             <div class="background hidden-xs" style="background-image:url( {{ page.thumbnail.src }})"></div>
             <div class="background visible-xs" style="background-image:url( {{ page.get_field('mobile_background').url }})"></div>
-            {{ dump(page.get_field('mobile_background').url) }}
     {% else %}
     <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
         <div class="background" style="background-image:url( {{ page.thumbnail.src }})"></div>

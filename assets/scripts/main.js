@@ -128,7 +128,11 @@
         });
 
         //initialise fancybox
-        $(".fancybox").fancybox();
+        $(".fancybox").fancybox({
+            autoSize : false,
+            'width': '80%',
+            'height': 'auto'
+        });
 
     });
 

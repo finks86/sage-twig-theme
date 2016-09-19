@@ -220,9 +220,18 @@ article {
 
 @include breakpoint(tablet) {
 
+
   article {
+    min-height: 0;
     h2 {
       font-size: 60px;
       }
+    }
+  }
+@media (max-width: $screen-sm-min) {
+  body {
+      article {
+        min-height: 0;
+        }
     }
   }
