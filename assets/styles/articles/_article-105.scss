@@ -45,6 +45,43 @@
             font-size: 10px;
           }
         }
+      &.products-mobiledown {
+        .product-list-category{
+          display: block;
+          float: left;
+          padding: 20px 10px;
+          font-size:10px;
+          width:100%;
+          font-family: 'AvenirLTStd-Black';
+          color: #fff;
+          position: relative;
+          i {
+              position: absolute;
+              right: 10px;
+              top: 16px;
+              font-size: 20px;
+            }
+          &:hover {
+            text-decoration: none;
+            }
+          &:nth-of-type(odd) {
+            background-color: #5569A0;
+            }
+          &:nth-of-type(even) {
+            background-color: #20335F;
+            }
+          }
+        .product-list {
+            width: 100%;
+          &:nth-of-type(odd) {
+            background-color: #20335F;
+            }
+          &:nth-of-type(even) {
+            background-color: #5569A0;
+            }
+          }
+        }
+
 
     }
 

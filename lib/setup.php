@@ -108,6 +108,7 @@ function assets()
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+    wp_enqueue_script('bootstrap/js', get_template_directory_uri().'/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js', ['jquery'], null, true);
     wp_enqueue_script('fancybox/js', get_template_directory_uri().'/fancybox/jquery.fancybox.pack.js', ['jquery'], null, true);
     wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery','fancybox/js'], null, true);
 

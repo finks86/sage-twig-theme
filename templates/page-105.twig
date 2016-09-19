@@ -21,7 +21,7 @@
                 <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
             </div>
             {% for item in page.get_field('items') %}
-                <a data-toggle="collapse" href="#product-list-{{ loop.index }}">Category {{ loop.index }}</a>
+                <a data-toggle="collapse"  class="product-list-category" href="#product-list-{{ loop.index }}">Category {{ loop.index }}<i class="fa fa-caret-down" aria-hidden="true"></i></a>
                 <div id="product-list-{{ loop.index }}" class="product-list collapse">
                     {% for product in item.products %}
                         <div class="product-item">
