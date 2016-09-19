@@ -17,18 +17,28 @@
                         {% if page.get_field('list') is defined %}
                             <div class="list-container">
                                 {% for list in page.get_field('list') %}
-                                    <div class="list-row">
-                                        <div class="list-number">
-                                            <span>
-                                                {{ list["number"] }}
-                                            </span>
-                                        </div>
-                                        <div class="list-text">
-                                            <span>
-                                                {{ list["text"] }}
-                                            </span>
-                                        </div>
+
+                                        {% if loop.first %}
+                                            <div class="list-row">
+                                        {% elseif loop.index == 6 %}
+                                            </div>
+                                            <div class="list-row">
+                                        {% endif %}
+                                            <div class="list-content">
+                                                <div class="list-number">
+                                                    <span>
+                                                        {{ list["number"] }}
+                                                    </span>
+                                                </div>
+                                                <div class="list-text">
+                                                    <span>
+                                                        {{ list["text"] }}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        {% if loop.last %}
                                     </div>
+                                {% endif %}
                                 {% endfor %}
                             </div>
                         {% endif %}
@@ -116,5 +126,4 @@
                 </div>
             </div>
         {% endif %}
-
     </article>

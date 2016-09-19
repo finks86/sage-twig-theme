@@ -1,0 +1,112 @@
+.section.contact {
+  padding: 40px 0px;
+  background-color: #EAEAEA;
+
+  .form-container{
+    @include make-sm-column-offset(1);
+    @include make-sm-column(10);
+    }
+
+  .title-container {
+    margin: 50px 0;
+    }
+  h2, label, span {
+    color: $blue;
+    }
+  h2 {
+
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 60px;
+    }
+  label {
+    font-family: "AvenirLTStd-Roman";
+    width: 100%;
+    font-weight: 600;
+    span{
+      font-weight: normal;
+      &.label-text{
+        font-weight: 600;
+        line-height: 28px;
+        font-size: 14px;
+        }
+      }
+    }
+  input, textarea {
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: normal;
+    }
+  input.wpcf7-submit {
+    font-family: "AvenirLTStd-Roman";
+    border-radius: 0;
+    background-color: $blue;
+    color: #fff;
+    max-width: 120px;
+    float: right;
+    }
+  a.download-link{
+    margin-top:20px;
+    display: block;
+    width: 100%;
+    float: left;
+    background: red;
+    height: 90px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    &:hover{
+
+      }
+    span{
+      color: white;
+      display: block;
+      max-width: 122px;
+      padding-left: 45px;
+      position: relative;
+      text-align: left;
+      margin: 25px auto;
+
+      i {
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        }
+      }
+    }
+  div.wpcf7 {
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+  form {
+    .form-top-input {
+      @include make-sm-column(4);
+      }
+    .form-bottom-input {
+      @include make-sm-column(12);
+      }
+    input, textarea {
+      width: 100%;
+      }
+    }
+  }
+
+@media (max-width: $screen-sm-min) {
+  .section.contact{
+    .title-container {
+      margin: 90px 0;
+      }
+    .form-container {
+      padding-left: 0px;
+      padding-right: 0px;
+      }
+    a.download-link {
+      height: 80px;
+      span {
+        margin: 20px auto;
+        }
+      }
+    }
+  }

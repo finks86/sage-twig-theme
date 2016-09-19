@@ -28,8 +28,8 @@ footer{
           padding-left: 15px;
           font-family: "AvenirLTStd-Roman";
           font-size: 12px;
+          color:#000;
           a{
-
             color:#000;
             &:hover{
               color: #000;
@@ -50,9 +50,7 @@ footer{
       nav.nav-footer ul {
         line-height: 32px;
         li {
-
             font-size: 6px;
-
           }
         }
       }

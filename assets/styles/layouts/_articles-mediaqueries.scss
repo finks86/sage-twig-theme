@@ -1,0 +1,255 @@
+@include breakpoint(tablet) {
+  article{
+    &.article-2 {
+      .row {
+        margin-top: 50px;
+        }
+      .left-container{
+        div{
+          margin-top: 110px;
+          }
+        }
+      .right-container{
+        margin-top:  10px;
+        }
+      }
+    &.article-7 {
+      .left-container{
+        margin-top: 220px;
+        div.main-text-container{
+          max-width: 380px;
+          margin-top: 120px;
+          }
+        }
+      }
+
+    &.article-10{
+      margin-top: -150px;
+      .title-container{
+        @include make-md-column(8);
+        }
+      .right-container {
+        @include make-md-column(6);
+        div{
+          margin-top: 22px;
+          }
+        }
+      .left-container {
+        margin-top: 50px;
+        float: right !important;
+        margin-right: 8.3333333333%;
+        max-width: none;
+        @include make-md-column-offset(0);
+        @include make-md-column(4);
+        }
+
+      h3{
+        color: $red;
+        font-size: 60px;
+        }
+      span{
+        color: $blue;
+        }
+      p{
+        color: #000;
+        strong{
+          color: $red
+          }
+        }
+      }
+    }
+  &.article-15 {
+    .row {
+      margin-top: 90px;
+      }
+    }
+
+  &.article-18 {
+    margin-top: 110px;
+
+    .left-container {
+      margin-top: 110px;
+      .text-container {
+        margin-top: 110px;
+        }
+      }
+    .right-container {
+      .person-content{
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .person-image-right{
+          max-width:150px;
+          float: left;
+          }
+
+        .person-text{
+          float: right;
+          margin: 46px 0px;
+          width: 55%;
+          span{
+            font-size: 16px;
+            line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+@media (max-width: $screen-sm-min) {
+  article{
+    &.article-2{
+      .left-container{
+        padding-left: 0px;
+        }
+      .right-container{
+        padding-left: 0px;
+        padding-right: 0px;
+        }
+      .rax-image-right {
+        max-width:80px;
+        margin:0;
+        float: left;
+        }
+
+      .rax-cross{
+        height:16px;
+        width:16px;
+        float: left;
+        margin: 32px 4px;
+        }
+
+      }
+    &.article-7 {
+      .left-container{
+        padding-left: 0px;
+        }
+      div.background {
+        background-position: top center;
+        }
+      .left-container{
+        margin-top:0px;
+        div.main-text-container {
+          margin-top: 60px;
+          margin-bottom: 50px;
+          }
+        }
+      }
+    &.article-10 {
+      margin-top: -80px;
+      min-height: 700px;
+      .title-container,
+      .left-container,
+      .right-container{
+        padding-left: 0px;
+        }
+      .background-container {
+        .background {
+          background-color: transparent;
+          bottom: -800px;
+          left: 15px;
+          right: 15px;
+          }
+        }
+      h2 {
+        margin-top:0px;
+        }
+      h3{
+        font-size: 30px;
+        }
+      span {
+        font-size: 12px;
+        }
+      .left-container {
+        div {
+          display: none;
+          }
+        }
+      }
+    &.article-15 {
+      .row{
+        margin-top: 0px;
+        }
+      div.background {
+        background-position: bottom center;
+        }
+      .left-container {
+        margin-bottom: 190px;
+        padding-left: 0px;
+        div{
+          margin-top: 50px;
+          ul{
+            margin-top: 50px;
+            padding-left: 25px;
+            }
+          }
+        }
+      }
+    &.article-18 {
+      margin-top: -100px;
+      .left-container {
+        margin-top: 0px;
+        padding-left: 0px;
+        .text-container {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          @include make-xs-column(8);
+          padding-left: 0px;
+          padding-right: 0px;
+          p{
+            font-size: 12px;
+            }
+          }
+        }
+      .right-container {
+        max-width: 290px;
+        padding-left: 0px;
+        .person-container {
+          max-width: 278px;
+          margin: 0 auto;
+
+          }
+        .person-content {
+          float: left;
+          &:nth-of-type(odd) {
+            margin-right: 20px;
+            }
+          }
+        .person-image-right {
+          max-width: 120px;
+          margin: 0 auto;
+          }
+        .person-text {
+          span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+@include breakpoint(desktop) {
+
+  }
+@media (min-width: 1300px) {
+  article {
+    &.article-10 {
+      .background-container {
+        width: 100%;
+        margin-left: 0%;
+        left: 0;
+        right: 0;
+        .background {
+          background-size: 66.66666%;
+          left:0;
+          right: 0;
+          }
+        }
+      }
+    }
+  }

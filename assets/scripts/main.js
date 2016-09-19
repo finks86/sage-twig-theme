@@ -112,7 +112,6 @@
         //initialise fancybox
         $(".fancybox").fancybox();
 
-
     });
 
 })(jQuery); // Fully reference jQuery after this point.
