@@ -2,32 +2,36 @@
     <div class="row">
 
         <div class="products products-tabletup hidden-xs">
-        <div class="title-container">
-            <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
-        </div>
-        {% for item in page.get_field('items') %}
-            <div class="product-list">
-            {% for product in item.products %}
-                <div class="product-item">
-                    <span>{{ product.title }}</span>
-                </div>
-
-            {% endfor %}
+            <div class="title-container">
+                <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
             </div>
-        {% endfor %}
+            {% for item in page.get_field('items') %}
+                <div class="product-list">
+                    {% for product in item.products %}
+                        <div class="product-item">
+                            <span>{{ product.title }}</span>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
         <div class="products products-mobiledown visible-xs">
             <div class="title-container">
                 <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
             </div>
             {% for item in page.get_field('items') %}
-                <a data-toggle="collapse"  class="product-list-category" href="#product-list-{{ loop.index }}">Category {{ loop.index }}<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <a data-toggle="collapse" class="product-list-category"
+                   href="#product-list-{{ loop.index }}">{{ (item.products | first).title }}<i class="fa fa-caret-down"
+                                                                                             aria-hidden="true"></i></a>
                 <div id="product-list-{{ loop.index }}" class="product-list collapse">
                     {% for product in item.products %}
-                        <div class="product-item">
-                            <span>{{ product.title }}</span>
-                        </div>
+                        {% if loop.index0 != 0 %}
 
+                            <div class="product-item">
+                                <span>{{ product.title }}</span>
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             {% endfor %}
