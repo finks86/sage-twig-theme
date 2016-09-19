@@ -97,6 +97,24 @@
             return false;
         });
 
+
+        //navbar slide
+        var navbarHeight = $('.navbar').height();
+        var iScrollPos = 0;
+        $(window).on('scroll', function (e) {
+            e.preventDefault();
+            var iCurScrollPos = $(window).scrollTop();
+            if (iCurScrollPos > iScrollPos && $(this).scrollTop() >= navbarHeight) {
+                $('.navbar').addClass('navbar--hidden');
+            } else if (iCurScrollPos < $(document).height() - $(window).height()) {
+                $('.navbar').removeClass('navbar--hidden');
+            }
+            iScrollPos = iCurScrollPos;
+
+
+        });
+
+
         //parallax
         $(window).scroll(function () {
             var windowTop = $(window).scrollTop();

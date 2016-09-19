@@ -30,6 +30,10 @@ $nav-height-phablet: 100px;
   border: 0;
   border-bottom: 1px solid $lightgrey;
   z-index: 10;
+  transition: all 600ms ease 0s;
+  &.navbar--hidden {
+    transform: translateY(-101px);
+  }
 }
 
 
