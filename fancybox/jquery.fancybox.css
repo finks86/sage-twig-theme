@@ -167,6 +167,8 @@
 .fancybox-lock {
     overflow: hidden !important;
     width: auto;
+	margin-top: 0 !important;
+	margin-bottom:0 !important;
 }
 
 .fancybox-lock body {

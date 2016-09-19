@@ -1,5 +1,5 @@
 .article-122 {
-
+  min-height:0;
   .background {
     top: 60px;
     background-size: cover;
@@ -9,7 +9,7 @@
 
   .row {
     margin-top: 110px;
-    margin-bottom: 110px;
+    margin-bottom: 160px;
     }
   .left-container {
     @include make-sm-column-offset(1);

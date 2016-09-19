@@ -1,10 +1,14 @@
 .article-96 {
+  overflow: hidden;
   .row {
     margin-top: 430px;
     margin-bottom: 160px;
   }
   .background {
     background-position: top right;
+    background-size: 65%;
+    top: 0px;
+    right: -55%;
   }
   .left-container {
     @include make-sm-column(6);
@@ -25,5 +29,19 @@
     .row {
       margin-top: 460px;
     }
+    .background {
+      top:-36%;
+      }
   }
+  @media (max-width: $screen-sm-min) {
+      .row {
+        margin-bottom: 60px;
+        }
+      .background {
+       background-size: 70%;
+       top: 20px;
+       right: -55%;
+       }
+    }
+
 }
