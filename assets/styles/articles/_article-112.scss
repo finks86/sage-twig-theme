@@ -25,6 +25,9 @@
       }
     }
   @include breakpoint(tablet) {
+    .row {
+      margin-bottom: 120px;
+      }
     .background{
       background-position: 95% 100%;
       background-size: 36%;
@@ -33,6 +36,9 @@
   @media (max-width: $screen-sm-min) {
     p, ul li {
       font-style: 12px;
+      }
+    .row {
+        margin-bottom: 0px;
       }
     .background {
       max-width: 400px;

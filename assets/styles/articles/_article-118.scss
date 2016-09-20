@@ -4,8 +4,8 @@
   .background {
     max-width: 1200px;
     margin: 0 auto;
-    background-position: 80% 30%;
-    background-size: 29%;
+    background-position: 80% 48%;
+    background-size: 28%;
     }
 
   .row {
@@ -32,6 +32,7 @@
   @include breakpoint(tablet) {
     .background {
       background-position: 77% 90%;
+      background-size: 24%;
       }
     }
   @media (max-width: $screen-sm-min) {
@@ -53,8 +54,9 @@
         -ms-filter: "FlipV";
         .background {
           max-width: 400px;
-          background-position: center;
-          background-size: 75%;
+          background-position: 50% 33%;
+          background-size: 68%;
+
           }
         }
     }

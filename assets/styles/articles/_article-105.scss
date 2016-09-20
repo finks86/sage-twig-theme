@@ -4,7 +4,7 @@
   min-height: 0;
   .row {
     margin-top: 80px;
-    margin-bottom: 200px;
+    margin-bottom: 190px;
   }
   .title-container {
     max-width:175px;
@@ -87,12 +87,21 @@
     }
 
   @include breakpoint(tablet) {
+    .row {
+        margin-bottom: 50px;
+      }
     .products {
+
         .product-item {
           span {
               font-size: 14px;
             }
           }
+      }
+    }
+  @media (max-width: $screen-sm-min) {
+    .row {
+      margin-bottom: 120px;
       }
     }
 }
