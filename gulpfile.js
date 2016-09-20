@@ -85,9 +85,9 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    .pipe(function() {
-      return gulpif('*.less', less());
-    })
+    // .pipe(function() {
+    //   return gulpif('*.less', less());
+    // })
     .pipe(function() {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
@@ -104,12 +104,12 @@ var cssTasks = function(filename) {
         'opera 12'
       ]
     })
-    .pipe(cssNano, {
-      safe: true
-    })
-    .pipe(function() {
-      return gulpif(enabled.rev, rev());
-    })
+    // .pipe(cssNano, {
+    //   safe: true
+    // })
+    // .pipe(function() {
+    //   return gulpif(enabled.rev, rev());
+    // })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
         sourceRoot: 'assets/styles/'
@@ -130,14 +130,14 @@ var jsTasks = function(filename) {
       return gulpif(enabled.maps, sourcemaps.init());
     })
     .pipe(concat, filename)
-    .pipe(uglify, {
-      compress: {
-        'drop_debugger': enabled.stripJSDebug
-      }
-    })
-    .pipe(function() {
-      return gulpif(enabled.rev, rev());
-    })
+    // .pipe(uglify, {
+    //   compress: {
+    //     'drop_debugger': enabled.stripJSDebug
+    //   }
+    // })
+    // .pipe(function() {
+    //   return gulpif(enabled.rev, rev());
+    // })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
         sourceRoot: 'assets/scripts/'
@@ -230,6 +230,10 @@ gulp.task('jshint', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
+});
+gulp.task('icons', function() {
+  return gulp.src('./bower_components/fontawesome/fonts/**.*')
+      .pipe(gulp.dest('./dist/fonts'));
 });
 
 // ### Clean

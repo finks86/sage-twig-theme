@@ -1,1 +1,15 @@
+@font-face {font-family: 'Gibson-regular';src: url('../fonts/Canada Type - Gibson-Regular.otf'); format: ('embedded-opentype');}
 
+
+@font-face {font-family: 'Gibson-semibold';src: url('../fonts/Canada Type - Gibson-SemiboldIt.otf'); format: ('embedded-opentype');}
+
+body {
+
+  h1, h2, h3, h4, h5{
+    font-family: 'Gibson-semibold';
+    }
+  p, ul li, span, a {
+    font-family: 'Gibson-regular';
+    }
+
+  }

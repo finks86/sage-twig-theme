@@ -39,6 +39,16 @@ class TwigSageTheme extends TimberSite {
 
         $context['sidebar_primary'] = Timber::get_widgets('sidebar-primary');
 
+        $args = array(
+            // Get all posts
+            'posts_per_page' => -1,
+            'post_type' => 'page',
+
+            'order' => 'ASC'
+        );
+
+        $context['pages'] =  Timber::get_posts( $args );
+
         return $context;
 
     }

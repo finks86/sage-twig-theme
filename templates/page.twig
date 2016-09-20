@@ -3,12 +3,35 @@
 {% block content %}
 
     {% for post in posts %}
+    <section class="header-section" >
+        <div class="product-image" style="background-image:url( {{ post.get_field('product_image').url }} )"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="banner-left" style="background-image: url({{ post.get_field('label_image').url }} );">
+                </div>
+                <div class="logo-image">
+                    <img src="{{ post.get_field('logo_image').url }}" alt="">
+                </div>
+            </div>
+            <div class="row">
 
-        <div class="page-header">
-            <h1>{{ post.title }}</h1>
+                <div class="product-tagline">
+                    {% for tagline in post.get_field('taglines') %}
+                        <h3>{{ tagline.tagline_text }}</h3>
+                        {% endfor %}
+                </div>
+            </div>
         </div>
-
-        {{ post.content }}
+    </section>
+    <section class="product-detail">
+        <div class="row">
+            <div class="product-detail-title">
+                <h3>
+                    {{ post.get_field('title') }}
+                </h3>
+            </div>
+        </div>
+    </section>
 
     {% endfor %}
 
