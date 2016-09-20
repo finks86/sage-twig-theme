@@ -1,10 +1,13 @@
 .article-122 {
   min-height:0;
+  overflow: hidden;
   .background {
-    top: 60px;
+    top: 5%;
     background-size: cover;
     max-width: 1200px;
     margin:0 auto;
+    height: 110%;
+
     }
 
   .row {
@@ -35,6 +38,9 @@
       }
     }
   @media (max-width: $screen-sm-min) {
+    .row {
+      margin-bottom: 80px;
+      }
     .background.visible-xs {
       background-size: 115%;
       background-position: 55% 46%;
@@ -46,7 +52,7 @@
       background-size: 100%;
       background-position: 39% 39%;
       max-width: 350px;
-      left: 110px;
+      left: 20%;
       }
     }
 }
