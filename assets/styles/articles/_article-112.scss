@@ -4,7 +4,7 @@
     color: $blue
     }
   .row {
-    margin-top: 200px;
+    margin-top: 160px;
     margin-bottom: 140px;
     }
   .background{
@@ -26,6 +26,7 @@
     }
   @include breakpoint(tablet) {
     .row {
+      margin-top: 80px;
       margin-bottom: 120px;
       }
     .background{
@@ -37,12 +38,17 @@
     p, ul li {
       font-style: 12px;
       }
+    h2 {
+      margin-bottom: 400px;
+      }
     .row {
+        margin-top:70px;
         margin-bottom: 0px;
       }
     .background {
       max-width: 400px;
       margin: 0 auto;
+      background-size: 60%;
       background-position: center 45%;
       }
     }
