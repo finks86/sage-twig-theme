@@ -1,7 +1,13 @@
 section.product-detail {
+  position: relative;
   .product-detail-title {
     background: $pinkcare;
     width:100%;
+    float: left;
+    text-align: center;
+    h3 {
+      color: white;
+      }
     }
 
   }

@@ -1,5 +1,10 @@
 section.header-section {
   overflow: hidden;
+  position: relative;
+  background-size: 116%;
+  background-repeat: no-repeat;
+  background-position: 48% 68%;
+  background-color: blue;
   .banner-left {
     position: absolute;
     left:0;
@@ -22,19 +27,17 @@ section.header-section {
         }
     }
   .product-image {
-    background-size: 100%;
-    background-repeat: no-repeat;
     position: absolute;
     left:0;
     width: 100%;
     height: 100%;
-    background-size: 100%;
 
+    background-position: 48%;
     }
   .product-tagline {
     @include make-xs-column(6);
     float: right;
     margin-top: 110px;
-    margin-bottom: 110px;
+    margin-bottom: 80px;
     }
   }
