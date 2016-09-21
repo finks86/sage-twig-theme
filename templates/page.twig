@@ -26,13 +26,19 @@
     </section>
     <section class="product-detail">
         <div class="product-detail-title">
-            <h3>
-                {{ post.get_field('title') }}
-            </h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <h3>
+                        {{ post.get_field('title') }}
+                    </h3>
+                </div>
+            </div>
         </div>
         <div class="container-fluid">
             <div class="row">
-
+                <div class="product-detail-image">
+                    <img src="{{ post.get_field('product_detail_image').url }}" alt="">
+                </div>
             </div>
         </div>
     </section>

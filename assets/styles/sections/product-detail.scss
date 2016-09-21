@@ -1,12 +1,18 @@
 section.product-detail {
   position: relative;
   .product-detail-title {
+    @include make-xs-column(8);
+    margin: 0 auto;
     background: $pinkcare;
     width:100%;
     float: left;
     text-align: center;
     h3 {
       color: white;
+      }
+    img {
+      width: 100%;
+      height: auto;
       }
     }
 
