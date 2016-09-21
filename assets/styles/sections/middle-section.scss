@@ -1,0 +1,83 @@
+section.middle-section {
+  .title-container {
+    text-align: center;
+    padding: 60px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .middle-section-heading {
+      max-width: 150px;
+      margin: 0 auto;
+      h3{
+        margin: 0;
+        color: #fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        }
+      }
+    }
+  .button-collapse {
+    background-color: #A62776;
+    height: 30px;
+    width: 100%;
+    display: block;
+    i {
+      color: #fff;
+      }
+    }
+  .form-container {
+    background-color: #F5F5F5;
+    .form-content {
+      width: 250px;
+      margin: 0 auto;
+      }
+    label {
+      font-family: 'Gibson-regular';
+      span {
+        &.label-text {
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+      }
+    input {
+      height: 35px;
+      border-radius: 5px;
+      border: 1px solid #CCCCCC;
+      width: 100%;
+      &.wpcf7-submit {
+        margin: 20px 0 40px;
+        background-color: #A62776;
+        color: white;
+        border-radius: 0px;
+        border: none;
+        padding: 0 15px;
+        max-width: 75px;
+        float: right;
+        }
+      &[type="checkbox"] {
+        max-width: 15px;
+        float:left;
+        margin-left: 2px;
+
+        & + span {
+          float: left;
+          line-height: 42px;
+          margin-left: 10px;
+          font-size: 12px;
+
+          }
+        }
+      }
+    }
+  .form-title {
+    text-align: center;
+    padding: 40px 0;
+    img {
+      width:100%;
+      height:auto;
+      max-width:255px;
+      }
+    }
+  }
