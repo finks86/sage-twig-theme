@@ -40,6 +40,19 @@
                     <img src="{{ post.get_field('product_detail_image').url }}" alt="">
                 </div>
             </div>
+            <div class="product-column-row row">
+            {% for column in post.get_field('columns') %}
+
+                <div class="product-column-container">
+                    <div class="column-image">
+                        <img src="{{ column['column_image'].url }}" alt="">
+                    </div>
+                    <div class="column-title"><h4>{{ column['column_heading'] }}</h4></div>
+                    <div class="column-content">{{ column['column_text'] }}</div>
+                </div>
+
+            {% endfor %}
+            </div>
         </div>
     </section>
 
