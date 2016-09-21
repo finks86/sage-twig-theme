@@ -1,3 +1,4 @@
+
 section.header-section {
   overflow: hidden;
   position: relative;
@@ -53,8 +54,29 @@ section.header-section {
         }
       }
     }
-
+  &.header-section-71{
+    background-color: #F5F5F5;
+    .logo-image {
+      img {
+        max-width: 180px;
+        }
+      }
+    .product-image {
+      background-size: 78%;
+      background-position: -29% 100%;
+      max-width:350px;
+      }
+    .product-tagline {
+      h3 {
+        strong {
+          color: #018FA7;
+          }
+        }
+      }
+    }
   }
+
+
 @media(min-width: 480px) {
   .product-image {
     background-size: 76%;
@@ -62,6 +84,7 @@ section.header-section {
     background-position: 20% 100%;
     }
   }
+
 @include breakpoint(phablet) {
 
   section.header-section {
@@ -98,5 +121,15 @@ section.header-section {
 
         }
       }
+    &.header-section-71 {
+      .logo-image {
+        max-width: 265px;
+        }
+      .product-image {
+        background-position: 0% 100%;
+
+        }
+      }
     }
   }
+

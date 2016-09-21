@@ -62,6 +62,11 @@ section.product-detail {
         }
       }
     }
+  &.product-detail-71{
+    .product-detail-title{
+      background-color: #018FA7;
+      }
+    }
   @include breakpoint(phablet) {
     .product-detail-title {
       .container-fluid {

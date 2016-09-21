@@ -27,7 +27,7 @@
         </div>
     </section>
 
-    <section class="middle-section care-middle-section">
+    <section class="middle-section middle-section-{{ post.id }}">
         <div class="title-container" style="background-image: url({{ post.get_field('care_background_image').url }})">
             <div class="middle-section-heading">
                 <h3>{{ post.get_field('care_form_title') }}</h3>
@@ -35,9 +35,11 @@
         </div>
         <a class="button-collapse" href=""><i class="fa fa-caret-down" aria-hidden="true"></i></a>
         <div class="form-container">
+            {% if post.get_field('care_section_image')  %}
             <div class="form-title">
                 <img src="{{ post.get_field('care_section_image').url }}" alt="">
             </div>
+            {% endif %}
             <div class="form-content clearfix">
                 {% filter shortcodes %}
                 {{ post.get_field('form_shortcode') }}
@@ -46,7 +48,7 @@
         </div>
     </section>
 
-    <section class="product-detail">
+    <section class="product-detail product-detail-{{ post.id }}">
         <div class="product-detail-title">
             <div class="container-fluid">
                 <div class="row">

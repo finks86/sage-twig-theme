@@ -85,6 +85,11 @@ section.middle-section {
       max-width:255px;
       }
     }
+  &.middle-section-71 {
+    .button-collapse {
+      background-color: #018FA7;
+      }
+    }
   @include breakpoint(phablet) {
     .title-container{
       .middle-section-heading {
