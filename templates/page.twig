@@ -3,8 +3,8 @@
 {% block content %}
 
     {% for post in posts %}
-    <section class="header-section" style="background-image:url( {{ post.get_field('product_image').url }} )" >
-        <div class="product-image" ></div>
+    <section class="header-section header-section-{{ post.id }}"  >
+        <div class="product-image" style="background-image:url( {{ post.get_field('product_image').url }} )"></div>
         <div class="container-fluid">
             <div class="row">
 

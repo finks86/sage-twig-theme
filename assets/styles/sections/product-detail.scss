@@ -29,8 +29,13 @@ section.product-detail {
       @include make-sm-column(3);
       text-align: center;
       border:2px solid #f5f5f5;
+      border-bottom: none;
+      border-right: none;
       height:210px;
       padding: 30px 0;
+      &:nth-of-type(even){
+        border-right:2px solid #f5f5f5;
+        }
       .column-image {
         text-align: center;
         margin-bottom: 25px;
@@ -76,7 +81,9 @@ section.product-detail {
 
     .product-column-row {
       .product-column-container {
-
+        &:nth-of-type(2) {
+          border-right:none;
+          }
         }
       }
   }
