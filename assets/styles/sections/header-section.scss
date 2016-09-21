@@ -1,7 +1,7 @@
 section.header-section {
   overflow: hidden;
   position: relative;
-  background-size: 116%;
+  background-size: 120%;
   background-repeat: no-repeat;
   background-position: 48% 68%;
   background-color: #f4e5ea;
@@ -43,6 +43,40 @@ section.header-section {
       color: #000;
       strong {
         color: #B73F89;
+        }
+      }
+    }
+  @media (min-width: 420px) and (max-width: 580px) {
+    background-size: 85%;
+    }
+  @media (min-width: 580px) {
+    background-size: 66%;
+    }
+
+  }
+@include breakpoint(phablet) {
+
+  section.header-section {
+    .banner-left {
+      height: 190px;
+      width: 190px;
+      }
+    .logo-image {
+      img {
+        float: right;
+        margin: 0;
+        max-width: 220px;
+        }
+      }
+
+    .product-tagline {
+      div {
+        float: left;
+        max-width: 180px;
+        }
+
+      h3 {
+        font-size: 35px;
         }
       }
     }
