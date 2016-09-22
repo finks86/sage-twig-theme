@@ -1,0 +1,26 @@
+<section class="middle-section middle-section-{{ post.id }}">
+    <div class="title-container" style="background-image: url({{ post.get_field('care_background_image').url }})">
+        <div class="middle-section-heading">
+            <h3>{{ post.get_field('care_form_title') }}</h3>
+        </div>
+    </div>
+    <a class="button-collapse" href=""><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+    <div class="form-container">
+        {% if post.get_field('care_section_image')  %}
+            <div class="form-title">
+                <img src="{{ post.get_field('care_section_image').url }}" alt="">
+            </div>
+        {% endif %}
+        <div class="form-content clearfix">
+            {% if post.id == '32' %}
+                {% filter shortcodes %}
+                    {{ post.get_field('form_shortcode') }}
+                {% endfilter %}
+            {% elseif post.id == '71'%}
+                {% filter shortcodes %}
+                    [contact-form-7 id="89" title="Oil Finder"]
+                {% endfilter %}
+            {% endif %}
+        </div>
+    </div>
+</section>
