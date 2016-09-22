@@ -164,5 +164,19 @@ section.header-section {
         }
       }
     }
+
+  &.header-section-97 {
+    .logo-image {
+      img {
+        max-width: 220px;
+        }
+      }
+
+    .product-image {
+      background-size: 66%;
+      background-position: -7% 100%;
+      top: -4%;
+      }
+    }
   }
 

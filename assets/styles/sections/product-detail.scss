@@ -10,6 +10,10 @@ section.product-detail {
     h3 {
       font-family: 'Gibson-semibold';
       color: white;
+      letter-spacing: 1.3px;
+      margin-right: 40px;
+      margin-left: 40px;
+      line-height: 30px
       }
     }
   .product-detail-image {
@@ -67,6 +71,11 @@ section.product-detail {
       background-color: #018FA7;
       }
     }
+  &.product-detail-97 {
+    .product-detail-title{
+      background-color: #008BD6;
+      }
+    }
   @include breakpoint(phablet) {
     .product-detail-title {
       .container-fluid {
@@ -74,10 +83,21 @@ section.product-detail {
         }
       h3 {
         font-size: 35px;
+        line-height: 38px;
         margin: 60px 0;
         }
       }
+
+    &.product-detail-97 {
+      .product-detail-image {
+        img {
+          max-width: 574px;
+          }
+        }
+      }
+
     }
+
     .product-detail-image {
       img {
         max-width: 330px;
@@ -91,4 +111,5 @@ section.product-detail {
           }
         }
       }
+
   }

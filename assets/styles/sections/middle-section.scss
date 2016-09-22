@@ -75,6 +75,7 @@ section.middle-section {
           }
         }
       }
+
     }
   .form-title {
     text-align: center;
@@ -85,11 +86,179 @@ section.middle-section {
       max-width:255px;
       }
     }
+
   &.middle-section-71 {
     .button-collapse {
       background-color: #018FA7;
       }
+    button.oil-finder-submit,
+    button.oil-finder-return{
+      margin: 20px 0 40px;
+      background-color: #018FA7;
+      color: white;
+      border-radius: 0px;
+      border: none;
+      padding: 0 15px;
+      max-width: 75px;
+      height: 35px;
+      float: right;
+      }
+    button.oil-finder-return {
+      max-width: 90px;
+      }
+    .dropdown-container {
+      position: relative;
+      ul {
+        position: absolute;
+        top:55px;
+        }
+      .oil-finder-form-title {
+        text-align: left;
+        h2 {
+            font-family: 'Gibson-semibold';
+            font-size: 18px;
+            margin: 40px 0 25px;
+            text-transform: uppercase;
+          }
+        }
+      .oil-finder-form {
+        span.dropdown-label {
+          float: left;
+          font-family: 'Gibson-regular';
+          font-size: 12px;
+          color: #999999;
+          margin-left: 5px;
+          margin-bottom: 3px;
+          }
+        button.btn {
+          position: relative;
+          font-family: 'Gibson-regular';
+          color: black;
+          float: left;
+          width: 100%;
+          border: 1px solid #CCCCCC;
+          background-color: white;
+          text-align: left;
+          margin-bottom: 10px;
+          &:after {
+            content: "\f0d7";
+            font-family: FontAwesome;
+            right: 12px;
+            position:absolute;
+            top:6;
+            }
+          }
+
+        }
+      }
+    .oil-finder-lastscreen-container {
+      display: none;
+
+      .oil-finder-lastscreen{
+        background-image: url('../images/Motor Oil.jpg');
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: 65% 69%;
+        max-width: 280px;
+        margin: 0 auto;
+
+        div {
+          @include make-sm-column(8);
+          float: right !important;
+          }
+        h3{
+            letter-spacing: 1px;
+            font-family: 'Gibson-semibold';
+            font-size: 30px;
+            strong {
+                color: #018FA7
+              }
+          }
+        span {
+          font-family: 'Gibson-regular';
+          font-size: 14px;
+          margin-bottom: 300px;
+          float: left;
+          }
+        }
+      }
+
     }
+
+  &.middle-section-97 {
+    .button-collapse {
+      background-color: #008BD6;
+      }
+
+    .pharma-midsection-column-row {
+      .pharma-column-container {
+
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        margin: 60px 0;
+
+        &:nth-of-type(1) {
+          margin-bottom: 20px;
+        }
+
+        .column-image {
+          width: 60px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+            height: auto;
+            }
+          }
+        }
+      .column-title {
+        color: #008BD6;
+        text-transform: uppercase;
+        font-size: 15px;
+        width: 210px;
+        margin:0 auto;
+        text-align: center;
+        h4 {
+
+          font-size: 15px;
+          margin: 20px 0;
+          }
+        }
+      .column-content {
+        width: 210px;
+        margin: 0 auto;
+        text-align: center;
+        p {
+          font-size: 13px;
+          font-family: 'Gibson-regular';
+          }
+        }
+      }
+      .bottom-text-row {
+        .bottom-text-container {
+          @include make-xs-column(11);
+          float: none;
+          margin: 0 auto;
+          }
+        p {
+          font-size: 12px;
+          margin-bottom: 50px;
+          strong {
+            font-weight: bold;
+            }
+          }
+        }
+    button.wpcf7-submit {
+        margin: 20px 0 40px;
+        background-color: #A62776;
+        color: white;
+        border-radius: 0px;
+        border: none;
+        padding: 0 15px;
+        max-width: 75px;
+        float: right;
+      }
+    }
+
   @include breakpoint(phablet) {
     .title-container{
       .middle-section-heading {
@@ -138,6 +307,76 @@ section.middle-section {
         }
       form {
         margin-bottom: 70px;
+        }
+      }
+
+    &.middle-section-71 {
+      .dropdown-container {
+        .oil-finder-form-title {
+            h2 {
+                font-size: 24px;
+                margin: 75px 0 35px;
+              }
+
+          }
+        }
+      .oil-finder-lastscreen-container {
+        .oil-finder-lastscreen{
+          max-width: none;
+          background-size: 38%;
+          background-position: 4% 43%;
+          div {
+            padding-right: 80px;
+            }
+          h3 {
+            margin-top: 225px;
+            font-size: 35px;
+            margin-bottom: 0px;
+            letter-spacing: 2px;
+            }
+          span {
+            font-size: 25px;
+            margin-bottom: 215px;
+            }
+          button {
+            margin-top: 90px;
+            margin-right: 15px;
+            }
+          }
+
+        }
+      }
+
+    &.middle-section-97 {
+      .title-container {
+        .middle-section-heading {
+          max-width: 460px;
+          }
+        }
+      .pharma-midsection-column-row {
+        .pharma-column-container {
+          margin: 80px 0;
+          .column-image {
+            width:80px;
+            }
+          .column-title {
+            h4{
+              font-size:16px;
+              }
+            }
+          .column-content {
+            p {
+              font-size: 14px;
+              }
+            }
+          }
+        .bottom-text-row {
+          .bottom-text-container {
+             p {
+               font-size: 14px;
+               }
+            }
+          }
         }
       }
     }

@@ -74,4 +74,32 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  //dropdown script
+
+  $(".dropdown-container .dropdown-menu li a").click(function(e){
+    e.preventDefault();
+    var buttonSelector = '.' + $(this).attr("class") + " button.btn";
+
+    $(buttonSelector).text($(this).text());
+    $(buttonSelector).val($(this).text());
+
+  });
+
+  $(".dropdown-2 li a").click(function(e){
+    if($(this).text() === "BMW") {
+      $(".ul-model-list").append('<li><a>BMW Model 1</a></li><li><a>BMW Model 2</a></li><li><a>BMW Model 3</a></li>');
+    }
+  });
+
+  $(".oil-finder-submit").click(function(){
+      $(".oil-finder-form").hide();
+      $(".oil-finder-lastscreen-container").fadeIn(800);
+  });
+
+  $(".oil-finder-return").click(function(){
+    $(".oil-finder-lastscreen-container").hide();
+    $(".oil-finder-form").fadeIn(800);
+  });
+
+
 })(jQuery); // Fully reference jQuery after this point.
