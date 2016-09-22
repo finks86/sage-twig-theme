@@ -118,6 +118,22 @@ section.header-section {
       }
     }
 
+  &.header-section-154 {
+    background-color: #eae9e5;
+    height:420px;
+    .logo-image {
+      img {
+        max-width: 47px;
+        float: right;
+        }
+      }
+    .product-image{
+      background-size: 96%;
+      background-position: -4% 85%;
+      max-width: none;
+      }
+    }
+
   }
 @media(min-width: 350px) {
   section.header-section {

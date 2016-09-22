@@ -242,6 +242,31 @@ section.middle-section {
         }
       }
     }
+
+  &.middle-section-154 {
+    position: relative;
+    .title-container {
+      padding: 70px 0 90px;
+
+      .middle-section-heading{
+        max-width: 220px;
+        }
+      h3 {
+        font-family: 'Perpetua Titling MT';
+        color: #B1383D;
+        }
+      }
+    .button-collapse {
+      position: absolute;
+      background-color: #B1383D;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      top: 180px;
+      left: 50%;
+      margin-left: -15px;
+      }
+    }
   @include breakpoint(phablet) {
     &.middle-section-71 {
       .dropdown-container {

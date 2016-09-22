@@ -14,8 +14,8 @@
                     <img src="{{ post.get_field('logo_image').url }}" alt="">
                 </div>
             </div>
+            {% if post.get_field('taglines') %}
             <div class="row">
-
                 <div class="product-tagline">
                     <div>
                     {% for tagline in post.get_field('taglines') %}
@@ -24,12 +24,15 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
     </section>
     {% if post.id == 71 or post.id == 32 %}
         {% include "templates/middle-section-forms.twig" %}
     {% elseif post.id == 97 or post.id == 125 %}
         {% include "templates/middle-section-content.twig" %}
+    {% elseif post.id == 154 %}
+        {% include "templates/middle-section-content-beverage.twig" %}
     {% endif %}
 
 
