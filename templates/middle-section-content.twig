@@ -1,0 +1,56 @@
+<section class="middle-section middle-section-{{ post.id }}">
+    {% if post.id == 72 %}
+    <div class="title-container" style="background-image: url({{ post.get_field('pharma_middle_section_background').url }})">
+        <div class="middle-section-heading">
+            <h3>{{ post.get_field('pharma_middle_section_title') }}</h3>
+        </div>
+    </div>
+    <a class="button-collapse" href=""><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+    <div class="container-fluid">
+        <div class="pharma-midsection-column-row row">
+            {% for column in post.get_field('pharma_middle_section_columns') %}
+
+                <div class="pharma-column-container">
+                    <div class="column-image">
+                        <img src="{{ column['column_image'].url }}" alt="">
+                    </div>
+                    <div class="column-title"><h4>{{ column['column_title'] }}</h4></div>
+                    <div class="column-content"><p>{{ column['column_text'] }}</p></div>
+                </div>
+
+            {% endfor %}
+        </div>
+        <div class="bottom-text-row row">
+            <div class="bottom-text-container">
+                <p>{{ post.get_field('pharma_middle_section_text') }}</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="title-container" style="background-image: url({{ post.get_field('power_cleaner_instructions_background').url }})">
+        <div class="middle-section-heading">
+            <h3>{{ post.get_field('power_cleaner_instructions_title') }}</h3>
+        </div>
+    </div>
+    <a class="button-collapse" href=""><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+    <div>
+        <div class="container-fluid power-cleaner-container">
+            {% for row in post.get_field('power_cleaner_instructions') %}
+
+                <div class="power-cleaner-row row">
+                    <div class="power-cleaner-row-image">
+                        <div>
+                            <img src="{{ row['power_cleaner_instructions_image'].url }}" alt="">
+                        </div>
+                    </div>
+                    <div class="power-cleaner-row-content">
+                        <div class="power-cleaner-row-title"><h4>{{ row['power_cleaner_instructions_heading'] }}</h4></div>
+                        <div class="power-cleaner-row-text"><p>{{ row['power_cleaner_instructions_text'] }}</p></div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</section>

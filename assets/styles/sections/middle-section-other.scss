@@ -1,92 +1,4 @@
 section.middle-section {
-  .title-container {
-    text-align: center;
-    padding: 60px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    .middle-section-heading {
-      max-width: 150px;
-      margin: 0 auto;
-      h3{
-        margin: 0;
-        color: #fff;
-        font-size: 30px;
-        text-transform: uppercase;
-        }
-      }
-    }
-  .button-collapse {
-    background-color: #A62776;
-    height: 30px;
-    width: 100%;
-    display: block;
-    text-align: center;
-    i {
-      color: #fff;
-      line-height: 30px;
-      font-size: 24px;
-      }
-    }
-  .form-container {
-    background-color: #F5F5F5;
-    .form-content {
-      width: 250px;
-      margin: 0 auto;
-      }
-    label {
-      font-family: 'Gibson-regular';
-      span {
-        &.label-text {
-            font-size: 12px;
-            margin-left: 5px;
-          }
-        }
-      }
-    input {
-      height: 35px;
-      border-radius: 5px;
-      border: 1px solid #CCCCCC;
-      width: 100%;
-      padding: 2px 10px 0;
-
-      &.wpcf7-submit {
-        margin: 20px 0 40px;
-        background-color: #A62776;
-        color: white;
-        border-radius: 0px;
-        border: none;
-        padding: 0 15px;
-        max-width: 75px;
-        float: right;
-        }
-      &[type="checkbox"] {
-        max-width: 15px;
-        float:left;
-        margin-left: 2px;
-
-        & + span {
-          float: left;
-          line-height: 42px;
-          margin-left: 10px;
-          font-size: 12px;
-
-          }
-        }
-      }
-
-    }
-  .form-title {
-    text-align: center;
-    padding: 40px 0;
-    img {
-      width:100%;
-      height:auto;
-      max-width:255px;
-      }
-    }
-
   &.middle-section-71 {
     .button-collapse {
       background-color: #018FA7;
@@ -115,10 +27,10 @@ section.middle-section {
       .oil-finder-form-title {
         text-align: left;
         h2 {
-            font-family: 'Gibson-semibold';
-            font-size: 18px;
-            margin: 40px 0 25px;
-            text-transform: uppercase;
+          font-family: 'Gibson-semibold';
+          font-size: 18px;
+          margin: 40px 0 25px;
+          text-transform: uppercase;
           }
         }
       .oil-finder-form {
@@ -167,12 +79,12 @@ section.middle-section {
           float: right !important;
           }
         h3{
-            letter-spacing: 1px;
-            font-family: 'Gibson-semibold';
-            font-size: 30px;
-            strong {
-                color: #018FA7
-              }
+          letter-spacing: 1px;
+          font-family: 'Gibson-semibold';
+          font-size: 30px;
+          strong {
+            color: #018FA7
+            }
           }
         span {
           font-family: 'Gibson-regular';
@@ -199,7 +111,7 @@ section.middle-section {
 
         &:nth-of-type(1) {
           margin-bottom: 20px;
-        }
+          }
 
         .column-image {
           width: 60px;
@@ -233,90 +145,111 @@ section.middle-section {
           }
         }
       }
-      .bottom-text-row {
-        .bottom-text-container {
-          @include make-xs-column(11);
-          float: none;
-          margin: 0 auto;
-          }
-        p {
-          font-size: 12px;
-          margin-bottom: 50px;
-          strong {
-            font-weight: bold;
-            }
+    .bottom-text-row {
+      .bottom-text-container {
+        @include make-xs-column(11);
+        float: none;
+        margin: 0 auto;
+        }
+      p {
+        font-size: 12px;
+        margin-bottom: 50px;
+        strong {
+          font-weight: bold;
           }
         }
+      }
     button.wpcf7-submit {
-        margin: 20px 0 40px;
-        background-color: #A62776;
-        color: white;
-        border-radius: 0px;
-        border: none;
-        padding: 0 15px;
-        max-width: 75px;
-        float: right;
+      margin: 20px 0 40px;
+      background-color: #A62776;
+      color: white;
+      border-radius: 0px;
+      border: none;
+      padding: 0 15px;
+      max-width: 75px;
+      float: right;
       }
     }
 
-  @include breakpoint(phablet) {
-    .title-container{
-      .middle-section-heading {
+  &.middle-section-125{
+    .middle-section-heading {
         max-width: none;
-        h3 {
-          font-size: 35px;
-          }
-        }
       }
     .button-collapse {
-      i {
-        font-size:30px;
-        }
+      background-color: #ED1E79;
       }
-    .form-container .form-title {
-      img {
-        max-width: 376px;
-        }
+    .power-cleaner-container {
+      margin: 40px 0 30px;
       }
-    .form-container{
-      .form-title {
-        padding: 70px 0 60px;
-        }
+    .power-cleaner-row{
+      margin-bottom: 30px;
 
-      }
-
-    .form-container .form-content {
-      position: relative;
-      width: 400px;
-      label {
-        width: 100%;
-        margin-bottom: 15px;
-        }
-      input{
-          margin-top: 2px;
-        &[type="checkbox"] {
-          & + span {
-            line-height: 39px;
+      .power-cleaner-row-image {
+        @include make-xs-column(3);
+        padding-right: 5px;
+        div {
+          float: right;
+          width: 45px;
+          text-align: center;
+          img {
+            margin: 0 auto;
             }
           }
-          &.wpcf7-submit {
-            position: absolute;
-            right:0;
-            bottom: 35px;
-            }
         }
-      form {
-        margin-bottom: 70px;
+
+      &:nth-of-type(1) {
+
+        .power-cleaner-row-image{
+          padding-top: 25px;
+          }
+        img {
+          height:45px;
+          width: auto;
+          margin: 0 auto;
+          }
+        }
+      &:nth-of-type(2) {
+        .power-cleaner-row-image{
+          padding-top: 25px;
+          }
+        img {
+          height:auto;
+          width: 30px;
+          margin: 0 auto;
+          }
+        }
+      &:nth-of-type(3) {
+        .power-cleaner-row-image{
+          padding-top: 53px;
+          }
+        img {
+          height:auto;
+          width: 45px;
+          margin: 0 auto;
+          }
         }
       }
 
+    .power-cleaner-row-content {
+      @include make-xs-column(9)
+      h4{
+        color: #ED1E79;
+        font-size: 14px;
+        text-transform: uppercase;
+        }
+      p {
+        font-size: 12px;
+        }
+      }
+    }
+  @include breakpoint(phablet) {
     &.middle-section-71 {
       .dropdown-container {
         .oil-finder-form-title {
-            h2 {
-                font-size: 24px;
-                margin: 75px 0 35px;
-              }
+          h2 {
+            font-size: 24px;
+            margin: 75px 0 35px;
+            }
 
           }
         }
@@ -372,12 +305,55 @@ section.middle-section {
           }
         .bottom-text-row {
           .bottom-text-container {
-             p {
-               font-size: 14px;
-               }
+            p {
+              font-size: 14px;
+              }
             }
           }
         }
       }
+
+    &.middle-section-125 {
+      .power-cleaner-row {
+        &:nth-of-type(1) {
+
+          .power-cleaner-row-image{
+            padding-top: 8px;
+            }
+
+          img {
+            height: 55px;
+            width: auto;
+            }
+          }
+        &:nth-of-type(2) {
+          .power-cleaner-row-image{
+            padding-top: 8px;
+            }
+
+          img {
+            height: auto;
+            width: 45px;
+            }
+          }
+        &:nth-of-type(3) {
+          .power-cleaner-row-image{
+            padding-top: 30px;
+            }
+          img {
+            height: auto;
+            width: 55px;
+            }
+          }
+        .power-cleaner-row-image {
+          padding-right: 15px;
+          div {
+            width: 55px;
+            height: 55px;
+            }
+          }
+        }
+      }
+
     }
   }

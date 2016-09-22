@@ -76,6 +76,16 @@ section.product-detail {
       background-color: #008BD6;
       }
     }
+  &.product-detail-125 {
+      .product-detail-title{
+        background-color: #2369CD;
+      }
+      .product-detail-image {
+          img {
+            max-width: 200px;
+            }
+        }
+    }
   @include breakpoint(phablet) {
     .product-detail-title {
       .container-fluid {
@@ -111,5 +121,11 @@ section.product-detail {
           }
         }
       }
-
+    &.product-detail-125 {
+      .product-detail-image {
+        img {
+          max-width: 315px;
+          }
+        }
+      }
   }
