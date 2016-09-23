@@ -1,10 +1,11 @@
-@font-face {font-family: 'Gibson-regular';src: url('../fonts/Canada Type - Gibson-Regular.otf'); format: ('embedded-opentype');}
+@font-face {font-family: 'Gibson-regular';src: url('../fonts/3227DA_0_0.eot');src: url('../fonts/3227DA_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3227DA_0_0.woff2') format('woff2'),url('../fonts/3227DA_0_0.woff') format('woff'),url('../fonts/3227DA_0_0.ttf') format('truetype'),url('../fonts/3227DA_0_0.svg#wf') format('svg');}
 
-@font-face {font-family: 'Gibson-semibold';src: url('../fonts/Canada Type - Gibson-Semibold.otf'); format: ('embedded-opentype');}
+@font-face {font-family: 'Gibson-semibold';src: url('../fonts/3227DA_1_0.eot');src: url('../fonts/3227DA_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3227DA_1_0.woff2') format('woff2'),url('../fonts/3227DA_1_0.woff') format('woff'),url('../fonts/3227DA_1_0.ttf') format('truetype'),url('../fonts/3227DA_1_0.svg#wf') format('svg');}
+
+@font-face {font-family: 'Gibson-Light';src: url('../fonts/3227DA_2_0.eot');src: url('../fonts/3227DA_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3227DA_2_0.woff2') format('woff2'),url('../fonts/3227DA_2_0.woff') format('woff'),url('../fonts/3227DA_2_0.ttf') format('truetype'),url('../fonts/3227DA_2_0.svg#wf') format('svg');}
 
 @font-face {font-family: 'Droid Serif Italic';src: url('../fonts/DroidSerif-Italic.ttf'); format: ('truetype');}
 
-@font-face {font-family: 'SFns Regular';src: url('../fonts/sfns-regular.ttf'); format: ('truetype');}
 @font-face {font-family: 'Perpetua Titling MT';src: url('../fonts/PerpetuaTitlingMTStd-Bd.otf'); format: ('embedded-opentype');}
 
 body {
@@ -15,6 +16,9 @@ body {
     }
   p, ul li, span, a {
     font-family: 'Gibson-regular';
+    }
+  section {
+    background-color: #fff;
     }
   .sidebar {
     display: none;
