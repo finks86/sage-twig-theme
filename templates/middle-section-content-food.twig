@@ -1,0 +1,37 @@
+<section class="middle-section middle-section-{{ post.id }}">
+    <div class="title-container" style="background-image: url({{ post.get_field('food_mid_section_title_image').url }}">
+        <div class="middle-section-heading">
+            <h3>{{ post.get_field('food_mid_section_title') }}</h3>
+        </div>
+    </div>
+    <a class="button-collapse" href=""><i cass="fa fa-caret-down" aria-hidden="true"></i></a>
+    <div class="container-fluid" usemap="#foodmap" style="background-image: url({{ post.get_field('food_mid_section_productbgimg').url }}">
+        <div class="row">
+            <div class="food-content-container" >
+                <div class="food-heading">
+                    <h3>{{ post.get_field('food_mid_section_heading')}}</h3>
+                </div>
+                <div class="food-content-productimg">
+                    <img src="{{ post.get_field('food_mid_section_productimg').url}}" usemap="#foodmap" alt="">
+                </div>
+                <div class="food-overlay">
+                    <div class="rhubarb food-overlay-image"></div>
+                    <div class="elderberry food-overlay-image"></div>
+                    <div class="raspberry food-overlay-image"></div>
+                    <div class="blueberry food-overlay-image"></div>
+                    <div class="strawberry food-overlay-image"></div>
+                    <div class="seasbuckthorn food-overlay-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <map name="foodmap">
+        <area id="rhubarb-small" class="food-map-area" shape="rect" coords="36,62,91,104" href="" alt="rhubarb">
+        <area id="elderberry-small" class="food-map-area" shape="rect" coords="91,62,146,104" href="" alt="Elderberry" >
+        <area id="raspberry-small" class="food-map-area" shape="rect" coords="146,62,201,104" href="" alt="Raspberry" >
+        <area id="blueberry-small" class="food-map-area" shape="rect" coords="201,62,256,104" href="" alt="Blueberry" >
+        <area id="strawberry-small" class="food-map-area" shape="rect" coords="132,26,182,63" href="" alt="Strawberry">
+        <area id="seasbuckthorn-small" class="food-map-area" shape="rect" coords="182,26,223,63" href="" alt="Seabuckthorn" >
+
+    </map>
+</section>

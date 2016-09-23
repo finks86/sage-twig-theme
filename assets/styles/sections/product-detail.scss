@@ -119,6 +119,25 @@ section.product-detail {
       }
 
     }
+
+  &.product-detail-186 {
+    .product-detail-title {
+      background: #BF1B36;
+      h3{
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        }
+      }
+    .product-detail-image {
+      padding: 70px 0 60px;
+
+      img {
+        max-width: 260px;
+        }
+      }
+    }
   @include breakpoint(phablet) {
     .product-detail-title {
       .container-fluid {

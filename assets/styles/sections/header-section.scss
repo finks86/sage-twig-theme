@@ -134,6 +134,38 @@ section.header-section {
       }
     }
 
+  &.header-section-186 {
+    background-color: #F1EBE1;
+    .logo-image {
+      img {
+        max-width: 55px;
+        float: right;
+        }
+      }
+    .product-image {
+      background-size: 75%;
+      background-position: 40% 52%;
+      }
+    .product-tagline {
+      width: 100%;
+      margin-top: 260px;
+      margin-bottom: 50px;
+      div {
+        float: left;
+        width: 100%;
+        max-width: none;
+        h3 {
+          font-size: 15px;
+          float: left;
+          width: 33.33333333%;
+          strong {
+            color: #BF1B36;
+            }
+          }
+        }
+      }
+    }
+
   }
 @media(min-width: 350px) {
   section.header-section {
@@ -180,6 +212,7 @@ section.header-section {
           background-position: 45% 50%;
         }
       }
+
 
     }
 
