@@ -171,7 +171,7 @@ section.middle-section {
       }
     }
 
-  &.middle-section-125{
+  &.middle-section-125 {
     .middle-section-heading {
         max-width: none;
       }
@@ -231,7 +231,8 @@ section.middle-section {
       }
 
     .power-cleaner-row-content {
-      @include make-xs-column(9)
+      @include make-xs-column(9);
+
       h4{
         color: #ED1E79;
         font-size: 14px;
@@ -243,11 +244,17 @@ section.middle-section {
       }
     }
 
-  &.middle-section-154 {
+  &.middle-section-154,&.header-section-179 {
     position: relative;
+    .container-fluid {
+      background-size: 170%;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      background-color: #EAE9E5;
+      }
     .title-container {
-      padding: 70px 0 90px;
-
+      padding: 80px 0 90px;
+      background-color: #eae9e5;
       .middle-section-heading{
         max-width: 220px;
         }
@@ -262,11 +269,31 @@ section.middle-section {
       border-radius: 50%;
       width: 30px;
       height: 30px;
-      top: 180px;
+      top: 194px;
       left: 50%;
       margin-left: -15px;
       }
+    .beverage-content-container {
+      .text-decoration-container {
+        width:150px;
+        margin: 0 auto;
+        padding: 50px 0;
+        img {
+          width: 100%;
+          height:auto;
+          }
+        }
+      .beverage-content {
+        @include make-xs-column(10);
+        float: none !important;
+        margin: 0 auto 90px;
+        p:last-of-type{
+          color:#B1383D;
+          }
+        }
+      }
     }
+
   @include breakpoint(phablet) {
     &.middle-section-71 {
       .dropdown-container {
@@ -380,5 +407,32 @@ section.middle-section {
         }
       }
 
+    &.middle-section-154,&.header-section-179 {
+      .title-container {
+        .middle-section-heading {
+          max-width: 620px;
+          h3 {
+            font-size: 48px;
+            }
+          }
+        }
+      .button-collapse {
+          padding: 1px 7.4px;
+          top: 180px;
+            i {
+            font-size: 28px;
+            line-height: 30px;
+            }
+        }
+      }
+      .container-fluid {
+        background-size: 80%;
+        }
+      .beverage-content-container {
+        .text-decoration-container {
+          width: 220px;
+          margin: 100px 0 70px;
+          }
+        }
     }
   }

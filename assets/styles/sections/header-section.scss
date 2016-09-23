@@ -118,7 +118,7 @@ section.header-section {
       }
     }
 
-  &.header-section-154 {
+  &.header-section-154,&.header-section-179 {
     background-color: #eae9e5;
     height:420px;
     .logo-image {
@@ -145,7 +145,12 @@ section.header-section {
         background-position: 61% 48%;
         }
       }
-
+    &.header-section-154,&.header-section-179 {
+      .product-image {
+        background-size: 80%;
+        background-position: 39% 90%;
+        }
+      }
     }
   }
 @media(min-width: 480px) {
@@ -169,6 +174,13 @@ section.header-section {
         background-position: 85% 44%;
         }
       }
+    &.header-section-154,&.header-section-179 {
+      .product-image {
+          background-size: 58%;
+          background-position: 45% 50%;
+        }
+      }
+
     }
 
 
@@ -247,7 +259,19 @@ section.header-section {
         background-position: 72% 30%;
         }
       }
+
+    &.header-section-154, &.header-section-179 {
+      height: 820px;
+
+      .logo-image {
+        img {
+          max-width: 80px;
+          }
+        }
+      }
+
     }
+
 
 
   }
