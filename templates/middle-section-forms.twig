@@ -4,9 +4,9 @@
             <h3>{{ post.get_field('care_form_title') }}</h3>
         </div>
     </div>
-    <a class="button-collapse" href=""><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+    {#<a class="button-collapse" href=""><i class="fa fa-caret-down" aria-hidden="true"></i></a>#}
     <div class="form-container">
-        {% if post.get_field('care_section_image')  %}
+        {% if post.get_field('care_section_image') %}
             <div class="form-title">
                 <img src="{{ post.get_field('care_section_image').url }}" alt="">
             </div>
@@ -17,55 +17,66 @@
                     {{ post.get_field('form_shortcode') }}
                 {% endfilter %}
             {% endif %}
-            {% if post.id == '71'%}
-                <div class="dropdown-container">
+            {% if post.id == '71' %}
+            <div class="dropdown-container">
 
-                    <div class="oil-finder-form">
-                        <div class="oil-finder-form-title">
-                            <h2>Oil Finder</h2>
-                        </div>
-                        <div class="dropdown-1 dropdown-field clearfix">
-                            <span class="dropdown-label">Category</span>
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a Category
-                                </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-1">Car</a></li>
-                                <li><a href="#" class="dropdown-1">Motorcyle</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown-2 dropdown-field clearfix">
-                            <span class="dropdown-label">Manufacturer</span>
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a Manufacturer
-                                </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-2" >BMW</a></li>
-                                <li><a href="#" class="dropdown-2" >Audi</a></li>
-                                <li><a href="#" class="dropdown-2" >Ford</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown-3 dropdown-field clearfix">
-                            <span class="dropdown-label">Model</span>
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a Model
-                                </button>
-                            <ul class="dropdown-menu ul-model-list">
-                            </ul>
-                        </div>
-                        <div class="submit-button-motor">
-                            <button class="oil-finder-submit">Submit</button>
-                        </div>
+                <div class="oil-finder-form">
+                    <div class="oil-finder-form-title">
+                        <h2>Oil Finder</h2>
+                    </div>
+                    <div class="dropdown-1 dropdown-field clearfix">
+                        <span class="dropdown-label">Category</span>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a
+                            Category
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-1" data-type="car">Car<i class="fa fa-check" aria-hidden="true"></i>
+                                </a></li>
+                            <li><a href="#" class="dropdown-1" data-type="bike">Motorcyle<i class="fa fa-check" aria-hidden="true"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-2 dropdown-field empty clearfix">
+                        <span class="dropdown-label">Manufacturer</span>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a
+                            Manufacturer
+                        </button>
+                    </div>
+                    {% include "templates/dropdown-2.twig" with { class: 'car', data: ['BMW', 'Audi','Ford']} %}
+                    {% include "templates/dropdown-2.twig" with { class: 'bike', data: ['Yamaha', 'Suzuki','Triumph']} %}
+
+
+                    <div class="dropdown-3 dropdown-field empty clearfix" >
+                        <span class="dropdown-label">Model</span>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a
+                            Model
+                        </button>
+                    </div>
+                    {% include "templates/dropdown-3.twig" with { class: 'bmw', data: ['BMW 6er Cabrio', 'BMW X3','BMW 3er Gran Turismo']} %}
+                    {% include "templates/dropdown-3.twig" with { class: 'audi', data: ['S6 Avang', 'A8 L W12','A3 Sportback']} %}
+                    {% include "templates/dropdown-3.twig" with { class: 'ford', data: ['Ford Focus', 'Ford B-Max','Ford Tourneo']} %}
+
+
+                    {% include "templates/dropdown-3.twig" with { class: 'yamaha', data: ['Yamaha Aerox R', 'Yamaha BT 1100 Bulldog','Yamaha Cygnus X']} %}
+                    {% include "templates/dropdown-3.twig" with { class: 'triumph', data: ['Thunderburd Family', 'Thunderburd Family', 'Trophy']} %}
+                    {% include "templates/dropdown-3.twig" with { class: 'suzuki', data: ['Hayabusa 1300 ABS', 'Bandit 650S ABS','VanVan 125']} %}
+
+                    <div class="submit-button-motor">
+                        <button class="oil-finder-submit">Submit</button>
                     </div>
                 </div>
+            </div>
         </div>
-                <div class="oil-finder-lastscreen-container">
-                    <div class="oil-finder-lastscreen clearfix">
-                        <div>
-                            <h3>RAKO<strong>MOTORS</strong> 10W-40</h3>
-                            <span>is recommended for your car.</span>
-                            <button class="oil-finder-return">Try again</button>
-                        </div>
-                    </div>
+        <div class="oil-finder-lastscreen-container">
+            <div class="oil-finder-lastscreen clearfix">
+                <div>
+                    <h3>RAKO<strong>MOTORS</strong> 10W-40</h3>
+                    <span>is recommended for your car.</span>
+                    <button class="oil-finder-return">Try again</button>
                 </div>
+            </div>
+        </div>
     </div>
-            {% endif%}
+    {% endif %}
 
 </section>

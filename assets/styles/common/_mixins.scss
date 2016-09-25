@@ -1,3 +1,12 @@
+@mixin button() {
+  font-family: 'Gibson-regular';
+  margin: 20px 0 40px;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  padding: 0 15px;
+}
+
 
 
 @mixin font-size($sizeValue: 1) {

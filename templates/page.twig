@@ -2,73 +2,75 @@
 
 {% block content %}
 
+
     {% for post in posts %}
-    <section class="header-section header-section-{{ post.id }}"  >
-        <div class="product-image" style="background-image:url( {{ post.get_field('product_image').url }} )"></div>
-        <div class="container-fluid">
-            <div class="row">
-
-                <div class="banner-left" style="background-image: url({{ post.get_field('label_image').url }} );">
-                </div>
-                <div class="logo-image">
-                    <img src="{{ post.get_field('logo_image').url }}" alt="">
-                </div>
-            </div>
-            {% if post.get_field('taglines') %}
-            <div class="row">
-                <div class="product-tagline">
-                    <div>
-                    {% for tagline in post.get_field('taglines') %}
-                        <h3>{{ tagline.tagline_text }}</h3>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-        </div>
-    </section>
-    {% if post.id == 71 or post.id == 32 %}
-        {% include "templates/middle-section-forms.twig" %}
-    {% elseif post.id == 97 or post.id == 125 %}
-        {% include "templates/middle-section-content.twig" %}
-    {% elseif post.id == 154 or post.id == 179 %}
-        {% include "templates/middle-section-content-beverage.twig" %}
-    {% elseif post.id == 186 %}
-        {% include "templates/middle-section-content-food.twig" %}
-    {% endif %}
-
-
-    <section class="product-detail product-detail-{{ post.id }}">
-        <div class="product-detail-title">
+        <section class="header-section header-section-{{ post.id }}">
+            <div class="product-image" style="background-image:url( {{ post.get_field('product_image').url }} )"></div>
             <div class="container-fluid">
                 <div class="row">
-                    <h3>
-                        {{ post.get_field('product_detail_title') }}
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="product-detail-image">
-                    <img src="{{ post.get_field('product_detail_image').url }}" alt="">
-                </div>
-            </div>
-            <div class="product-column-row row">
-            {% for column in post.get_field('columns') %}
 
-                <div class="product-column-container">
-                    <div class="column-image">
-                        <img src="{{ column['column_image'].url }}" alt="">
+                    <div class="banner-left" style="background-image: url({{ post.get_field('label_image').url }} );">
                     </div>
-                    <div class="column-title"><h4>{{ column['column_heading'] }}</h4></div>
-                    <div class="column-content">{{ column['column_text'] }}</div>
+                    <div class="logo-image">
+                        <img src="{{ post.get_field('logo_image').url }}" alt="">
+                    </div>
                 </div>
-
-            {% endfor %}
+                {% if post.get_field('taglines') %}
+                    <div class="row">
+                        <div class="product-tagline">
+                            <div>
+                                {% for tagline in post.get_field('taglines') %}
+                                    <h3>{{ tagline.tagline_text }}</h3>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
-        </div>
-    </section>
+        </section>
+        {% if post.id == 71 or post.id == 32 %}
+            {% include "templates/middle-section-forms.twig" %}
+        {% elseif post.id == 97 or post.id == 125 %}
+            {% include "templates/middle-section-content.twig" %}
+        {% elseif post.id == 154 or post.id == 179 %}
+            {% include "templates/middle-section-content-beverage.twig" %}
+        {% elseif post.id == 186 %}
+            {% include "templates/middle-section-content-food.twig" %}
+        {% endif %}
+
+
+        <section class="product-detail product-detail-{{ post.id }}">
+            <div class="product-detail-title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h3>
+                            {{ post.get_field('product_detail_title') }}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="product-detail-image">
+                        <img src="{{ post.get_field('product_detail_image').url }}" alt="">
+                    </div>
+                </div>
+                <div class="product-column-row row">
+                    {% for column in post.get_field('columns') %}
+
+                        <div class="product-column-container">
+                            <div class="column-image">
+                                {#<img class="icon-{{ loop.index }}" src="{{ theme.link }}/dist/images/icons/icon_messe_specifiaction_{{ loop.index }}.svg" alt="">#}
+                                <i class="icon-icon_messe_specifiaction_{{ loop.index }}"></i>
+                            </div>
+                            <div class="column-title"><h4>{{ column['column_heading'] }}</h4></div>
+                            <div class="column-content">{{ column['column_text'] }}</div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
 
     {% endfor %}
 

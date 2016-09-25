@@ -1,0 +1,12 @@
+<div class="dropdown-3 dropdown-field clearfix {{ class }}">
+    <span class="dropdown-label">Model</span>
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a
+        Model
+    </button>
+    <ul class="dropdown-menu">
+        {% for model in data %}
+            <li><a href="#" class="dropdown-3">{{ model }}<i class="fa fa-check" aria-hidden="true"></i>
+                </a></li>
+        {% endfor %}
+    </ul>
+</div>

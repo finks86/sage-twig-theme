@@ -56,7 +56,7 @@ footer {
       }
     }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(phablet) {
 
     .site-link {
       span {
