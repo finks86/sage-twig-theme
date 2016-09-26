@@ -54,14 +54,10 @@ section.middle-section {
       padding: 2px 10px 0;
 
       &.wpcf7-submit {
+        @include button();
         margin: 5px 0 40px;
         background-color: #A62776;
-        color: white;
-        border-radius: 0px;
-        border: none;
-        padding: 0 15px;
         max-width: 75px;
-        float: right;
         }
       &[type="checkbox"] {
         max-width: 15px;

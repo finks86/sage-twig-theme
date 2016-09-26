@@ -74,31 +74,71 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  // $('.dropdown-1 a').click(function(e) {
+  //   e.preventDefault();
+  // })
   //dropdown script
-
+  //
   $(".dropdown-container .dropdown-menu li a").click(function(e){
     e.preventDefault();
     var buttonSelector = '.' + $(this).attr("class") + " button.btn";
 
     $(buttonSelector).text($(this).text());
     $(buttonSelector).val($(this).text());
-
-  });
-
-  $(".dropdown-2 li a").click(function(e){
-    if($(this).text() === "BMW") {
-      $(".ul-model-list").append('<li><a>BMW Model 1</a></li><li><a>BMW Model 2</a></li><li><a>BMW Model 3</a></li>');
+    $(this).parents('.dropdown-menu').find('li a').removeClass('active');
+    $(this).addClass('active');
+    //first dropdown
+    if ($(this).data('type')) {
+      $('.dropdown-3 button').text('Choose a Model');
+      $('.dropdown-2 button').text('Choose a Manufacturer');
+      $('.dropdown-3 a').add('.dropdown-2 a').removeClass('active');
+      $('div.dropdown-2').hide();
+      $('.'+$(this).data('type')).show();
     }
+    else if ($(this).data('model')) {
+      $('.dropdown-3 button').text('Choose a Model');
+      $('.dropdown-3 a').removeClass('active');
+
+      $('div.dropdown-3').hide();
+      $('.'+$(this).data('model')).show();
+    }
+
+
   });
+  //
+  // $(".dropdown-2 li a").click(function(e){
+  //   if($(this).text() === "BMW") {
+  //     $(".ul-model-list").append('<li><a>BMW Model 1</a></li><li><a>BMW Model 2</a></li><li><a>BMW Model 3</a></li>');
+  //   }
+  // });
 
   $(".oil-finder-submit").click(function(){
-      $(".oil-finder-form").hide();
+    $('.dropdown-1 button').text('Choose Category');
+    $('.dropdown-3 button').text('Choose a Model');
+    $('.dropdown-2 button').text('Choose a Manufacturer');
+    $('.dropdown-menu li a').removeClass('active');
+
+    $(".oil-finder-form").hide();
       $(".oil-finder-lastscreen-container").fadeIn(800);
+
   });
 
   $(".oil-finder-return").click(function(){
+    // location.reload();
     $(".oil-finder-lastscreen-container").hide();
     $(".oil-finder-form").fadeIn(800);
+  });
+
+  //overlay imprint
+  $('.imprint').click(function(e) {
+    e.preventDefault();
+    $('.overlay').fadeIn();
+  });
+
+  $(document).on('click','.overlay__close',function (e) {
+    e.preventDefault();
+    console.log('Asd');
+    $('.overlay').fadeOut();
   });
 
   $(".food-map-area").on("click", function(e){

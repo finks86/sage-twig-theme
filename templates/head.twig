@@ -3,4 +3,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ function('wp_head') }}
+    {% for post in posts %}
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ theme.link }}/dist/images/touch/{{ post.id }}/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="{{ theme.link }}/dist/images/touch/{{ post.id }}/android-chrome-192x192.png" sizes="196x196">
+        <link rel="shortcut icon" href="{{ theme.link }}/dist/images/touch/{{ post.id }}/android-chrome-512x512.png" sizes="512x512">
+        <link rel="icon" href="{{ theme.link }}/dist/images/touch/{{ post.id }}/favicon.ico" type="image/x-icon" />
+    {% endfor %}
 </head>

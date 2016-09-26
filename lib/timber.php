@@ -41,13 +41,14 @@ class TwigSageTheme extends TimberSite {
 
         $args = array(
             // Get all posts
-            'posts_per_page' => -1,
+            'posts_per_page' => 1,
             'post_type' => 'page',
-
-            'order' => 'ASC'
+            'p' => 2,
         );
 
-        $context['pages'] =  Timber::get_posts( $args );
+        $context['imprint'] =  Timber::get_posts( $args )[0];
+
+
 
         return $context;
 
