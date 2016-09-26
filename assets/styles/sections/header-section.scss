@@ -436,22 +436,29 @@ section.header-section {
       .product-tagline {
         float: none;
         margin: 0 auto;
-        max-width: 490px;
+        max-width: none;
         margin-top: 525px;
         margin-bottom: 40px;
+        div {
+          h3 {
+            font-size: 35px;
+            line-height: 42px;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
 
-        h3 {
-          &:nth-of-type(1) {
-            padding-left: 80px;
-          }
-          &:nth-of-type(2) {
-            padding-left: 75px;
-          }
-          &:nth-of-type(3) {
-            padding-right: 45px;
-            padding-left: 15px;
+            &:nth-of-type(1) {
+              padding-left: 80px;
+            }
+            &:nth-of-type(2) {
+              padding-left: 75px;
+            }
+            &:nth-of-type(3) {
+              padding-right: 45px;
+              padding-left: 15px;
+            }
           }
         }
+
       }
     }
 
