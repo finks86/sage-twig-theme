@@ -139,6 +139,15 @@ section.middle-section {
     width: 100%;
   }
 
+  &.middle-section-97 {
+
+      .title-container {
+        padding: 70px 0 60px;
+        .middle-section-heading {
+          max-width: 260px;
+          }
+        }
+    }
   @include breakpoint(phablet) {
     &.middle-section-71 {
       .middle-section-heading {

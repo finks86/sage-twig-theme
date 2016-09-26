@@ -9,9 +9,9 @@ section.header-section {
 
     width: 100%;
     height: 100%;
-    background-size: 75%;
+    background-size: 70%;
     background-repeat: no-repeat;
-    background-position: -45% 100%;
+    background-position: -10% -4%;
     max-width: 370px;
   }
 
@@ -32,8 +32,9 @@ section.header-section {
       display: block;
       height: auto;
       width: 100%;
-      max-width: 145px;
-      margin: 0 auto;
+      max-width: 144px;
+      float: right;
+      margin-right: 5px
     }
   }
 
@@ -41,15 +42,16 @@ section.header-section {
     @include make-xs-column(6);
     float: right;
     margin-top: 110px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     div {
       max-width: 80px;
     }
     h3 {
-      font-size: 14px;
+      font-size: 15px;
       color: #000;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin-bottom: 30px;
       strong {
         color: #B73F89;
       }
@@ -58,21 +60,26 @@ section.header-section {
   &.header-section-32 {
     .product-image {
       top: 28px;
+      background-size: 74%;
+      background-repeat: no-repeat;
+      background-position: -36% -3%;
+
     }
   }
   &.header-section-71 {
     background-color: #F5F5F5;
     .logo-image {
       img {
-        max-width: 180px;
+        max-width: 183px;
       }
     }
     .product-image {
       background-size: 70%;
-      background-position: -10% 99%;
+      background-position: -11% 74%;
       max-width: 350px;
     }
     .product-tagline {
+      margin-top: 105px;
       h3 {
         strong {
           color: #018FA7;
@@ -84,14 +91,18 @@ section.header-section {
     background-color: #eaf9ff;
     .logo-image {
       img {
-        max-width: 125px;
+        max-width: 123px;
+        margin-right: 10px;
       }
     }
     .product-image {
-      background-size: 75%;
-      background-position: -23% 59%;
+      background-size: 70%;
+      background-position: -13% 56%;
     }
     .product-tagline {
+      div {
+        max-width: 115px;
+        }
       h3 {
         strong {
           color: #008BD6;
@@ -109,12 +120,12 @@ section.header-section {
       }
     }
     .product-image {
-      background-size: 240%;
-      background-position: 64% 10%;
+      background-size: 216%;
+      background-position: 65% 8%;
       max-width: none;
     }
     .product-tagline {
-      margin-top: 80px;
+      margin-top: 70px;
 
       h3 {
         strong {
@@ -127,35 +138,51 @@ section.header-section {
   &.header-section-154, &.header-section-179 {
     background-color: #eae9e5;
     height: 420px;
+
+    .product-image {
+      max-width: none;
+    }
+
     .logo-image {
       img {
         max-width: 47px;
         float: right;
+        margin-right: 15px;
       }
     }
-    .product-image {
-      background-size: 96%;
-      background-position: -4% 85%;
-      max-width: none;
-    }
+
   }
 
+
+  &.header-section-154 {
+    .product-image {
+      background-size: 92%;
+      background-position: 23% 85%;
+    }
+  }
+  &.header-section-179 {
+    .product-image {
+      background-size: 85%;
+      background-position: 52% 85%;
+    }
+  }
   &.header-section-186 {
     background-color: #F1EBE1;
     .logo-image {
       img {
-        max-width: 55px;
+        max-width: 56px;
         float: right;
+        margin-right: 15px;
       }
     }
     .product-image {
-      background-size: 75%;
-      background-position: 40% 52%;
+      background-size: 72%;
+      background-position: 54% 53%;
     }
     .product-tagline {
       width: 100%;
-      margin-top: 260px;
-      margin-bottom: 50px;
+      margin-top: 275px;
+      margin-bottom: 20px;
       div {
         float: left;
         width: 100%;
@@ -163,7 +190,16 @@ section.header-section {
         h3 {
           font-size: 15px;
           float: left;
-          width: 33.33333333%;
+          @include make-xs-column(4);
+          &:nth-of-type(1) {
+            padding-left: 10px;
+          }
+          &:nth-of-type(2) {
+            padding-left: 25px;
+          }
+          &:nth-of-type(3) {
+            padding-right: 10px;
+          }
           strong {
             color: #BF1B36;
           }
@@ -251,36 +287,58 @@ section.header-section {
       div {
         float: left;
         max-width: 180px;
+        h3 {
+          font-size: 35px;
+          line-height: 45px;
+          margin-bottom: 50px;
+          letter-spacing: 2px;
+        }
       }
 
-      h3 {
-        font-size: 35px;
-        line-height: 45px;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-      }
+
     }
     &.header-section-32 {
       .product-image {
         top: 0px;
+        background-size: 61%;
+        background-position: 0% -20%;
+      }
+
+      .product-tagline {
+        padding-left: 50px;
+        margin-bottom: 140px;
+        img {
+          max-width: 219px;
+        }
+        div {
+          h3 {
+            line-height: 42px;
+          }
+        }
       }
     }
     &.header-section-71 {
       .logo-image {
+        margin-top: 45px;
+        padding-right: 40px;
         img {
           max-width: 265px;
         }
 
       }
       .product-tagline {
-        margin-top: 260px;
-        margin-bottom: 70px;
+        margin-top: 210px;
+        margin-bottom: 100px;
+        padding-left: 35px;
+        h3 {
+          line-height: 42px;
+        }
       }
 
       .product-image {
         max-width: 880px;
-        background-position: 0% 100%;
-        background-size: 60%;
+        background-position: -3% 90%;
+        background-size: 65%;
       }
     }
 
@@ -292,21 +350,49 @@ section.header-section {
       }
 
       .product-image {
-        background-size: 66%;
-        background-position: -7% 100%;
+        background-size: 64%;
+        background-position: -5% -122%;
         top: -4%;
+      }
+
+      .product-tagline {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        padding-left: 35px;
+        div {
+          max-width: 260px;
+          h3 {
+            line-height: 42px;
+            strong {
+              color: #008BD6;
+            }
+          }
+
+        }
       }
     }
 
     &.header-section-125 {
       .logo-image {
+        margin-top: 35px;
+        padding-right: 35px;
         img {
           max-width: 188px;
         }
       }
       .product-image {
         background-size: 188%;
-        background-position: 72% 30%;
+        background-position: 72% 33%;
+      }
+      .product-tagline {
+        margin-top: 150px;
+        margin-bottom: 110px;
+        padding-left: 30px;
+        div {
+          h3 {
+            line-height: 42px;
+          }
+        }
       }
     }
 
@@ -314,28 +400,58 @@ section.header-section {
       height: 820px;
 
       .logo-image {
+        margin-top: 55px;
         img {
-          max-width: 80px;
+          max-width: 81px;
+          margin-right: 20px;
         }
+      }
+    }
+
+    &.header-section-154 {
+      .product-image {
+        background-size: 87%;
+        background-position: 39% 90%;
+      }
+    }
+
+    &.header-section-179 {
+      .product-image {
+        background-size: 84%;
+        background-position: 49% 90%;
       }
     }
 
     &.header-section-186 {
       .logo-image {
         img {
-          max-width: 120px;
+          max-width: 119px;
+          margin-right: 24px;
         }
       }
       .product-image {
-        background-size: 56%;
-        background-position: 50% 58%;
+        background-size: 70%;
+        background-position: 50% 54%;
       }
       .product-tagline {
         float: none;
         margin: 0 auto;
         max-width: 490px;
-        margin-top: 370px;
-        margin-bottom: 30px;
+        margin-top: 525px;
+        margin-bottom: 40px;
+
+        h3 {
+          &:nth-of-type(1) {
+            padding-left: 80px;
+          }
+          &:nth-of-type(2) {
+            padding-left: 75px;
+          }
+          &:nth-of-type(3) {
+            padding-right: 45px;
+            padding-left: 15px;
+          }
+        }
       }
     }
 

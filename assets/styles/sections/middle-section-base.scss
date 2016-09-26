@@ -127,9 +127,10 @@ section.middle-section {
             }
           }
           &.wpcf7-submit {
-            position: absolute;
-            right:0;
-            bottom: 35px;
+            margin-bottom: 0px;
+            float: right;
+            position: relative;
+            top: -20px;
             }
         }
       form {
