@@ -118,7 +118,7 @@ section.product-detail {
       }
     }
   }
-  &.product-detail-154, &.header-section-179 {
+  &.product-detail-154, &.product-detail-179 {
     .product-detail-title {
       background-color: $beverage;
       h3 {
@@ -204,6 +204,26 @@ section.product-detail {
       }
     }
 
+    &.product-detail-125 {
+      .product-detail-image {
+        img {
+          max-width: 315px;
+        }
+      }
+    }
+
+    &.product-detail-154, &.product-detail-179 {
+      .product-detail-title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .product-detail-image {
+        img {
+          max-width: 440px;
+        }
+      }
+    }
+
   }
 
   .product-column-row {
@@ -213,19 +233,5 @@ section.product-detail {
       }
     }
   }
-  &.product-detail-125 {
-    .product-detail-image {
-      img {
-        max-width: 315px;
-      }
-    }
-  }
 
-  &.product-detail-154, &.header-section-179 {
-    .product-detail-image {
-      img {
-        max-width: 440px;
-      }
-    }
-  }
 }
