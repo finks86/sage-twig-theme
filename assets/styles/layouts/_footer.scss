@@ -1,138 +1,139 @@
 footer {
-  width:100%;
-  max-width:768px;
+  width: 100%;
+  max-width: 768px;
   margin: 0 auto;
   background-color: #fff;
   .site-link {
     background-color: #f5f5f5;
     text-align: center;
-    padding:40px 0;
+    padding: 40px 0;
     span {
-        font-size: 12px;
-        color: #000;
-        font-family: 'Droid Serif Italic';
-        width: 100%;
-        display: block;
-      }
-    a {
-        font-family: 'Gibson-semibold';
-        letter-spacing: 1.3px;
-        font-size: 15px;
-        color: #B73F89;
-        text-transform: uppercase;
-      }
+      font-size: 12px;
+      color: #000;
+      font-family: 'Droid Serif Italic';
+      width: 100%;
+      display: block;
     }
+    a {
+      font-family: 'Gibson-semibold';
+      letter-spacing: 1.3px;
+      font-size: 15px;
+      color: #B73F89;
+      text-transform: uppercase;
+    }
+  }
   .footer-content {
     text-align: center;
     .container-fluid {
       padding: 10px 0 15px;
-      }
+    }
     span, a {
       color: #000;
-      font-size:10px;
+      font-size: 10px;
       text-transform: uppercase;
       font-family: 'Gibson-semibold';
-      }
+    }
     .footer-logo {
       margin-bottom: 10px;
       img {
-        width:100%;
-        height:auto;
+        width: 100%;
+        height: auto;
         max-width: 120px;
-        }
       }
+    }
     &:before {
       content: '';
       display: block;
       background-image: url('../images/stripes-line-mobile.jpg');
-      -webkit-background-size:100%;
-      background-size:100%;
+      -webkit-background-size: 100%;
+      background-size: 100%;
       background-repeat: no-repeat;
-      top:0;
-      height:10px;
+      top: 0;
+      height: 10px;
       width: 100%;
-      left:-15px;
+      left: -15px;
       right: -15px;
-      }
     }
+  }
 
   @include breakpoint(phablet) {
 
     .site-link {
       span {
-         font-size: 17px;
-        }
+        font-size: 17px;
+      }
 
       a {
-          font-size: 24px;
-        }
+        font-size: 24px;
       }
+    }
 
     .footer-content {
       position: relative;
       .footer-link {
         position: absolute;
         right: 40px;
-        bottom: 48px;
-        }
+        top: 55px;
+      }
       .copyright-text {
         position: absolute;
         left: 40px;
-        bottom: 48px;
-        }
+        top: 55px;
+      }
       .footer-logo {
         margin-top: 20px;
         margin-bottom: 20px;
-        }
       }
     }
-
   }
-body{
+
+}
+
+body {
   &.page-id-71 {
     footer {
       .site-link {
         a {
           color: #018FA7;
-          }
         }
       }
     }
+  }
   &.page-id-97 {
     footer {
       .site-link {
         a {
           color: #008BD6;
-          }
         }
       }
     }
+  }
   &.page-id-125 {
     footer {
       .site-link {
         a {
           color: #2369CD;
-          }
         }
       }
     }
-  &.page-id-154,&.page-id-179 {
+  }
+  &.page-id-154, &.page-id-179 {
     footer {
       .site-link {
         a {
           color: #B1383D;
-          }
         }
       }
     }
+  }
   &.page-id-186 {
     footer {
       .site-link {
         a {
           color: #BF1B36;
-          }
         }
       }
     }
-
   }
+
+}

@@ -141,39 +141,75 @@
     $('.overlay').fadeOut();
   });
 
-  $(".food-map-area").on("click", function(e){
+  $(".touch_icon").on("click", function(e){
     e.preventDefault();
     console.log($(this).attr('id'));
+    $(".touch_icon").find('div').fadeOut(400);
+    if ($('.'+$(this).attr('id')+':visible').length) {
+      $('.'+$(this).attr('id')).fadeOut(400);
 
-    if( $(this).attr('id') === "rhubarb-small") {
-      $(".food-overlay-image").hide();
-      $('.rhubarb').fadeIn(400);
+    } else {
+
+      $('.'+$(this).attr('id')).fadeIn(400);
     }
 
-    if( $(this).attr('id') === "elderberry-small") {
-      $(".food-overlay-image").hide();
-      $('.elderberry').fadeIn(400);
-    }
-
-    if( $(this).attr('id') === "raspberry-small") {
-      $(".food-overlay-image").hide();
-      $('.raspberry').fadeIn(400);
-    }
-
-    if( $(this).attr('id') === "blueberry-small") {
-      $(".food-overlay-image").hide();
-      $('.blueberry').fadeIn(400);
-    }
-
-    if( $(this).attr('id') === "strawberry-small") {
-      $(".food-overlay-image").hide();
-      $('.strawberry').fadeIn(400);
-    }
-
-    if( $(this).attr('id') === "seasbuckthorn-small") {
-      $(".food-overlay-image").hide();
-      $('.seasbuckthorn').fadeIn(400);
-    }
+    // if(  === "rhubarb-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.rhubarb').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "elderberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.elderberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "raspberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.raspberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "blueberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.blueberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "strawberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.strawberry').fif(  === "rhubarb-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.rhubarb').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "elderberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.elderberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "raspberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.raspberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "blueberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.blueberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "strawberry-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.strawberry').fadeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "seasbuckthorn-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.seasbuckthorn').fadeIn(400);
+    // }adeIn(400);
+    // }
+    //
+    // if( $(this).attr('id') === "seasbuckthorn-small") {
+    //   $(".food-overlay-image").hide();
+    //   $('.seasbuckthorn').fadeIn(400);
+    // }
   });
 
 })(jQuery); // Fully reference jQuery after this point.

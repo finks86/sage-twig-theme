@@ -17,7 +17,7 @@ section.middle-section {
       max-width: 75px;
       height: 35px;
       float: right;
-
+      margin: 20px 0 60px;
     }
     button.oil-finder-return {
       max-width: 90px;
@@ -86,6 +86,7 @@ section.middle-section {
           letter-spacing: 1px;
           font-family: 'Gibson-semibold';
           font-size: 30px;
+          margin-top: 40px;
           strong {
             color: #018FA7
           }
@@ -112,6 +113,7 @@ section.middle-section {
   }
   .dropdown-field {
     position: relative;
+    margin-bottom: 5px;
     li {
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       a {
@@ -151,16 +153,16 @@ section.middle-section {
   }
 
   &.middle-section-97 {
-
-      .title-container {
-        padding: 70px 0 60px;
-        .middle-section-heading {
-          max-width: 260px;
-          }
-        }
+    background-color: #EAF8FF;
+    .title-container {
+      padding: 60px 0 50px;
+      .middle-section-heading {
+        max-width: 260px;
+      }
     }
+  }
 
-  &.middle-section-125{
+  &.middle-section-125 {
     .container-fluid {
       margin: 35px 0 0;
       padding-bottom: 40px;
@@ -183,6 +185,7 @@ section.middle-section {
     .title-container {
       background-size: 300%;
       background-position: center 58%;
+      position: relative;
       .middle-section-heading {
         max-width: 250px;
       }
@@ -191,7 +194,7 @@ section.middle-section {
   }
   @include breakpoint(phablet) {
     &.middle-section-71 {
-      .title-container{
+      .title-container {
         background-size: 110%;
         background-position: 70% 19%;
       }
@@ -216,14 +219,14 @@ section.middle-section {
             padding-right: 80px;
           }
           h3 {
-            margin-top: 225px;
+            margin-top: 250px;
             font-size: 35px;
             margin-bottom: 0px;
             letter-spacing: 2px;
           }
           span {
             font-size: 25px;
-            margin-bottom: 215px;
+            margin-bottom: 240px;
           }
           button {
             margin-top: 90px;
@@ -237,7 +240,7 @@ section.middle-section {
   &.middle-section-97 {
     .button-collapse {
       background-color: #008BD6;
-      }
+    }
 
     .pharma-midsection-column-row {
       .pharma-column-container {
@@ -248,7 +251,7 @@ section.middle-section {
 
         &:nth-of-type(1) {
           margin-bottom: 20px;
-          }
+        }
 
         .column-image {
           width: 60px;
@@ -256,22 +259,22 @@ section.middle-section {
           img {
             width: 100%;
             height: auto;
-            }
           }
         }
+      }
       .column-title {
         color: #008BD6;
         text-transform: uppercase;
         font-size: 15px;
         width: 210px;
-        margin:0 auto;
+        margin: 0 auto;
         text-align: center;
         h4 {
 
           font-size: 15px;
           margin: 20px 0;
-          }
         }
+      }
       .column-content {
         width: 210px;
         margin: 0 auto;
@@ -279,43 +282,44 @@ section.middle-section {
         p {
           font-size: 13px;
           font-family: 'Gibson-regular';
-          }
         }
       }
+    }
     .bottom-text-row {
       .bottom-text-container {
         @include make-xs-column(11);
         float: none;
         margin: 0 auto;
-        }
+      }
       p {
         font-size: 12px;
         margin-bottom: 50px;
         strong {
           font-weight: bold;
-          }
+          font-family: 'Gibson-semibold';
         }
       }
+    }
     button.wpcf7-submit {
       @include button();
       background-color: #A62776;
       max-width: 75px;
       float: right;
-      }
     }
+  }
 
   &.middle-section-125 {
     .middle-section-heading {
-        max-width: none;
-      }
+      max-width: none;
+    }
     .button-collapse {
       background-color: #ED1E79;
-      }
+    }
 
     .power-cleaner-container {
       margin: 40px 0 0;
-      }
-    .power-cleaner-row{
+    }
+    .power-cleaner-row {
       margin-bottom: 30px;
 
       .power-cleaner-row-image {
@@ -327,56 +331,56 @@ section.middle-section {
           text-align: center;
           img {
             margin: 0 auto;
-            }
-          }
-        }
-
-      &:nth-of-type(1) {
-
-        .power-cleaner-row-image{
-          padding-top: 25px;
-          }
-        img {
-          height:45px;
-          width: auto;
-          margin: 0 auto;
-          }
-        }
-      &:nth-of-type(2) {
-        .power-cleaner-row-image{
-          padding-top: 25px;
-          }
-        img {
-          height:auto;
-          width: 30px;
-          margin: 0 auto;
-          }
-        }
-      &:nth-of-type(3) {
-        .power-cleaner-row-image{
-          padding-top: 53px;
-          }
-        img {
-          height:auto;
-          width: 45px;
-          margin: 0 auto;
           }
         }
       }
+
+      &:nth-of-type(1) {
+
+        .power-cleaner-row-image {
+          padding-top: 25px;
+        }
+        img {
+          height: 45px;
+          width: auto;
+          margin: 0 auto;
+        }
+      }
+      &:nth-of-type(2) {
+        .power-cleaner-row-image {
+          padding-top: 25px;
+        }
+        img {
+          height: auto;
+          width: 30px;
+          margin: 0 auto;
+        }
+      }
+      &:nth-of-type(3) {
+        .power-cleaner-row-image {
+          padding-top: 53px;
+        }
+        img {
+          height: auto;
+          width: 45px;
+          margin: 0 auto;
+        }
+      }
+    }
 
     .power-cleaner-row-content {
       @include make-xs-column(9);
 
-      h4{
+      h4 {
         color: #ED1E79;
         font-size: 14px;
         text-transform: uppercase;
-        }
+      }
       p {
         font-size: 12px;
-        }
       }
     }
+  }
 
   &.middle-section-154 {
     .container-fluid {
@@ -391,24 +395,24 @@ section.middle-section {
     }
   }
 
-  &.middle-section-154,&.middle-section-179 {
+  &.middle-section-154, &.middle-section-179 {
     position: relative;
     .container-fluid {
 
       background-repeat: no-repeat;
       background-color: #EAE9E5;
-      }
+    }
     .title-container {
-      padding: 80px 0 90px;
+      padding: 70px 0 95px;
       background-color: #eae9e5;
-      .middle-section-heading{
+      .middle-section-heading {
         max-width: 220px;
-        }
+      }
       h3 {
         font-family: 'Perpetua Titling MT';
         color: #B1383D;
-        }
       }
+    }
     .button-collapse {
       position: absolute;
       background-color: #B1383D;
@@ -418,121 +422,141 @@ section.middle-section {
       top: 194px;
       left: 50%;
       margin-left: -15px;
-      }
+    }
     .beverage-content-container {
       .text-decoration-container {
-        width:150px;
+        width: 150px;
         margin: 0 auto;
         padding: 50px 0;
         img {
           width: 100%;
-          height:auto;
-          }
+          height: auto;
         }
+      }
       .beverage-content {
         @include make-xs-column(10);
         float: none !important;
         margin: 0 auto 90px;
-        p:last-of-type{
-          color:#B1383D;
-          }
+        p {
+          margin-bottom: 20px;
+        }
+        p:last-of-type {
+          color: #B1383D;
         }
       }
     }
+  }
 
   &.middle-section-186 {
     .container-fluid {
-      height:360px;
-      background-size: 122%;
-      background-position: center;
-      background-repeat: repeat;
-      }
+      background-size: cover;
+      background-position: center center;
+      background: url('../images/fruit-bg.jpg') no-repeat;
+    }
+
     .middle-section-heading {
       max-width: none;
-      }
+    }
     .title-container {
-      padding: 70px 0 90px;
-      }
+      padding: 60px 0 80px;
+    }
     .button-collapse {
       background-color: transparent;
       position: absolute;
-      bottom: -110px;
+      bottom: 13px;
       i {
-          font-size: 34px;
-        }
+        font-size: 34px;
       }
+    }
     .food-content-container {
       position: relative;
-      .food-overlay {
-        position: relative;
-        margin: 0 auto;
-        width: 320px;
-        height: 0px;
-        bottom: 253px;
+      .rhubarb {
+        background: url('../images/rhubarb_text.png');
+        width: 140px;
+        height: 80px;
+        bottom: 29px;
+        left: -42px;
 
-        .food-overlay-image {
-          display: none;
-          }
+      }
+      .elderberry {
+        background: url('../images/fruechte_elderberry_text.png');
+        width: 90px;
+        height: 90px;
+        bottom: 20px;
+        left: -54px;
+      }
+
+      .raspberry {
+        background: url('../images/fruechte_raspberry_text.png');
+        width: 73px;
+        height: 103px;
+        bottom: 25px;
+        left: -49px;
+      }
+      .blueberry {
+        background: url('../images/fruechte_blueberry_text.png');
+        width: 80px;
+        height: 110px;
+        bottom: 30px;
+        left: -63px;
+      }
+      .seasbuckthorn {
+        background: url('../images/fruechte_seasbuckthorn_text.png');
+        width: 90px;
+        height: 70px;
+        bottom: 26px;
+        left: -35px;
+      }
+      .strawberry {
+        background: url('../images/fruechte_strawberry_text.png');
+        width: 83px;
+        height: 71px;
+        bottom: 32px;
+        left: -10px;
+      }
+      @include breakpoint(phablet) {
         .rhubarb {
-          background: url('../images/rhubarb_text.png');
-          width: 140px;
-          height: 80px;
-          bottom: -41px;
-          left: 20px;
-          background-size: cover;
-          position: absolute;
-          }
+          width: 280px;
+          height: 160px;
+          bottom: 29px;
+          left: -80px;
 
+        }
         .elderberry {
-          background: url('../images/früchte_elderberry_text.png');
-          width: 90px;
-          height: 90px;
-          bottom: -26px;
-          left: 52px;
-          background-size: cover;
-          position: absolute;
-          }
+          width: 180px;
+          height: 175px;
+          bottom: 20px;
+          left: -100px;
+        }
 
         .raspberry {
-          background: url('../images/früchte_raspberry_text.png');
-          width: 73px;
-          height: 103px;
-          bottom: -44px;
-          left: 120px;
-          background-size: cover;
-          position: absolute;
-          }
-        .blueberry {
-          background: url('../images/früchte_blueberry_text.png');
-          width: 80px;
-          height: 110px;
-          bottom: -38px;
-          left: 174px;
-          background-size: cover;
-          position: absolute;
-          }
-        .seasbuckthorn {
-          background: url('../images/früchte_seasbuckthorn_text.png');
-          width: 90px;
-          height: 70px;
-          bottom: -8px;
-          left: 178px;
-          background-size: cover;
-          position: absolute;
-          }
-        .strawberry {
-          background: url('../images/früchte_strawberry_text.png');
-          width: 83px;
-          height: 71px;
-          bottom: 0px;
-          left: 137px;
-          background-size: cover;
-          position: absolute;
-          }
+          width: 146px;
+          height: 206px;
+          bottom: 25px;
+          left: -90px;
         }
+        .blueberry {
+          width: 160px;
+          height: 220px;
+          bottom: 30px;
+          left: -120px;
+        }
+        .seasbuckthorn {
+          width: 180px;
+          height: 140px;
+          bottom: 26px;
+          left: -80px;
+        }
+        .strawberry {
+          width: 166px;
+          height: 142px;
+          bottom: 32px;
+          left: -40px;
+        }
+      }
       .food-heading {
-        padding:0 15px;
-        margin: 35px 0 250px;
+        padding: 0 15px;
+        margin: 100px 0 250px;
 
         h3 {
           text-align: center;
@@ -542,26 +566,63 @@ section.middle-section {
           line-height: 33px;
           color: #BF1B36;
           letter-spacing: 1.3px;
-          }
         }
-      .food-content-productimg{
+      }
+      .food-content-productimg {
         width: 100%;
         position: relative;
         bottom: 138px;
         margin: 0 auto;
-        max-width: 320px;
-        img {
-
-          width:100%;
-          height: auto;
+        max-width: 620px;
+        .touch_icon {
+          display: inline-block;
+          background: url('../images/icons/touch_icon.png') no-repeat;
+          background-size: cover;
+          background-position: center center;
+          width: 23px;
+          height: 21px;
+          position: absolute;
+          cursor: pointer;
+          div {
+            display: none;
+            background-size: cover;
+            position: absolute;
           }
+        }
+        #rhubarb {
+          left: 9%;
+          bottom: 9%;
+        }
+        #elderberry {
+          bottom: 32%;
+          left: 35%;
+        }
+        #raspberry {
+          bottom: 16%;
+          left: 63%;
+        }
+        #blueberry {
+          right: 14%;
+          bottom: 12%;
+        }
+        #strawberry {
+          bottom: 71%;
+          left: 53%;
+        }
+        #seasbuckthorn {
+          right: 20%;
+          bottom: 40%;
+        }
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }
+  }
 
-
-  @media (min-width:420px) {
-    &.middle-section-179,&.middle-section-154 {
+  @media (min-width: 420px) {
+    &.middle-section-179, &.middle-section-154 {
       .container-fluid {
         background-size: 80%;
       }
@@ -578,34 +639,34 @@ section.middle-section {
       .title-container {
         .middle-section-heading {
           max-width: 460px;
-          }
         }
+      }
       .pharma-midsection-column-row {
         .pharma-column-container {
           margin: 80px 0;
           .column-image {
-            width:80px;
-            }
+            width: 80px;
+          }
           .column-title {
-            h4{
-              font-size:16px;
-              }
+            h4 {
+              font-size: 16px;
             }
+          }
           .column-content {
             p {
               font-size: 14px;
-              }
             }
           }
+        }
         .bottom-text-row {
           .bottom-text-container {
             p {
               font-size: 14px;
-              }
             }
           }
         }
       }
+    }
 
     &.middle-section-125 {
       .power-cleaner-container {
@@ -619,61 +680,61 @@ section.middle-section {
       .power-cleaner-row {
         &:nth-of-type(1) {
 
-          .power-cleaner-row-image{
+          .power-cleaner-row-image {
             padding-top: 8px;
-            }
+          }
 
           img {
             height: 55px;
             width: auto;
-            }
           }
+        }
         &:nth-of-type(2) {
-          .power-cleaner-row-image{
+          .power-cleaner-row-image {
             padding-top: 8px;
-            }
+          }
 
           img {
             height: auto;
             width: 45px;
-            }
           }
+        }
         &:nth-of-type(3) {
-          .power-cleaner-row-image{
+          .power-cleaner-row-image {
             padding-top: 30px;
-            }
+          }
           img {
             height: auto;
             width: 55px;
-            }
           }
+        }
         .power-cleaner-row-image {
           padding-right: 15px;
           div {
             width: 55px;
             height: 55px;
-            }
           }
         }
       }
+    }
 
-    &.middle-section-154,&.middle-section-179 {
+    &.middle-section-154, &.middle-section-179 {
       .title-container {
         .middle-section-heading {
           max-width: 620px;
           h3 {
             font-size: 48px;
-            }
           }
         }
+      }
       .button-collapse {
-          padding: 1px 7.4px;
-          top: 180px;
-            i {
-            font-size: 28px;
-            line-height: 30px;
-            }
+        padding: 1px 7.4px;
+        top: 180px;
+        i {
+          font-size: 28px;
+          line-height: 30px;
         }
+      }
       .container-fluid {
         background-size: 80%;
       }
@@ -684,9 +745,7 @@ section.middle-section {
           padding-bottom: 65px;
         }
       }
-      }
-
-
+    }
 
     &.middle-section-186 {
       .title-container {
@@ -698,5 +757,5 @@ section.middle-section {
       }
     }
 
-    }
   }
+}
