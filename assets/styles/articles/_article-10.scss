@@ -5,8 +5,8 @@
     color: $blue;
   }
   .row {
-    margin-top: 100px;
-    margin-bottom: 300px;
+    margin-top: 50px;
+    margin-bottom: 82px;
   }
   .container-fluid {
     position: relative;
@@ -14,10 +14,19 @@
   .title-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(7);
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 80px;
+
+    h2 {
+      max-width: 265px;
+    }
+
     div {
       margin-top: 25px;
+
     }
-    margin-bottom: 70px;
+
   }
   //.left-container {
   //  @include make-sm-column-offset(1);
@@ -32,6 +41,8 @@
   .right-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(8);
+    padding-left: 0;
+    padding-right: 0;
     float: none;
   }
 
@@ -39,7 +50,7 @@
     //left: 8.3333333333%;
     //right: 8.3333333333%;
     width: 100%;
-    background-size: 95%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: bottom;
     bottom: -110px;
@@ -68,8 +79,9 @@
   //}
 
   .items-container {
-
     @include make-xs-column(6);
+    padding-right: 0;
+    width: 51%;
     div {
       margin-bottom: 20px;
     }
@@ -81,6 +93,7 @@
     }
     &:nth-of-type(1) {
       margin-left: -15px;
+      margin-right: 5px;
     }
 
   }
@@ -133,6 +146,8 @@
     .title-container {
       @include make-md-column(8);
       margin-bottom: 90px;
+      padding-left: 0;
+      padding-right: 0;
     }
     .right-container {
       @include make-md-column(6);
@@ -160,7 +175,7 @@
   @media (max-width: $screen-sm-min) {
     background-color: #fff;
     .background {
-      bottom: -200px;
+      bottom: -2px;
       background-color: #fff;
       }
 

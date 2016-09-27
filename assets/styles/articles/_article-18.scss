@@ -1,20 +1,43 @@
 .article-18 {
-  background-color: $blue;
+  background-color: white !important;
+
   .row {
-    margin-top: 80px;
+    margin-top: 85px;
     margin-bottom: 130px;
   }
   .left-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(5);
+    padding-left: 0;
+    padding-right: 0;
+    .title-container {
+      h2 {
+        color: $blue;
+        strong {
+          color: #FF3C46;
+        }
+      }
+    }
     .text-container {
-      margin-top: 70px;
+      margin-top: 45px;
+      p {
+        font-size: 12px;
+        span{
+          color: #1E325F;
+          strong {
+            color: #1E325F;
+          }
+        }
+
+      }
     }
   }
   .right-container {
     @include make-sm-column(5);
     @include make-md-column-offset(0);
     @include make-md-column(5);
+    padding-left: 0;
+    padding-right: 0;
     margin-top: 60px;
     span {
       display: block;
@@ -27,6 +50,9 @@
   }
   .person-text {
     margin: 15px 0;
+    span {
+      color: #1E325F;
+    }
   }
   .person-image-right {
     max-width: 120px;

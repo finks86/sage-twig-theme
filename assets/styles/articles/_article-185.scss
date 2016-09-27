@@ -1,0 +1,25 @@
+.article-185 {
+  background-color: white;
+  .row {
+    margin-top: 45px;
+    margin-bottom: 55px;
+
+    .left-container{
+      h2{
+        margin-bottom: 60px;
+        color: $blue;
+        strong{
+          color: $red;
+        }
+
+      }
+      p{
+        font-size: 12px;
+        color: #1E325F;
+      }
+      @include make-xs-column(8);
+      padding-left: 0;
+      padding-right: 15px;
+    }
+  }
+}

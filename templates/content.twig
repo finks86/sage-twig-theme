@@ -5,15 +5,16 @@
     {% elseif page.id == '118' %}
 
     <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
-       <div class="background-container">
-           <div class="background" style="background-image:url( {{ page.thumbnail.src }})"></div>
-       </div>
+        <div class="background" style="background-image:url( {{ page.thumbnail.src }})"></div>
+
 
     {% elseif page.id == '122' %}
 
         <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
-            <div class="background hidden-xs" style="background-image:url( {{ page.thumbnail.src }})"></div>
-            <div class="background visible-xs" style="background-image:url( {{ page.get_field('mobile_background').url }})"></div>
+
+            <div class="background" style="background-image:url( {{ page.thumbnail.src }})"></div>
+            <div class="timeline visible-xs" style="background-image:url( {{ page.get_field('mobile_timeline').url }})"></div>
+            <div class="timeline hidden-xs" style="background-image:url( {{ page.get_field('desktop_timeline').url }})"></div>
         {% else %}
 
     <article id="{{ page.slug }}" class="parallax article-{{ page.id }} clearfix">
@@ -121,7 +122,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="left-container">
-                        <h2>{{ page.get_field('title') |striptags('<strong>') }}</h2>
+                        <h2>{{ page.get_field('title') |striptags('<strong><br>') }}</h2>
                         <div><p>{{ page.post_content }}</p></div>
                     </div>
                     {% if page.get_field('images') is defined %}

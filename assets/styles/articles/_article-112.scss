@@ -4,7 +4,7 @@
     color: $blue
     }
   .row {
-    margin-top: 160px;
+    margin-top: 105px;
     margin-bottom: 140px;
     }
   .background{
@@ -17,8 +17,11 @@
   .left-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(6);
+    padding-left: 0;
+    padding-right: 0;
     h2 {
-      margin-bottom: 200px;
+
+      margin-bottom: 300px;
       }
     ul {
       margin-top: 40px;
@@ -36,20 +39,22 @@
     }
   @media (max-width: $screen-sm-min) {
     p, ul li {
-      font-style: 12px;
+      font-size: 12px;
       }
     h2 {
+      display: block;
+      max-width: 200px;
       margin-bottom: 400px;
       }
     .row {
-        margin-top:70px;
-        margin-bottom: 0px;
+        margin-top:40px;
+        margin-bottom: 50px;
       }
     .background {
       max-width: 400px;
       margin: 0 auto;
-      background-size: 60%;
-      background-position: center 45%;
+      background-size: 52%;
+      background-position: center 48%;
       }
     }
 }

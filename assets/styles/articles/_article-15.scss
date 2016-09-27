@@ -6,12 +6,12 @@
   background-repeat: no-repeat;
   background-position-y: bottom;
   .row {
-    margin-top: 70px;
-    margin-bottom: 240px;
+    margin-top: 20px;
+    margin-bottom: 165px;
   }
   .background {
-    background-size: 100%;
-    background-position: bottom right;
+    background-size: 398%;
+    background-position: 44% 100%;
     background-repeat: no-repeat;
   }
   .left-container {
@@ -20,16 +20,17 @@
     @include make-xs-column(9);
     div {
       max-width: 270px;
-      margin-top: 25px;
+      margin-top: 40px;
     }
     p {
       font-weight: normal;
+      font-size: 12px;
       strong {
-        font-family: $font-heavy;
+        color: white;
       }
     }
     ul {
-      margin-top: 25px;
+      margin-top: 40px;
       li {
         padding-left: 10px;
       }
