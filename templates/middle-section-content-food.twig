@@ -1,46 +1,52 @@
 <section class="middle-section middle-section-{{ post.id }}">
-    <div class="title-container" style="background-image: url({{ post.get_field('food_mid_section_title_image').url }}">
+    <div class="title-container" style="background-image: url({{ post.get_field('food_mid_section_title_image').url }})">
         <div class="middle-section-heading">
             <h3>{{ post.get_field('food_mid_section_title') }}</h3>
         </div>
+        <div class="button-collapse"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
     </div>
-    <div class="button-collapse" ><i cass="fa fa-caret-down" aria-hidden="true"></i></div>
-    <div class="container-fluid" usemap="#foodmap" style="background-image: url({{ post.get_field('food_mid_section_productbgimg').url }}">
+    <div class="container-fluid bg"
+    >
         <div class="row">
-            <div class="food-content-container" >
+            <div class="food-content-container">
                 <div class="food-heading">
-                    <h3>{{ post.get_field('food_mid_section_heading')}}</h3>
+                    <h3>{{ post.get_field('food_mid_section_heading') }}</h3>
                 </div>
                 <div class="food-content-productimg">
-                    <img src="{{ post.get_field('food_mid_section_productimg').url}}" class="visible-xs" usemap="#foodmap" alt="">
-                    <img src="{{ post.get_field('food_mid_section_productimg_desktop').url}}" class="hidden-xs" usemap="#foodmap-desktop" alt="">
-                </div>
-                <div class="food-overlay">
-                    <div class="rhubarb food-overlay-image"></div>
-                    <div class="elderberry food-overlay-image"></div>
-                    <div class="raspberry food-overlay-image"></div>
-                    <div class="blueberry food-overlay-image"></div>
-                    <div class="strawberry food-overlay-image"></div>
-                    <div class="seasbuckthorn food-overlay-image"></div>
+                    <img src="{{ post.get_field('food_mid_section_productimg').url }}" >
+                    <i class="touch_icon" id="rhubarb">
+                        <div class="rhubarb "></div>
+
+                    </i>
+                    <i class="touch_icon" id="elderberry">
+                        <div class="elderberry"></div>
+                    </i>
+                    <i class="touch_icon" id="raspberry">
+                        <div class="raspberry"></div>
+                    </i>
+                    <i class="touch_icon" id="blueberry">
+                        <div class="blueberry"></div>
+                    </i>
+                    <i class="touch_icon" id="strawberry">
+                        <div class="strawberry"></div>
+                    </i>
+                    <i class="touch_icon" id="seasbuckthorn">
+                        <div class="seasbuckthorn"></div>
+                    </i>
+                    {#<div class="food-overlay">#}
+                    {#<div class="seasbuckthorn food-overlay-image"></div>#}
+                    {#</div>#}
                 </div>
             </div>
         </div>
     </div>
-    <map name="foodmap">
-        <area id="rhubarb-small" class="food-map-area" shape="rect" coords="20,65,85,107" href="" alt="rhubarb">
-        <area id="elderberry-small" class="food-map-area" shape="rect" coords="85,65,143,107" href="" alt="Elderberry" >
-        <area id="raspberry-small" class="food-map-area" shape="rect" coords="144,65,228,107" href="" alt="Raspberry" >
-        <area id="blueberry-small" class="food-map-area" shape="rect" coords="235,65,300,107" href="" alt="Blueberry" >
-        <area id="strawberry-small" class="food-map-area" shape="rect" coords="144,16,205,65" href="" alt="Strawberry">
-        <area id="seasbuckthorn-small" class="food-map-area" shape="rect" coords="205,16,265,65" href="" alt="Seabuckthorn" >
+    {#<map name="foodmap">#}
+    {#<area id="rhubarb-small" class="food-map-area" shape="rect" coords="20,65,85,107" href="" alt="rhubarb">#}
+    {#<area id="elderberry-small" class="food-map-area" shape="rect" coords="85,65,143,107" href="" alt="Elderberry" >#}
+    {#<area id="raspberry-small" class="food-map-area" shape="rect" coords="144,65,228,107" href="" alt="Raspberry" >#}
+    {#<area id="blueberry-small" class="food-map-area" shape="rect" coords="235,65,300,107" href="" alt="Blueberry" >#}
+    {#<area id="strawberry-small" class="food-map-area" shape="rect" coords="144,16,205,65" href="" alt="Strawberry">#}
+    {#<area id="seasbuckthorn-small" class="food-map-area" shape="rect" coords="205,16,265,65" href="" alt="Seabuckthorn" >#}
 
-    </map>
-    <map name="foodmap-desktop">
-        <area id="rhubarb-small" class="food-map-area" shape="rect" coords="112,140,240,220" href="" alt="rhubarb">
-        <area id="elderberry-small" class="food-map-area" shape="rect" coords="240,140,350,220" href="" alt="Elderberry" >
-        <area id="raspberry-small" class="food-map-area" shape="rect" coords="350,140,524,220" href="" alt="Raspberry" >
-        <area id="blueberry-small" class="food-map-area" shape="rect" coords="524,140,654,220" href="" alt="Blueberry" >
-        <area id="strawberry-small" class="food-map-area" shape="rect" coords="350,45,453,140" href="" alt="Strawberry">
-        <area id="seasbuckthorn-small" class="food-map-area" shape="rect" coords="453,45,568,140" href="" alt="Seabuckthorn" >
-    </map>
+    {#</map>#}
 </section>

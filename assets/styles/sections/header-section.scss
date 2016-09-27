@@ -60,9 +60,9 @@ section.header-section {
   &.header-section-32 {
     .product-image {
       top: 28px;
-      background-size: 74%;
+      background-size: 63%;
       background-repeat: no-repeat;
-      background-position: -36% -3%;
+      background-position: -6% -3%;
 
     }
   }
@@ -79,7 +79,8 @@ section.header-section {
       max-width: 350px;
     }
     .product-tagline {
-      margin-top: 105px;
+      margin-top: 120px;
+      margin-bottom: 65px;
       h3 {
         strong {
           color: #018FA7;
@@ -102,7 +103,7 @@ section.header-section {
     .product-tagline {
       div {
         max-width: 115px;
-        }
+      }
       h3 {
         strong {
           color: #008BD6;
@@ -120,9 +121,9 @@ section.header-section {
       }
     }
     .product-image {
-      background-size: 216%;
-      background-position: 65% 8%;
       max-width: none;
+      background-size: 160%;
+      background-position: 83% 48%;
     }
     .product-tagline {
       margin-top: 70px;
@@ -145,7 +146,7 @@ section.header-section {
 
     .logo-image {
       img {
-        max-width: 47px;
+        max-width: 54px;
         float: right;
         margin-right: 15px;
       }
@@ -153,11 +154,11 @@ section.header-section {
 
   }
 
-
   &.header-section-154 {
     .product-image {
-      background-size: 92%;
-      background-position: 23% 85%;
+      max-width: none;
+      background-size: 160%;
+      background-position: 83% 48%;
     }
   }
   &.header-section-179 {
@@ -168,6 +169,11 @@ section.header-section {
   }
   &.header-section-186 {
     background-color: #F1EBE1;
+    display: flex;
+    justify-content: center;
+    .container-fluid {
+      width: 100%;
+    }
     .logo-image {
       img {
         max-width: 56px;
@@ -176,12 +182,17 @@ section.header-section {
       }
     }
     .product-image {
-      background-size: 72%;
-      background-position: 54% 53%;
+      background-size: 100%;
+      background-position: center center;
+      width: 225px;
+      left: 50%;
+      right: auto;
+      margin: 0 auto;
+      margin-left: -112.5px;
     }
     .product-tagline {
       width: 100%;
-      margin-top: 275px;
+      margin-top: 255px;
       margin-bottom: 20px;
       div {
         float: left;
@@ -216,8 +227,8 @@ section.header-section {
     &.header-section-125 {
       .product-image {
         max-width: none;
-        background-size: 221%;
-        background-position: 61% 48%;
+        background-size: 168%;
+        background-position: 83% 48%;
       }
     }
     &.header-section-154, &.header-section-179 {
@@ -236,27 +247,30 @@ section.header-section {
       background-size: 76%;
       background-repeat: no-repeat;
       background-position: 20% 100%;
-
     }
     &.header-section-71 {
       .product-image {
-        max-width: 380px
+        background-position: 55% 50%;
+      }
+    }
+    &.header-section-97 {
+      .product-image {
+        background-position: 55% 44%;
+      }
+    }
+    &.header-section-125 {
+      .product-image {
+        background-size: 137%;
+        background-position: 85% 44%;
+      }
+    }
+    &.header-section-154, &.header-section-179 {
+      .product-image {
+        background-size: 58%;
+        background-position: 45% 50%;
       }
     }
   }
-  &.header-section-125 {
-    .product-image {
-      background-size: 137%;
-      background-position: 85% 44%;
-    }
-  }
-  &.header-section-154, &.header-section-179 {
-    .product-image {
-      background-size: 58%;
-      background-position: 45% 50%;
-    }
-  }
-
 }
 
 @include breakpoint(phablet) {
@@ -294,7 +308,6 @@ section.header-section {
           letter-spacing: 2px;
         }
       }
-
 
     }
     &.header-section-32 {
@@ -352,12 +365,11 @@ section.header-section {
       .product-image {
         background-size: 64%;
         background-position: -5% -122%;
-        top: -4%;
       }
 
       .product-tagline {
         margin-top: 200px;
-        margin-bottom: 100px;
+        margin-bottom: 130px;
         padding-left: 35px;
         div {
           max-width: 260px;
@@ -430,8 +442,10 @@ section.header-section {
         }
       }
       .product-image {
-        background-size: 70%;
-        background-position: 50% 54%;
+        //background-size: 70%;
+        //background-position: 50% 54%;
+        width: 530px;
+        margin-left: -265px;
       }
       .product-tagline {
         float: none;

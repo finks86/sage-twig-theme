@@ -1,7 +1,7 @@
 section.middle-section {
   .title-container {
     text-align: center;
-    padding: 60px 0;
+    padding: 50px 0 50px 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,7 +52,7 @@ section.middle-section {
       border: 1px solid #CCCCCC;
       width: 100%;
       padding: 2px 10px 0;
-
+      font-weight: 300;
       &.wpcf7-submit {
         @include button();
         margin: 5px 0 40px;
