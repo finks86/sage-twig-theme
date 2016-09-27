@@ -166,18 +166,18 @@ section.middle-section {
       padding-bottom: 40px;
     }
   }
+
   &.middle-section-186 {
     .container-fluid {
       background-size: cover;
       background-repeat: no-repeat;
     }
+
     .food-content-container {
       .food-overlay {
         bottom: 234px;
       }
-      .food-heading {
-        padding: 0 15px;
-      }
+
     }
 
     .title-container {
@@ -443,7 +443,7 @@ section.middle-section {
   &.middle-section-186 {
     .container-fluid {
       height:360px;
-      background-size: 122%;
+      background-size: 132%;
       background-position: center;
       background-repeat: repeat;
       }
@@ -468,7 +468,7 @@ section.middle-section {
         margin: 0 auto;
         width: 320px;
         height: 0px;
-        bottom: 253px;
+        bottom: 220px;
 
         .food-overlay-image {
           display: none;
@@ -541,7 +541,7 @@ section.middle-section {
           font-size: 26px;
           line-height: 33px;
           color: #BF1B36;
-          letter-spacing: 1.3px;
+          letter-spacing: 1.2px;
           }
         }
       .food-content-productimg{
@@ -696,6 +696,70 @@ section.middle-section {
           max-width: 490px;
         }
       }
+
+
+      .container-fluid {
+        height: 700px;
+      }
+      .food-content-container {
+        .food-heading {
+          padding: 0 15px;
+          margin: 100px auto 20px;
+          max-width: 420px;
+          h3 {
+            line-height:40px;
+            font-size: 35px;
+          }
+        }
+        .food-overlay {
+          width:580px;
+
+          .rhubarb {
+            width: 252px;
+            height: 144px;
+            bottom: -315px;
+            left: 0px;
+          }
+
+          .elderberry {
+            width: 165px;
+            height: 162px;
+            bottom: -288px;
+            left: 105px;
+          }
+          .raspberry {
+            width: 132px;
+            height: 185px;
+            bottom: -303px;
+            left: 209px;
+          }
+          .blueberry {
+            width: 144px;
+            height: 198px;
+            bottom: -307px;
+            left: 380px;
+          }
+          .strawberry {
+            width: 150px;
+            height: 128px;
+            bottom: -200px;
+            left: 260px;
+          }
+          .seasbuckthorn {
+            width: 162px;
+            height: 128px;
+            bottom: -243px;
+            left: 343px;
+
+          }
+        }
+          .food-content-productimg{
+          max-width: none;
+          bottom: -180px;
+
+        }
+      }
+
     }
 
     }

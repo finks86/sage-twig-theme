@@ -157,8 +157,8 @@ section.product-detail {
       h3 {
         margin-right: 0px;
         margin-left: 0px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
       }
     }
     .product-detail-image {
@@ -224,6 +224,22 @@ section.product-detail {
       }
     }
 
+    &.product-detail-186 {
+      .product-detail-title {
+        h3{
+          margin-top: 55px;
+          margin-bottom: 55px;
+          line-height: 42px;
+          letter-spacing: 2.5px;
+        }
+      }
+      .product-detail-image {
+        padding: 120px 0 90px;
+        img {
+          max-width:580px;
+        }
+      }
+    }
   }
 
   .product-column-row {

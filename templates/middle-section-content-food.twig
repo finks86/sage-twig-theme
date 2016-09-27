@@ -12,7 +12,8 @@
                     <h3>{{ post.get_field('food_mid_section_heading')}}</h3>
                 </div>
                 <div class="food-content-productimg">
-                    <img src="{{ post.get_field('food_mid_section_productimg').url}}" usemap="#foodmap" alt="">
+                    <img src="{{ post.get_field('food_mid_section_productimg').url}}" class="visible-xs" usemap="#foodmap" alt="">
+                    <img src="{{ post.get_field('food_mid_section_productimg_desktop').url}}" class="hidden-xs" usemap="#foodmap-desktop" alt="">
                 </div>
                 <div class="food-overlay">
                     <div class="rhubarb food-overlay-image"></div>
@@ -33,5 +34,13 @@
         <area id="strawberry-small" class="food-map-area" shape="rect" coords="144,16,205,65" href="" alt="Strawberry">
         <area id="seasbuckthorn-small" class="food-map-area" shape="rect" coords="205,16,265,65" href="" alt="Seabuckthorn" >
 
+    </map>
+    <map name="foodmap-desktop">
+        <area id="rhubarb-small" class="food-map-area" shape="rect" coords="112,140,240,220" href="" alt="rhubarb">
+        <area id="elderberry-small" class="food-map-area" shape="rect" coords="240,140,350,220" href="" alt="Elderberry" >
+        <area id="raspberry-small" class="food-map-area" shape="rect" coords="350,140,524,220" href="" alt="Raspberry" >
+        <area id="blueberry-small" class="food-map-area" shape="rect" coords="524,140,654,220" href="" alt="Blueberry" >
+        <area id="strawberry-small" class="food-map-area" shape="rect" coords="350,45,453,140" href="" alt="Strawberry">
+        <area id="seasbuckthorn-small" class="food-map-area" shape="rect" coords="453,45,568,140" href="" alt="Seabuckthorn" >
     </map>
 </section>
