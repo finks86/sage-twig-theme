@@ -1,4 +1,4 @@
-.article-2 {
+.article-2, .article-232 {
   background-color: $blue;
   .row {
     margin-top: 30px;
@@ -88,7 +88,7 @@
 
 
 @include breakpoint(phablet) {
-  .article-2 {
+  .article-2, .article-232 {
     min-height:0px;
     .row {
         margin-top: 150px;
@@ -128,7 +128,7 @@
 
 
 @include breakpoint(tablet) {
-  .article-2 {
+  .article-2, .article-232 {
     .row {
       margin-top: 110px;
       margin-bottom: 110px;

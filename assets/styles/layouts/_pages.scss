@@ -94,6 +94,9 @@ article {
       height: auto;
     }
   }
+  &:first-child {
+    margin-top: 60px;
+  }
 
 }
 
@@ -212,6 +215,10 @@ article {
       background-size: 100%;
       background-repeat: no-repeat;
 
+    }
+    &:first-child {
+      margin-top: 100px;
+      padding: 0;
     }
 
   }

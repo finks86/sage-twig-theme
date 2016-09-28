@@ -1,5 +1,5 @@
 
-.article-15 {
+.article-15, .article-266 {
   background-color: $blue;
   -webkit-background-size: 100%;
   background-size: 100%;
@@ -41,7 +41,7 @@
 }
 
 @include breakpoint(phablet) {
-  .article-15 {
+  .article-15, .article-266 {
     min-height: 0px;
     overflow: hidden;
 
