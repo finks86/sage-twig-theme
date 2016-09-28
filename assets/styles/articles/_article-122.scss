@@ -1,63 +1,27 @@
 .article-122 {
-  min-height:0;
+  min-height: 675px;
   overflow: hidden;
-  .background {
-    top: 5%;
 
-    max-width: 1200px;
-    margin:0 auto;
-    height: 110%;
-
-    }
 
   .row {
-    margin-top: 110px;
-    margin-bottom: 160px;
+    margin-top: 15px;
+    margin-bottom: 80px;
     }
   .left-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(5);
     @include make-xs-column(8);
+    padding-left: 0px;
+    padding-right: 10px;
 
     div {
       margin-top: 70px;
       p {
-        margin-bottom: 30px;
-        }
-      }
-    }
-  @include breakpoint(tablet) {
-    .background.hidden-xs {
-        background-position-x: 33%;
-      }
-    }
-
-  @include breakpoint(desktop) {
-    .left-container {
-      padding-left: 0px;
-    }
-    .background.hidden-xs {
-      background-position-x: 25%;
-      }
-    }
-  @media (max-width: $screen-sm-min) {
-    min-height: 675px;
-    .row {
-      margin-top: 15px;
-      margin-bottom: 80px;
-      }
-    .left-container {
-      padding-left: 0px;
-      padding-right: 10px;
-      div {
-        margin-top: 45px;
-      }
-      p {
         font-size: 12px;
         margin-bottom: 20px;
-      }
-      ul{
-        li{
+        }
+      ul {
+        li {
           &:before {
             position: absolute;
           }
@@ -67,28 +31,30 @@
           }
         }
       }
+      }
     }
-    .background {
-      top: 76%;
-      right: -16.5%;
-      left:inherit;
-      width: 490px;
-      height: 260px;
-      background-size: cover;
-      position: absolute;
-
-    }
-    .timeline {
-      width: 98px;
-      height: 310px;
-      right: 4%;
-      top: 27.5%;
-      position: absolute;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  .timeline {
+    width: 98px;
+    height: 310px;
+    right: 4%;
+    top: 27.5%;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
+  .background {
+    top: 76%;
+    right: -16.5%;
+    left:inherit;
+    width: 490px;
+    height: 260px;
+    background-size: cover;
+    position: absolute;
+    margin:0 auto;
+  }
+
+
   @media (min-width: 350px) and (max-width: 380px) {
     .background {
       right: -15%;
@@ -99,4 +65,39 @@
       right: -13%;
     }
   }
+
+  @include breakpoint(phablet) {
+    min-height: 1020px;
+    .row {
+      margin-top: 55px;
+      margin-bottom: 210px;
+    }
+    .background {
+      top: 67%;
+      right: -1.5%;
+      left: inherit;
+      width: 814px;
+      height: 371px;
+    }
+    .timeline {
+      width: 220px;
+      height: 545px;
+      right: 8%;
+      top: 11.5%;
+    }
+    .left-container {
+      div {
+        margin-top: 55px;
+
+        p, ul li span {
+          font-size: 18px;
+        }
+        p {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+
+
 }
