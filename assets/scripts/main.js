@@ -79,7 +79,7 @@
         });
 
         var nav_height = $('.navbar-header').height();
-        $('.nav-main-link').click(function (e) {
+        $('.nav__link').click(function (e) {
             e.preventDefault();
             var anchor = $(this).attr('href');
 
@@ -87,8 +87,8 @@
 
 
             console.log(target.offset().top, nav_height);
-            $('.navbar-toggler').removeClass('is-active');
-            $('.navbar-header').removeClass('active');
+            // $('.navbar-toggler').removeClass('is-active');
+            // $('.navbar-header').removeClass('active');
 
             $('html, body').animate({
                 scrollTop: target.offset().top - nav_height

@@ -1,6 +1,5 @@
 .article-18 {
-  background-color: white !important;
-
+  background-color: white;
   .row {
     margin-top: 85px;
     margin-bottom: 130px;
@@ -76,7 +75,9 @@
   .person-content {
     @include make-xs-column(6);
     text-align: center;
-    height: 170px;
+
+    height: 200px;
+
   }
 
   @include breakpoint(phablet) {
@@ -96,7 +97,7 @@
     .right-container {
       margin-top: 0px;
       .person-container {
-        //max-width: 278px;
+
         margin: 0 auto;
 
       }
@@ -106,6 +107,8 @@
         margin-bottom: 25px;
         margin-right: 0;
         padding: 0;
+        height: auto;
+        text-align: left;
         &:nth-of-type(odd) {
           margin-right: 20px;
         }
