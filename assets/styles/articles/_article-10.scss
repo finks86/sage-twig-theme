@@ -109,11 +109,11 @@
 
   @include breakpoint(phablet) {
     .row {
-      margin-top: 200px;
-      margin-bottom: 300px;
+      margin-top: 130px;
+      margin-bottom: 370px;
     }
     .title-container {
-      margin-bottom: 140px;
+      margin-bottom: 60px;
       h2 {
         max-width: 350px;
       }
@@ -124,21 +124,31 @@
     //  padding-left: 0px;
     //}
     .background {
+      background-size:100%;
       background-color: transparent;
-      bottom: -245px;
+      bottom: -4px;
       left: 8.3333333333%;
       right: 8.3333333333%;
       width: 83.3333333333%;
     }
     h2 {
       margin-top: 0px;
+      font-size: 50px;
+      line-height: 55px;
     }
     h3 {
       font-size: 50px;
     }
-    .item__label {
-      font-size: 18px;
+    .items-container{
+      div {
+        margin-bottom: 60px;
+      }
+      .item__label {
+        position: static;
+        font-size: 18px;
+      }
     }
+
 
     //.left-container {
     //  div {
@@ -149,7 +159,7 @@
 
   @include breakpoint(tablet) {
     .row {
-      margin-top: 140px;
+      margin-top: 130px;
       margin-bottom: 400px;
     }
     .background {

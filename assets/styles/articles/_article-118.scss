@@ -28,11 +28,31 @@
         }
      }
    }
-  @include breakpoint(desktop) {
+  @include breakpoint(phablet) {
+    .row {
+      margin-top: 200px;
+      margin-bottom: 210px;
+    }
     .background {
-        background-position: 70% 90%;
+      width: 437px;
+      margin: 0;
+      right: -16%;
+      background-position: center;
+      background-size: cover;
+      left: inherit;
+    }
+    .left-container {
+      max-width: 305px;
+      div {
+        margin-top: 60px;
       }
+      h2 {
+        font-size: 50px;
+        line-height: 55px;
+      }
+    }
   }
+
   @include breakpoint(tablet) {
     .background {
       background-position: 77% 90%;

@@ -81,17 +81,28 @@
   }
 
   @include breakpoint(phablet) {
-
-    //margin-top: -100px;
+    min-height: 0px;
+    .row {
+      margin-top: 90px;
+      margin-bottom: 80px;
+    }
     .left-container {
-      margin-top: 0px;
+      margin-top: 70px;
       padding-left: 0px;
+      .title-container {
+        max-width: 234px;
+        h2{
+          font-size: 50px;
+          line-height: 55px;
+        }
+      }
       .text-container {
+        max-width: 288px;
         margin-top: 50px;
         margin-bottom: 50px;
-        //@include make-xs-column(8);
-        //padding-left: 0px;
-        //padding-right: 0px;
+        p{
+          font-size: 18px;
+        }
       }
     }
     .right-container {
@@ -114,17 +125,19 @@
         }
       }
       .person-image-right {
-        max-width: 100px;
+        max-width: 114px;
         margin: 0 auto;
       }
       .person-text {
         display: inline-block;
         text-align: left;
-        margin-left: 10px;
+        margin-left: -28px;
+        margin-top: 46px;
+        width: 170px;
         span {
           display: block;
           width: 100%;
-          font-size: 16px;
+          font-size: 12px;
         }
       }
     }

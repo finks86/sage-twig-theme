@@ -60,11 +60,9 @@ article {
     }
   }
 
-  p, ul {
-    font-family: $font-oblique;
-  }
 
   p {
+    font-family: $font-oblique;
     font-size: 14px;
     margin-bottom: 0;
   }
@@ -75,6 +73,7 @@ article {
       li {
         list-style: none;
         span {
+          font-family: $font-oblique;
           padding-left: 25px;
           display: block;
         }

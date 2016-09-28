@@ -18,8 +18,26 @@
         color: #1E325F;
       }
       @include make-xs-column(8);
+      @include make-sm-column-offset(1);
       padding-left: 0;
       padding-right: 15px;
     }
+  }
+  @include breakpoint(phablet) {
+    .row{
+      margin-top: 135px;
+
+      .left-container {
+        h2{
+          font-size: 40px;
+          line-height: 45px;
+          margin-bottom: 70px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+
   }
 }

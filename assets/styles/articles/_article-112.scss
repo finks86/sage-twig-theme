@@ -3,16 +3,26 @@
   h2, p, ul li {
     color: $blue
     }
+  h2{
+    display: block;
+    max-width: 200px;
+    margin-bottom: 400px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  p,ul li {
+    font-size: 12px;
+  }
   .row {
     margin-top: 105px;
     margin-bottom: 140px;
     }
   .background{
-    max-width: 1200px;
+    max-width: 400px;
     margin: 0 auto;
+    background-size: 52%;
+    background-position: center 45%;
     background-color: transparent;
-    background-position: 95% 40%;
-    background-size: 40%;
     }
   .left-container {
     @include make-sm-column-offset(1);
@@ -32,6 +42,41 @@
       }
       }
     }
+  @include breakpoint(phablet) {
+    min-height: 0px;
+
+    .left-container {
+      div {
+        max-width: 290px;
+      }
+      h2 {
+        font-size: 50px;
+        line-height: 55px;
+        margin-bottom: 60px;
+        max-width: 315px;
+      }
+      p, ul li {
+        font-size: 18px;
+      }
+    }
+
+    .row {
+      margin-top: 40px;
+      margin-bottom: 155px;
+    }
+    .background {
+      width: 207px;
+      height: 225px;
+      margin: 0;
+      right: 24%;
+      top: inherit;
+      bottom: 205px;
+      left: inherit;
+      background-size: cover;
+      background-position: center;
+      background-color: transparent;
+    }
+  }
   @include breakpoint(tablet) {
     .row {
       margin-top: 80px;
@@ -42,24 +87,5 @@
       background-size: 36%;
       }
     }
-  @media (max-width: $screen-sm-min) {
-    p, ul li {
-      font-size: 12px;
-      }
-    h2 {
-      display: block;
-      max-width: 200px;
-      margin-bottom: 400px;
-      }
-    .row {
-        margin-top:40px;
-        margin-bottom: 50px;
-      }
-    .background {
-      max-width: 400px;
-      margin: 0 auto;
-      background-size: 52%;
-      background-position: center 45%;
-      }
-    }
+
 }

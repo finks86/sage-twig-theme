@@ -42,23 +42,35 @@
 
 @include breakpoint(phablet) {
   .article-15 {
+    min-height: 0px;
+    overflow: hidden;
+
     .row {
-      margin-top: 140px;
-      margin-bottom: 320px;
+      margin-top: 90px;
+      margin-bottom: 110px;
     }
     div.background {
-      background-position: bottom center;
+      background-size: 360%;
+      background-position: 50% 100%;
+      width: 1000px;
     }
     .left-container {
       margin-bottom: 190px;
       padding-left: 0px;
       font-size: 16px;
       div {
-        margin-top: 50px;
-        max-width: 90%;
+        margin-top: 60px;
+        max-width: 72%;
+        h2{
+          font-size:50px;
+          line-height: 55px;
+        }
         ul {
-          margin-top: 50px;
+          margin-top: 40px;
           font-size: 16px;
+        }
+        p {
+          font-size: 18px;
         }
       }
     }
