@@ -19,7 +19,9 @@
   background-size: cover;
   background-position: center center;
   }
-
+.left-container, .right-container, .title-container {
+  max-width: 495px
+}
 .other-pages-container {
   display: none;
   }
@@ -70,10 +72,15 @@ article {
     padding: 0;
     li {
       list-style: none;
+      span {
+        padding-left: 25px;
+        display: block;
+      }
       &:before {
         content: "• ";
         margin-right: 10px;
         color: $red; /* or whatever color you prefer */
+        position: absolute;
         }
       }
     }
@@ -187,7 +194,8 @@ article {
     min-height: 0px;
 
     h2 {
-      font-size: 40px;
+      font-size: 50px;
+      line-height: 55px;
       }
     p {
       font-size: 18px;

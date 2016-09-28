@@ -81,19 +81,23 @@
   .items-container {
     @include make-xs-column(6);
     padding-right: 0;
-    width: 51%;
+
     div {
       margin-bottom: 20px;
+      position: relative;
+      height: 75px;
     }
     .item__label {
       color: $purple;
       font-size: 12px;
       font-family: $font-heavy;
       font-weight: bold;
+      position: absolute;
+      width: 135px;
     }
     &:nth-of-type(1) {
       margin-left: -15px;
-      margin-right: 5px;
+      margin-right: 15px;
     }
 
   }
@@ -172,10 +176,20 @@
       }
     }
   }
+  @media (min-width: 480px) and (max-width: $screen-sm-min) {
+    .background {
+      bottom: -73px;
+      background-size: 94%;
+    }
+  }
+
   @media (max-width: $screen-sm-min) {
     background-color: #fff;
+    .row {
+      margin-bottom: 115px;
+    }
     .background {
-      bottom: -2px;
+      bottom: -33px;
       background-color: #fff;
       }
 

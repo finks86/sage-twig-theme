@@ -25,6 +25,11 @@
       }
     ul {
       margin-top: 40px;
+      li {
+        span {
+          color: $blue;
+        }
+      }
       }
     }
   @include breakpoint(tablet) {
@@ -54,7 +59,7 @@
       max-width: 400px;
       margin: 0 auto;
       background-size: 52%;
-      background-position: center 48%;
+      background-position: center 45%;
       }
     }
 }

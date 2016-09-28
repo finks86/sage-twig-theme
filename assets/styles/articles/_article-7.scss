@@ -13,12 +13,15 @@
   .left-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(10);
+    padding-left: 0px;
+    padding-right: 0px;
+    h2 {
+      display: block;
+      max-width: 260px;
+    }
     .main-text-container {
       margin-top: 180px;
-      h2 {
-        display: block;
-        max-width: 260px;
-      }
+
       p {
         strong {
           color: white;

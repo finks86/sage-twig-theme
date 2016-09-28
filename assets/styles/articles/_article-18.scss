@@ -41,17 +41,28 @@
     margin-top: 60px;
     span {
       display: block;
-      font-size: 12px;
+      font-size: 10px;
       font-family: "AvenirLTStd-Oblique";
+
       &.person--name {
-        font-family: "AvenirLTStd-Heavy";
+        font-family: "AvenirLTStd-Heavy"
+
       }
     }
   }
   .person-text {
     margin: 15px 0;
+    position: absolute;
+    margin-left: -66px;
+    width: 132px;
+    left: 50%;
+
     span {
       color: #1E325F;
+      strong {
+        color:#1E325F !important;
+        font-family: "AvenirLTStd-Oblique";
+      }
     }
   }
   .person-image-right {
@@ -65,6 +76,7 @@
   .person-content {
     @include make-xs-column(6);
     text-align: center;
+    height: 170px;
   }
 
   @include breakpoint(phablet) {
