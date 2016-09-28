@@ -23,8 +23,10 @@
     }
   }
   @include breakpoint(phablet) {
+    min-height: 0px;
     .row{
       margin-top: 135px;
+      margin-bottom: 120px;
 
       .left-container {
         h2{
