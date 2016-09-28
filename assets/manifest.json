@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost"
+    "devUrl": "http://rax.localhost"
   }
 }

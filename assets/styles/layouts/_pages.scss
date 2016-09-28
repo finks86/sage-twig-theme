@@ -18,11 +18,11 @@
   right: 0;
   background-size: cover;
   background-position: center center;
-  }
+}
 
 .other-pages-container {
   display: none;
-  }
+}
 
 article {
   //padding: 50px 0px;
@@ -31,7 +31,7 @@ article {
   background: $blue;
   .container {
     max-width: 680px;
-    }
+  }
   h2 {
     font-family: "AvenirLTStd-Heavy";
     letter-spacing: 1px;
@@ -44,26 +44,26 @@ article {
     margin-bottom: 0;
     strong {
       color: $red;
-      }
     }
+  }
   h3 {
     font-family: "AvenirLTStd-Heavy";
-    }
+  }
   ul, li, span, p {
     color: #fff;
     strong {
       color: $red;
-      }
     }
+  }
 
   p, ul {
     font-family: $font-oblique;
-    }
+  }
 
   p {
     font-size: 14px;
     margin-bottom: 0;
-    }
+  }
 
   ul {
     font-size: 16px;
@@ -74,22 +74,21 @@ article {
         content: "• ";
         margin-right: 10px;
         color: $red; /* or whatever color you prefer */
-        }
       }
     }
-
-  &.article-18 {
-    background-color: $blue;
-    }
+  }
 
   .person-image-right {
     max-width: 150px;
     img {
       width: 100%;
       height: auto;
-      }
     }
   }
+  &:first-child {
+    margin: 60px auto;
+  }
+}
 
 .section.contact {
   padding: 40px 0px;
@@ -98,18 +97,18 @@ article {
   .form-container {
     @include make-sm-column-offset(1);
     @include make-sm-column(10);
-    }
+  }
 
   .title-container {
     margin: 80px 0;
-    }
+  }
   h2, label {
     color: $blue;
-    }
+  }
   h2 {
     font-family: "AvenirLTStd-Heavy";
     font-size: 60px;
-    }
+  }
   label {
     font-family: "AvenirLTStd-Roman";
     width: 100%;
@@ -120,22 +119,22 @@ article {
         font-weight: 600;
         line-height: 28px;
         font-size: 14px;
-        }
       }
     }
+  }
   input, textarea {
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-weight: normal;
-    }
+  }
   input.wpcf7-submit {
     border-radius: 0;
     background-color: $blue;
     color: #fff;
     max-width: 120px;
     float: right;
-    }
+  }
   a {
     margin-top: 20px;
     display: block;
@@ -148,7 +147,7 @@ article {
     text-align: center;
     &:hover {
 
-      }
+    }
     span {
       display: block;
       max-width: 122px;
@@ -161,25 +160,25 @@ article {
         font-size: 40px;
         position: absolute;
         left: 0;
-        }
-      }
-    }
-  div.wpcf7 {
-    margin-left: -15px;
-    margin-right: -15px;
-    }
-  form {
-    .form-top-input {
-      @include make-sm-column(4);
-      }
-    .form-bottom-input {
-      @include make-sm-column(12);
-      }
-    input, textarea {
-      width: 100%;
       }
     }
   }
+  div.wpcf7 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  form {
+    .form-top-input {
+      @include make-sm-column(4);
+    }
+    .form-bottom-input {
+      @include make-sm-column(12);
+    }
+    input, textarea {
+      width: 100%;
+    }
+  }
+}
 
 @include breakpoint(phablet) {
 
@@ -188,52 +187,57 @@ article {
 
     h2 {
       font-size: 40px;
-      }
+      line-height: 45px;
+    }
     p {
       font-size: 18px;
-      }
+    }
     ul {
       font-size: 18px
-      }
+    }
     div.background {
       background-color: $blue;
       background-size: 100%;
       background-repeat: no-repeat;
 
-      }
-
     }
+    &:first-child {
+      margin: 100px auto;
+    }
+
+  }
   .section.contact {
     .title-container {
       margin: 40px 0 60px;
-      }
+    }
     .form-container {
       padding-left: 0px;
       padding-right: 0px;
-      }
+    }
     a.download-link {
       height: 80px;
       span {
         margin: 20px auto;
-        }
       }
     }
   }
+}
 
 @include breakpoint(tablet) {
-
 
   article {
     min-height: 0;
     h2 {
       font-size: 60px;
-      }
+      line-height: 65px;
     }
   }
+}
+
 @media (max-width: $screen-sm-min) {
   body {
-      article {
-        min-height: 0;
-        }
+    article {
+      min-height: 0;
     }
   }
+}

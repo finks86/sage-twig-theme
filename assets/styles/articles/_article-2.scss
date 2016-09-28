@@ -4,18 +4,22 @@
     margin-top: 30px;
     margin-bottom: 50px;
   }
+
   .left-container {
 
     @include make-sm-column-offset(1);
     @include make-sm-column(5);
     padding-left: 0;
     padding-right: 0;
+    h2 {
+      max-width: 70%;
+    }
     div {
       margin-top: 50px;
-      h2{
-        display: block;
-        max-width: 220px;
-      }
+      //h2{
+      //  display: block;
+      //  max-width: 220px;
+      //}
       p {
         strong {
           color: white;
@@ -93,7 +97,7 @@
     .left-container {
       margin-top: 10px;
       div {
-        margin-top: 50px;
+        margin-top: 55px;
       }
     }
     .right-container {

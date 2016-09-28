@@ -1,30 +1,41 @@
 <header class="navbar navbar-default">
     <div class="navbar-header">
-        <h1><a class="brand" href="{{ function('home_url', '/') }}">{{ function('bloginfo', 'name') }}</a></h1>
+        {#<h1><a class="brand" href="{{ function('home_url', '/') }}">{{ function('bloginfo', 'name') }}</a></h1>#}
         {#data-toggle="collapse" data-target="#navbar"#}
-        <button class="navbar-toggler hamburger hamburger--squeeze" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-        </button>
-        <nav class="navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav">
-                {% for item in menu.get_items %}
-                    <li class="nav-main-item {{ item.classes | join(' ') }}">
-                        <a class="nav-main-link" href="{{ item.slug }}">{{ item.title }}</a>
+        {#<button class="navbar-toggler hamburger hamburger--squeeze" type="button">#}
+        {#<span class="hamburger-box">#}
+        {#<span class="hamburger-inner"></span>#}
+        {#</span>#}
+        {#</button>#}
+        {#<nav class="navbar-collapse" id="navbar">#}
+        {#<ul class="nav navbar-nav">#}
+        {#{% for item in menu.get_items %}#}
+        {#<li class="nav-main-item {{ item.classes | join(' ') }}">#}
+        {#<a class="nav-main-link" href="{{ item.slug }}">{{ item.title }}</a>#}
 
 
-                        {% if item.get_children %}
-                            <ul class="nav-drop">
-                                {% for child in item.get_children %}
-                                    <li class="nav-drop-item"><a href="{{ child.get_link }}">{{ child.title }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
+        {#{% if item.get_children %}#}
+        {#<ul class="nav-drop">#}
+        {#{% for child in item.get_children %}#}
+        {#<li class="nav-drop-item"><a href="{{ child.get_link }}">{{ child.title }}</a></li>#}
+        {#{% endfor %}#}
+        {#</ul>#}
+        {#{% endif %}#}
+        {#</li>#}
+        {#{% endfor %}#}
+        {#</ul>#}
+        {#</nav>#}
+        <ul class="language-switcher">
+            {% for lang in lang_switcher %}
+                {% if not lang.active %}
+                    <li class="language-switcher__item"><a href="{{ lang.url }}"
+                                                           class="language-switcher__link">{{ lang.language_code }}</a></li>
 
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {% for item in menu.get_items %}
+            <a class="nav__link" href="{{ item.slug }}">{{ item.title }}</a>
+        {% endfor %}
     </div>
 </header>

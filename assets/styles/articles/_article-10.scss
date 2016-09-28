@@ -79,11 +79,14 @@
   //}
 
   .items-container {
-    @include make-xs-column(6);
-    padding-right: 0;
-    width: 51%;
+    //@include make-xs-column(6);
+    padding-right: 15px;
+    padding-left: 15px;
+    //width: 51%;
     div {
       margin-bottom: 20px;
+      float: left;
+      width: 50%;
     }
     .item__label {
       color: $purple;
@@ -105,6 +108,9 @@
     }
     .title-container {
       margin-bottom: 140px;
+      h2 {
+        max-width: 350px;
+      }
     }
     //.title-container,
     //.left-container,
