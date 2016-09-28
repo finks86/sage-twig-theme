@@ -7,13 +7,24 @@
                 <ul>
                     {#<li class=""><font>Next Label Group 2016</font>#}
 
-                    </li>
-                    <li class=""><a class="nav-footer__link fancybox" href="#other-page-74"><font>Impressum</font></a>
+                    {% if lang_current == 'de' %}
+                        <li class=""><a class="nav-footer__link fancybox"
+                                        href="#other-page-302"><font>Impressum</font></a>
 
-                    </li>
-                    <li class=""><a class="nav-footer__link fancybox" href="#other-page-76"><font>Disclaimer</font></a>
+                        </li>
+                        <li class=""><a class="nav-footer__link fancybox" href="#other-page-304"><font>Disclaimer</font></a>
 
-                    </li>
+                        </li>
+                    {% else %}
+                        <li class=""><a class="nav-footer__link fancybox"
+                                        href="#other-page-74"><font>Impressum</font></a>
+
+                        </li>
+                        <li class=""><a class="nav-footer__link fancybox" href="#other-page-76"><font>Disclaimer</font></a>
+
+                        </li>
+
+                    {% endif %}
                 </ul>
             </nav>
         </div>

@@ -51,7 +51,7 @@ class TwigSageTheme extends TimberSite
             // Get all posts
             'posts_per_page' => -1,
             'post_type' => 'page',
-            'post__not_in' => array(74, 76),
+            'post__not_in' => array(74, 76, 302, 304),
             // Order by meta value first, then order by post date
             'orderby' => 'menu_order',
 
@@ -60,15 +60,27 @@ class TwigSageTheme extends TimberSite
 
         $context['pages'] = Timber::get_posts($args);
         $context['lang_current'] = ICL_LANGUAGE_CODE;
-        $args = array(
-            // Get all posts
-            'post_type' => 'page',
-            'post__in' => array(74, 76),
-            // Order by meta value first, then order by post date
-            'orderby' => array(
-                'menu_order' => 'DESC',
-            ),
-        );
+        if (ICL_LANGUAGE_CODE == 'de') {
+            $args = array(
+                // Get all posts
+                'post_type' => 'page',
+                'post__in' => array(302, 304),
+                // Order by meta value first, then order by post date
+                'orderby' => array(
+                    'menu_order' => 'DESC',
+                ),
+            );
+        } else {
+            $args = array(
+                // Get all posts
+                'post_type' => 'page',
+                'post__in' => array(74, 76),
+                // Order by meta value first, then order by post date
+                'orderby' => array(
+                    'menu_order' => 'DESC',
+                ),
+            );
+        }
         $context['other_pages'] = Timber::get_posts($args);
         /* Menu */
         $context['menu'] = new TimberMenu('primary');

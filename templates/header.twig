@@ -35,7 +35,7 @@
             {% endfor %}
         </ul>
         {% for item in menu.get_items %}
-            <a class="nav__link" href="{{ item.slug }}">{{ item.title }}</a>
+            <a class="nav__link" href="{{ item.link }}">{{ item.title }}</a>
         {% endfor %}
     </div>
 </header>

@@ -83,7 +83,7 @@
             e.preventDefault();
             var anchor = $(this).attr('href');
 
-            var target = $('#' + anchor);
+            var target = $(anchor);
 
 
             console.log(target.offset().top, nav_height);
