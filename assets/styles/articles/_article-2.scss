@@ -89,12 +89,13 @@
 
 @include breakpoint(phablet) {
   .article-2 {
+    min-height:0px;
     .row {
-        margin-top: 185px;
-        margin-bottom: 185px;
+        margin-top: 150px;
+        margin-bottom: 105px;
     }
     .left-container {
-      margin-top: 10px;
+      margin-top: 90px;
       div {
         margin-top: 55px;
       }
@@ -111,9 +112,17 @@
   }
 
   .rax-cross {
-    width: 35px;
-    height: 35px;
-    margin: 20px auto;
+    width: 32px;
+    height: 32px;
+    margin: 20px auto !important;
+    &:before {
+      width: 30% !important;
+      margin-left: -15% !important;
+    }
+    &:after {
+      height: 30% !important;
+      margin-top: -15% !important;
+    }
   }
 }
 
@@ -133,9 +142,5 @@
       margin-top: 10px;
     }
   }
-  @media (max-width: $screen-sm-min) {
-      .rax-cross {
-        margin: 26px 4px;
-        }
-    }
+
 }

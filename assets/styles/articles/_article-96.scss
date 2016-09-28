@@ -29,8 +29,27 @@
     }
   }
   @include breakpoint(phablet) {
+
+    min-height: 0px;
+
     .row {
-      margin-top: 360px;
+      margin-top: 255px;
+      margin-bottom: 240px;
+
+    }
+    .background {
+      background-size: cover;
+      top: 22%;
+      right: inherit;
+      height: 610px;
+      width: 609px;
+      left: 66%;
+    }
+    .left-container {
+      margin-top: 60px;
+      ul {
+        margin-top: 55px;
+      }
     }
   }
   @include breakpoint(tablet) {

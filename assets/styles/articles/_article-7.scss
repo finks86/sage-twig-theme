@@ -7,8 +7,8 @@
 
     background-color: $blue;
     background-repeat: no-repeat;
-    background-size: 156%;
-    background-position: 25% 5%;
+    background-size: 210%;
+    background-position: 25% 2%;
   }
   .left-container {
     @include make-sm-column-offset(1);
@@ -65,21 +65,30 @@
       font-family: $font-oblique;
     }
   }
-
+  @media (min-width: 480px) and (max-width: $screen-sm-min) {
+    .background {
+      background-size: 136%;
+    }
+  }
   @include breakpoint(phablet) {
+    min-height: 0px;
     .row {
-      margin-top: 330px;
+      margin-top: 230px;
       margin-bottom: 50px;
     }
     .background {
-      background-position: top center;
+      background-position: 45% 8%;
+      background-size: 160%;
     }
     .list-container {
       padding-left: 0px;
       display: block;
     }
     .left-container {
-      margin-top: 170px;
+      margin-top: 0px;
+      h2 {
+        max-width: 340px;
+      }
       .main-text-container {
         margin-top: 170px;
         margin-bottom: 50px;
@@ -88,7 +97,7 @@
         width: 100%;
       }
       .list-container {
-        margin-top: 0;
+        margin-top: 170px;
         @include make-sm-column(4);
         padding-right: 0;
       }

@@ -192,11 +192,14 @@ article {
 
   article {
     min-height: 0px;
-
+    .row {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
     h2 {
 
-      font-size: 50px;
-      line-height: 55px;
+      font-size: 40px;
+      line-height: 45px;
       }
 
     p {
@@ -210,9 +213,6 @@ article {
       background-size: 100%;
       background-repeat: no-repeat;
 
-    }
-    &:first-child {
-      margin: 100px auto;
     }
 
   }
