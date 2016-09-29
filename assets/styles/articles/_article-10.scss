@@ -5,7 +5,7 @@
     color: $blue;
   }
   .row {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 82px;
   }
   .container-fluid {
@@ -16,7 +16,7 @@
     @include make-sm-column(7);
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 
     h2 {
       max-width: 265px;
@@ -197,7 +197,7 @@
   @media (max-width: $screen-sm-min) {
     background-color: #fff;
     .row {
-      margin-bottom: 105px;
+      margin-bottom: 145px;
     }
     .background {
       bottom: -4px;

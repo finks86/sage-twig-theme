@@ -64,20 +64,25 @@
       }
   }
   @media (max-width: $screen-sm-min) {
+      padding-bottom: 40px;
       .row {
-        margin-bottom: 100px;
+        margin-bottom: 0px;
 
         .left-container {
           div {
+            margin-top: 40px;
             p {
               font-size: 12px;
+            }
+            ul{
+              margin-top: 40px;
             }
           }
         }
         }
       .background {
         background-size: cover;
-        top: 15px;
+        top: 0px;
         left: inherit;
         right: -190px;
         width: 385px;

@@ -1,7 +1,7 @@
 .article-2, .article-232 {
   background-color: $blue;
   .row {
-    margin-top: 30px;
+    margin-top: 55px;
     margin-bottom: 50px;
   }
 
@@ -31,7 +31,7 @@
     @include make-sm-column(3);
     padding-left: 0;
     padding-right: 0;
-    margin-top: 70px;
+    margin-top: 45px;
     display: flex;
 
     .rax-cross {

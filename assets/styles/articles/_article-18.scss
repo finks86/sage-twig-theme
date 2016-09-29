@@ -1,8 +1,9 @@
 .article-18, .article-277 {
   background-color: white;
+  padding-bottom: 40px;
   .row {
-    margin-top: 85px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .left-container {
     @include make-sm-column-offset(1);
@@ -37,7 +38,7 @@
     @include make-md-column(5);
     padding-left: 0;
     padding-right: 0;
-    margin-top: 60px;
+    margin-top: 50px;
     span {
       display: block;
       font-size: 10px;
@@ -76,12 +77,13 @@
     @include make-xs-column(6);
     text-align: center;
 
-    height: 200px;
+    height: 175px;
 
   }
 
   @include breakpoint(phablet) {
     min-height: 0px;
+    padding-bottom: 50px;
     .row {
       margin-top: 90px;
       margin-bottom: 80px;

@@ -6,7 +6,7 @@
 
   .row {
     margin-top: 15px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     }
   .left-container {
     @include make-sm-column-offset(1);
@@ -16,7 +16,7 @@
     padding-right: 10px;
 
     div {
-      margin-top: 70px;
+      margin-top: 50px;
       p {
         font-size: 12px;
         margin-bottom: 20px;

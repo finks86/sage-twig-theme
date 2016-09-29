@@ -12,6 +12,7 @@
     }
   h2, label, span {
     color: $blue;
+    font-family: "AvenirLTStd-Black";
     }
   h2 {
 
@@ -97,7 +98,7 @@
 @media (max-width: $screen-sm-min) {
   .section.contact{
     .title-container {
-      margin: 20px 0 40px;
+      margin: 20px 0 30px;
       h2{
         font-size: 30px;
         margin-top: 0px;
@@ -107,7 +108,12 @@
     .form-container {
       padding-left: 0px;
       padding-right: 0px;
+      input.wpcf7-submit {
+        padding: 7px;
+        font-size: 12px;
       }
+      }
+
     a.download-link {
       height: 80px;
       span {
