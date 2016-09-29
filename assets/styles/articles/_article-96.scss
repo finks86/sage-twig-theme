@@ -55,13 +55,28 @@
       }
     }
   }
+
   @include breakpoint(tablet) {
     .row {
-      margin-top: 460px;
+      margin-top: 50px;
+      margin-bottom: 285px;
     }
     .background {
-      top:-36%;
+      top:10px;
+      left:inherit;
+      right:inherit;
+      height: 840px;
+      width: 840px;
+      margin-left: 70%;
       }
+    .left-container {
+      div {
+        margin-top: 45px;
+        ul {
+          margin-top: 50px;
+        }
+      }
+    }
   }
   @media (max-width: $screen-sm-min) {
       padding-bottom: 40px;

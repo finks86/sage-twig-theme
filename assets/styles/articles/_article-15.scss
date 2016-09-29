@@ -78,3 +78,28 @@
     }
   }
 }
+
+@include breakpoint(tablet) {
+  .article-15, .article-266 {
+    .row{
+      margin-top: 110px;
+    }
+    .background {
+      background-size: contain;
+      background-position: bottom;
+      width: 367%;
+      left: -112%;
+      right: inherit;
+    }
+    .left-container {
+      margin-bottom: 130px;
+      div {
+        margin-top: 50px;
+        max-width: 290px;
+        ul {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}

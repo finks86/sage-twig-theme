@@ -15,8 +15,9 @@
   }
   &:after {
     content: '';
-    width: 200px;
-
+    height:1px;
+    width: 100%;
+    border-bottom: 1px solid #EAEAEA;
   }
   .row {
     margin-top: 5px;
@@ -84,13 +85,23 @@
   }
   @include breakpoint(tablet) {
     .row {
-      margin-top: 80px;
-      margin-bottom: 120px;
+      margin-top: 90px;
+      margin-bottom: 160px;
       }
     .background{
       background-position: 95% 100%;
       background-size: 36%;
       }
+    .left-container {
+      h2 {
+        font-size: 60px;
+        line-height: 65px;
+        margin-bottom: 110px;
+      }
+      div {
+        max-width: 370px;
+      }
+    }
     }
 
 }

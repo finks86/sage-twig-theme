@@ -159,20 +159,38 @@
 
   @include breakpoint(tablet) {
     .row {
-      margin-top: 130px;
-      margin-bottom: 400px;
+      margin-top: 140px;
+      margin-bottom: 330px;
     }
     .background {
-      background-size: 92%;
+      background-size: contain;
+      width: 805px;
+      margin: 0 auto;
+      bottom: -95px;
     }
     .title-container {
       @include make-md-column(8);
-      margin-bottom: 90px;
+      margin-bottom: 100px;
       padding-left: 0;
       padding-right: 0;
+      h2 {
+        font-size: 60px;
+        line-height: 65px;
+      }
     }
     .right-container {
-      @include make-md-column(6);
+      @include make-md-column(10);
+      @include make-md-column-offset(1);
+      padding-left:0px;
+
+      float: left;
+      max-width: none;
+      .items-container {
+        margin-left: -15px;
+        div {
+          @include make-md-column(4);
+        }
+      }
     }
     .left-container {
       margin-top: 50px;
