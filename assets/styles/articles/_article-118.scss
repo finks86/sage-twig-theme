@@ -59,12 +59,15 @@
       margin-bottom: 160px;
     }
     .background {
-      width: 529px;
+      width: 3030px;
+      height: 1760px;
       margin: 0;
-      right: 10%;
-      top: -32%;
-      background-size: cover;
-      background-position: center;
+      right: inherit;
+      left: 50%;
+      margin-left: -394px;
+      top: -44.3%;
+      background-size: contain;
+      background-position: center
       }
     .left-container{
       max-width:none;
