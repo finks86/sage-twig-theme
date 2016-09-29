@@ -75,15 +75,16 @@
     }
     .timeline {
       width: 814px;
-      height: 545px;
+      height: 445px;
       right: 1%;
       left: 50%;
-      top: 11.5%;
+      top: 15%;
+      margin-left: -210px;
     }
     .left-container {
       div {
         margin-top: 55px;
-        max-width: none;
+        max-width: 275px;
         p, ul li span {
           font-size: 18px;
         }
