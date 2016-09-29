@@ -42,6 +42,9 @@ $nav-height-phablet: 100px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
   }
   @include breakpoint(phablet) {
     height: $nav-height-phablet+1;

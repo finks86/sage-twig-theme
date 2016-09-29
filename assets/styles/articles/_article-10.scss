@@ -57,8 +57,8 @@
     position: absolute;
   }
   h3 {
-    font-family: $font-heavy;
-    font-weight: bold;
+    font-family: $font-black;
+    font-weight: 300;
     color: $red;
     font-size: 30px;
     margin-bottom: 0;
@@ -189,6 +189,7 @@
         margin-left: -15px;
         div {
           @include make-md-column(4);
+          margin-bottom: 75px;
         }
       }
     }
