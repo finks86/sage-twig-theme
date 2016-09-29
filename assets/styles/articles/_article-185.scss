@@ -39,6 +39,18 @@
         }
       }
     }
-
+  }
+  @include breakpoint(tablet) {
+    .row {
+      margin-top: 155px;
+      margin-bottom: 130px;
+      .left-container {
+        @include make-md-column(5);
+        h2{
+          font-size: 60px;
+          line-height: 65px;
+        }
+      }
+    }
   }
 }

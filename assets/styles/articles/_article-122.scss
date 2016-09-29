@@ -100,5 +100,40 @@
     }
   }
 
+  @include breakpoint(tablet) {
+    min-height: 0px;
+    .row {
+      margin-top: 65px;
+      margin-bottom: 280px;
+    }
+    .timeline {
+      width: 918px;
+      height: 440px;
+      left: 50%;
+      top: 18.5%;
+      margin-left: -218px;
+
+    }
+    .background {
+      top: 65%;
+      right: inherit;
+      left: 50%;
+      width: 918px;
+      height: 424px;
+      margin-left: -460px;
+    }
+    .left-container {
+      div {
+        margin-top: 105px;
+        p{
+          margin-bottom: 40px;
+        }
+        ul {
+          width: 352px;
+        }
+      }
+    }
+
+  }
 
 }

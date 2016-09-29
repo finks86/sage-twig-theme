@@ -85,11 +85,11 @@
       margin-top: 110px;
     }
     .background {
-      background-size: contain;
-      background-position: bottom;
-      width: 367%;
-      left: -112%;
-      right: inherit;
+      background-size: contain !important;
+      background-position: bottom !important;
+      width: 367% !important;
+      left: -112% !important;
+      right: inherit !important;
     }
     .left-container {
       margin-bottom: 130px;

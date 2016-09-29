@@ -147,14 +147,31 @@
   }
 
   @include breakpoint(tablet) {
-
+    .row {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
     .right-container {
       .person-image-right {
-        max-width: 120px;
+        max-width: 140px;
+      }
+      .person-text{
+        width: 220px;
+        span {
+          font-size: 16px;
+        }
       }
     }
     .left-container {
+      .title-container {
+        max-width: 280px;
+        h2 {
+          font-size: 60px;
+          line-height: 65px;
+        }
+      }
       .text-container {
+        max-width: 360px;
         margin-top: 100px;
       }
     }

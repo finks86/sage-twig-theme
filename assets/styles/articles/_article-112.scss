@@ -83,14 +83,17 @@
       background-color: transparent;
     }
   }
+
   @include breakpoint(tablet) {
     .row {
       margin-top: 90px;
       margin-bottom: 160px;
       }
     .background{
-      background-position: 95% 100%;
-      background-size: 36%;
+      background-size: cover;
+      width: 263px;
+      height: 285px;
+      right: 300px;
       }
     .left-container {
       h2 {
@@ -102,6 +105,15 @@
         max-width: 370px;
       }
     }
+  }
+  @media (min-width: 992px) and (max-width: 1200px){
+    .background {
+      right: 15%;
     }
-
+  }
+  @media (min-width: 1200px) {
+    .background {
+      right: 26%;
+    }
+  }
 }

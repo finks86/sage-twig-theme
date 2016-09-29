@@ -54,11 +54,32 @@
   }
 
   @include breakpoint(tablet) {
+    .row {
+      margin-top: 140px;
+      margin-bottom: 160px;
+    }
     .background {
-      background-position: 77% 90%;
-      background-size: 24%;
+      width: 529px;
+      margin: 0;
+      right: 10%;
+      top: -32%;
+      background-size: cover;
+      background-position: center;
+      }
+    .left-container{
+      max-width:none;
+      h2{
+        font-size: 60px;
+        line-height: 65px;
+      }
+      div{
+        margin-top: 110px;
+        max-width: 305px;
       }
     }
+    }
+
+
   @media (min-width: 480px) and (max-width: $screen-sm-min) {
     .background {
       right: -24% !important;
