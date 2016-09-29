@@ -132,3 +132,18 @@
   }
 
 }
+.article-291 {
+  .timeline{
+    margin-left: -295px;
+  }
+  @include breakpoint(phablet) {
+    .timeline{
+      margin-left: -197px;
+    }
+  }
+  @include breakpoint(tablet) {
+  .timeline{
+    margin-left: -208px;
+  }
+}
+}
