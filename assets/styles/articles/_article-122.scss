@@ -17,6 +17,7 @@
 
     div {
       margin-top: 50px;
+      max-width: 210px;
       p {
         font-size: 12px;
         margin-bottom: 20px;
@@ -35,10 +36,12 @@
       }
     }
   .timeline {
-    width: 98px;
+    width: 800px;
     height: 310px;
-    right: 4%;
+    right: inherit;
+    left: 50%;
     top: 27.5%;
+    margin-left: -301px;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
@@ -46,26 +49,16 @@
   }
   .background {
     top: 76%;
-    right: -16.5%;
-    left:inherit;
-    width: 490px;
+    right: -15%;
+    left: 50%;
+    width: 800px;
     height: 260px;
-    background-size: cover;
+    background-size: contain;
     position: absolute;
-    margin:0 auto;
+    margin: 0 auto;
+    margin-left: -435px;
   }
 
-
-  @media (min-width: 350px) and (max-width: 380px) {
-    .background {
-      right: -15%;
-    }
-  }
-  @media (min-width: 380px) and (max-width: $screen-sm-min) {
-    .background {
-      right: -13%;
-    }
-  }
 
   @include breakpoint(phablet) {
     min-height: 1020px;
@@ -76,20 +69,21 @@
     .background {
       top: 67%;
       right: -1.5%;
-      left: inherit;
+      left: 50%;
       width: 814px;
       height: 371px;
     }
     .timeline {
-      width: 220px;
+      width: 814px;
       height: 545px;
-      right: 8%;
+      right: 1%;
+      left: 50%;
       top: 11.5%;
     }
     .left-container {
       div {
         margin-top: 55px;
-
+        max-width: none;
         p, ul li span {
           font-size: 18px;
         }
