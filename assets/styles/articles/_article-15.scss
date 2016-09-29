@@ -84,12 +84,16 @@
     .row{
       margin-top: 110px;
     }
-    .background {
-      background-size: contain !important;
-      background-position: bottom !important;
-      width: 367% !important;
-      left: -112% !important;
-      right: inherit !important;
+    div.background {
+      background-size: contain;
+      background-position: center bottom;
+      width: 5300px;
+      height: 920px;
+      left: 50%;
+      right: inherit;
+      bottom: -27px;
+      margin-left: -2560px;
+      top: inherit;
     }
     .left-container {
       margin-bottom: 130px;

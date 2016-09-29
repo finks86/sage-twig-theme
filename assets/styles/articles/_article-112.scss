@@ -90,10 +90,10 @@
       margin-bottom: 160px;
       }
     .background{
-      background-size: cover;
-      width: 263px;
+      background-size: contain;
+      width: 1000px;
       height: 285px;
-      right: 300px;
+      left: 50.8%;
       }
     .left-container {
       h2 {
@@ -106,14 +106,5 @@
       }
     }
   }
-  @media (min-width: 992px) and (max-width: 1200px){
-    .background {
-      right: 15%;
-    }
-  }
-  @media (min-width: 1200px) {
-    .background {
-      right: 26%;
-    }
-  }
+
 }
