@@ -42,14 +42,16 @@
   }
   @include breakpoint(tablet) {
     .row {
-      margin-top: 155px;
-      margin-bottom: 130px;
+      margin-top: 161px;
+      margin-bottom: 155px;
       .left-container {
         @include make-md-column(5);
         h2{
           font-size: 60px;
           line-height: 65px;
+          margin-bottom: 106px;
         }
+
       }
     }
   }

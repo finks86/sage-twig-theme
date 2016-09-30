@@ -41,14 +41,14 @@
       .list-content {
         float: left;
         margin-bottom: 10px;
-        span {
-          font-family: $font-oblique;
-        }
+        //span {
+        //  font-family: $font-oblique;
+        //}
         }
       .list-number {
         float: left;
         display: inline-block;
-        background-color: $red;
+        background-color: #FF3C46;
         border-radius: 50%;
         width: 20px;
         height: 20px;
@@ -57,9 +57,9 @@
         line-height: 20px;
         margin-right: 10px;
         span {
-          color: black;
+          color: #1e325f;
           font-family: $font-black;
-          font-size: 12px;
+          font-size: 10px;
         }
       }
       .list-text {
@@ -68,9 +68,9 @@
         }
     }
 
-    span {
-      font-family: $font-oblique;
-    }
+    //span {
+    //  font-family: $font-oblique;
+    //}
   }
   @media (min-width: 480px) and (max-width: $screen-sm-min) {
     .background {
@@ -106,6 +106,7 @@
       .list-container {
         margin-top: 170px;
         @include make-sm-column(4);
+        padding-left: 80px;
         padding-right: 0;
       }
     }
@@ -114,7 +115,7 @@
   @include breakpoint(tablet) {
     .row {
       margin-top: 300px;
-      margin-bottom: 80px;
+      margin-bottom: 143px;
     }
     .background {
       background-position: center 2%;
@@ -135,7 +136,7 @@
       }
       .main-text-container {
         max-width: 380px;
-        margin-top: 110px;
+        margin-top: 105px;
         margin-bottom: 20px;
       }
       .list-container {

@@ -16,7 +16,7 @@
     }
   h2 {
 
-    font-family: "AvenirLTStd-Heavy";
+    font-family: "AvenirLTStd-Black";
     font-size: 60px;
     }
   label {
@@ -55,7 +55,7 @@
     display: block;
     width: 100%;
     float: left;
-    background: red;
+    background: #FF3C46;
     height: 90px;
     color: white;
     text-decoration: none;
@@ -132,7 +132,7 @@
 @include breakpoint(tablet) {
   .section.contact {
     .title-container{
-      margin: 40px 0 70px
+      margin: 40px 0 66px
     }
     input.wpcf7-submit{
       padding: 9px;

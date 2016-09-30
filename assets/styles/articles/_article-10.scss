@@ -57,8 +57,8 @@
     position: absolute;
   }
   h3 {
-    font-family: $font-heavy;
-    font-weight: bold;
+    font-family: $font-black;
+    font-weight: 300;
     color: $red;
     font-size: 30px;
     margin-bottom: 0;
@@ -159,8 +159,8 @@
 
   @include breakpoint(tablet) {
     .row {
-      margin-top: 140px;
-      margin-bottom: 330px;
+      margin-top: 149px;
+      margin-bottom: 277px;
     }
     .background {
       background-size: contain;
@@ -170,7 +170,7 @@
     }
     .title-container {
       @include make-md-column(8);
-      margin-bottom: 100px;
+      margin-bottom: 101px;
       padding-left: 0;
       padding-right: 0;
       h2 {
@@ -189,6 +189,7 @@
         margin-left: -15px;
         div {
           @include make-md-column(4);
+          margin-bottom: 76px;
         }
       }
     }

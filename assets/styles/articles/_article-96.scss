@@ -59,21 +59,23 @@
   @include breakpoint(tablet) {
     .row {
       margin-top: 50px;
-      margin-bottom: 285px;
+      margin-bottom: 135px;
     }
     .background {
-      top:10px;
-      left:inherit;
-      right:inherit;
-      height: 840px;
+      top: 8px;
+      left: inherit;
+      right: -428px;
+      height: 786px;
       width: 840px;
-      margin-left: 70%;
+      background-size: contain;
       }
     .left-container {
+      margin-top: 88px;
       div {
-        margin-top: 45px;
+        margin-top: 30px;
+        width: 480px;
         ul {
-          margin-top: 50px;
+          margin-top: 42px;
         }
       }
     }

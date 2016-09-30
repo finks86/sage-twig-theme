@@ -92,14 +92,14 @@
       margin-top: 70px;
       padding-left: 0px;
       .title-container {
-        max-width: 234px;
+        //max-width: 234px;
         h2{
           font-size: 50px;
           line-height: 55px;
         }
       }
       .text-container {
-        max-width: 288px;
+        //max-width: 288px;
         margin-top: 50px;
         margin-bottom: 50px;
         p{
@@ -148,8 +148,8 @@
 
   @include breakpoint(tablet) {
     .row {
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: -5px;
+      margin-bottom: 35px;
     }
     .right-container {
       .person-image-right {
@@ -164,15 +164,16 @@
     }
     .left-container {
       .title-container {
-        max-width: 280px;
+        max-width: none;
         h2 {
           font-size: 60px;
           line-height: 65px;
+          max-width: none;
         }
       }
       .text-container {
         max-width: 360px;
-        margin-top: 100px;
+        margin-top: 103px;
       }
     }
   }
