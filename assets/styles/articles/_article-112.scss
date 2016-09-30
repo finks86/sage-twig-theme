@@ -87,19 +87,20 @@
   @include breakpoint(tablet) {
     .row {
       margin-top: 90px;
-      margin-bottom: 160px;
+      margin-bottom: 145px;
       }
     .background{
       background-size: contain;
+      bottom: 203px;
       width: 1000px;
-      height: 285px;
+      height: 254px;
       left: 50.8%;
       }
     .left-container {
       h2 {
         font-size: 60px;
         line-height: 65px;
-        margin-bottom: 110px;
+        margin-bottom: 105px;
       }
       div {
         max-width: 370px;
