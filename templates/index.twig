@@ -2,16 +2,351 @@
 
 {% block content %}
 
-    {% for post in posts %}
+    <div class="posts" id="work">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    {% for post in posts %}
+                        {% include "templates/post.twig" %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="jobs">
+        <div class="row jobs">
+            <div class="jobs__description">
+                <h2 class="red">Jobs</h2>
+                <p>
+                    We love to find talented people with passion for their work. Like us, the need to be driven by quality and have the bar set hight to grow and develop.
+                </p>
+                <p>
+                    If you enjoy to work in a personal and creative environment and love coffee, do not hesitate to send us your application (German or English) and we will get in touch.
+                </p>
 
-        {% include "templates/content.twig" with {post: post}  %}
+                <a href="mailto:jobs@byintention.de" class="button">jobs@byintention.de</a>
 
-    {% endfor %}
+            </div>
+            <ul class="jobs__items">
+                {% for job in jobs %}
+                    {% include "templates/job.twig" %}
 
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact" class="container contact">
+        <div class="row">
+            <div class="contact__col contact__col--form">
+                <div class="success">
+                    We will be in contact with you soon. Thank you!
+                </div>
+                <form id="contact-form" name="contactForm">
+                    <div class="input-field">
+                        <label>Name<sup>*</sup>
+                        </label>
+                        <div class="input-control">
+                            <input type="text" name="name" required="required">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label>E-Mail<sup>*</sup>
+                        </label>
+                        <div class="input-control">
+                            <input type="email" name="email" required="required">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Phone<sup>*</sup>
+                        </label>
+                        <div class="input-control input-control__phone--country">
+                            <input type="text" name="phone-country" required="required">
+                        </div>
+                        <div class="input-control input-control__phone--prefix">
+                            <input type="text" name="phone-prefix" required="required">
+                        </div>
+                        <div class="input-control input-control__phone--number">
+                            <input type="text" name="phone-number" required="required">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label>Project<sup>*</sup>
+                        </label>
+                        <div class="input-control">
+                            <input type="text" name="project" required="required">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label>Message<sup>*</sup>
+                        </label>
+                        <div class="input-control input-control__textarea">
+                            <textarea name="message" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <input type="hidden" name="action" value="post_action">
+                        {{ function('wp_nonce_field','post_action', '_acf_nonce', true, false) }}
+                        <button type="submit" class="button button--submit">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact__col contact__col--map">
+                <h2 class="red">Stop by or get in touch</h2>
+                <div class="contact__col__title">Mehringdamm 33, 10961 Berlin, Germany<br>+49 172 3032646</div>
+
+                <script>
+                    google.maps.event.addDomListener(window, 'load', init);
+                    var map;
+                    function init() {
+                        var mapOptions = {
+                            center: new google.maps.LatLng(52.505564, 13.387984),
+                            zoom: 13,
+                            zoomControl: true,
+                            zoomControlOptions: {
+                                style: google.maps.ZoomControlStyle.DEFAULT
+                            },
+                            disableDoubleClickZoom: true,
+                            mapTypeControl: false,
+                            scaleControl: true,
+                            scrollwheel: false,
+                            panControl: true,
+                            streetViewControl: true,
+                            draggable: true,
+                            overviewMapControl: true,
+                            overviewMapControlOptions: {
+                                opened: false
+                            },
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            styles: [
+                                {
+                                    "featureType": "water",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#d3d3d3"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "transit",
+                                    "stylers": [
+                                        {
+                                            "color": "#808080"
+                                        }, {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }, {
+                                            "color": "#b3b3b3"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#ffffff"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.local",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }, {
+                                            "color": "#ffffff"
+                                        }, {
+                                            "weight": 1.8
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.local",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#d7d7d7"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "poi",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }, {
+                                            "color": "#ebebeb"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "administrative",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#a7a7a7"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#ffffff"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#ffffff"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "landscape",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }, {
+                                            "color": "#efefef"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#696969"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "administrative",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }, {
+                                            "color": "#737373"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "poi",
+                                    "elementType": "labels.icon",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "poi",
+                                    "elementType": "labels",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#d6d6d6"
+                                        }
+                                    ]
+                                }, {
+                                    "featureType": "road",
+                                    "elementType": "labels.icon",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                }, {}, {
+                                    "featureType": "poi",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#dadada"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                        var mapElement = document.getElementById('map');
+                        var map = new google.maps.Map(mapElement, mapOptions);
+                        var locations = [
+                            [
+                                'byIntention Office',
+                                'undefined',
+                                '+491723032646',
+                                'text@byintention.de',
+                                'www.byintention.de',
+                                52.4933847,
+                                13.388791099999935,
+                                '{{ theme.link }}/dist/images/default.png'
+                            ]
+                        ];
+                        for (i = 0; i < locations.length; i++) {
+                            if (locations[i][1] == 'undefined') {
+                                description = '';
+                            } else {
+                                description = locations[i][1];
+                            }
+                            if (locations[i][2] == 'undefined') {
+                                telephone = '';
+                            } else {
+                                telephone = locations[i][2];
+                            }
+                            if (locations[i][3] == 'undefined') {
+                                email = '';
+                            } else {
+                                email = locations[i][3];
+                            }
+                            if (locations[i][4] == 'undefined') {
+                                web = '';
+                            } else {
+                                web = locations[i][4];
+                            }
+                            if (locations[i][7] == 'undefined') {
+                                markericon = '';
+                            } else {
+                                markericon = locations[i][7];
+                            }
+                            marker = new google.maps.Marker({
+                                icon: markericon,
+                                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                                map: map,
+                                title: locations[i][0],
+                                desc: description,
+                                tel: telephone,
+                                email: email,
+                                web: web
+                            });
+                            link = '';
+                        }
+
+                    }
+                </script>
+
+                <div class="map" id="map"></div>
+            </div>
+
+        </div>
+
+    </div>
 {% endblock %}
 
-{% block sidebar %}
+{#{% block sidebar %}#}
 
-    {% include "templates/sidebar.twig" %}
+{#{% include "templates/sidebar.twig" %}#}
 
-{% endblock %}
+{#{% endblock %}#}

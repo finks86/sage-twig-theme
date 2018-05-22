@@ -1,0 +1,95 @@
+.input-field {
+    width: 100%;
+
+    label {
+        width: 100%;
+        font-size: 12px;
+        line-height: 1;
+        font-family: $font-light;
+    }
+}
+
+.input-control {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    margin: .325rem 0;
+    line-height: 1;
+    margin-bottom: 20px;
+    margin-right: 15px;
+
+    &__phone--country {
+        width: 65px;
+    }
+
+    &__phone--prefix {
+        width: 80px;
+    }
+
+    &__phone--number {
+        width: 135px;
+        margin-right: 0;
+    }
+
+    input, textarea {
+        line-height: 18px;
+        font-size: 14px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        border: 1px #d9d9d9 solid;
+        background: #fafafa;
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        padding-top: 5px;
+        z-index: 0;
+        outline: 0;
+
+        &:focus {
+            background: white;
+        }
+
+        &.ng-touched.ng-invalid {
+            border-color: red;
+        }
+    }
+
+    &__textarea {
+        height: 130px;
+    }
+}
+
+.button {
+    width: 165px;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #58585a;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 40px;
+    background: transparent;
+    transition: background-color 300ms linear, color 300ms linear;
+
+    //transition: color 1000ms linear;
+    letter-spacing: 1px;
+    width: 200px;
+
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+        background-color: #58585a;
+        color: white;
+    }
+}
+
+.success {
+    display: none;
+}

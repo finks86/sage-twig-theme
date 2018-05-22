@@ -1,0 +1,17 @@
+
+
+
+
+<li class="post-item {{ post.detail_image ? 'post-item--cursor' : ''  }}">
+    <div class="post-item__image" data-id="{{post.id}}">
+        <img src="{{ post.thumbnail.src }}" alt="{{ post.title }}">
+        <div class="post-item__overlay">
+            <h2>{{ post.title }}</h2>
+            <div>
+                {{ post.content }}
+            </div>
+        </div>
+    </div>
+
+</li>
+{% include 'templates/modal.twig' %}

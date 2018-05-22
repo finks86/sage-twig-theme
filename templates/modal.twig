@@ -1,0 +1,14 @@
+{% if post.detail_image %}
+    <div class="modal__mask" data-post-id="{{post.id}}">
+        <div class="modal__wrapper">
+            <div class="modal__container">
+                <button class="modal__button">
+                    <i class="fa fa-times"></i>
+                </button>
+                <div class="modal__body">
+                    <img src="" data-src="{{ TimberImage(post.detail_image).src }}" alt="{{ post.title }}">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

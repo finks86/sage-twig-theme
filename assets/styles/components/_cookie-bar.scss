@@ -1,0 +1,51 @@
+.cookie-bar {
+  background: $gray;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 12px 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+
+  > .container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  &__button {
+    color: white;
+    border-color: white;
+    margin-top: 0;
+  }
+
+  &__text {
+      margin-bottom: 15px;
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+  }
+
+  @include breakpoint(tablet) {
+      > .container {
+          flex-wrap: nowrap;
+      }
+
+      &__text {
+          flex-shrink: 1;
+          margin-bottom: 0;
+      }
+
+      &__button {
+          flex-shrink: 0;
+          margin-left: 150px;
+      }
+  }
+
+
+  // @include gt-tablet-landscape {
+  //     &__button {
+  //     }
+  // }
+}

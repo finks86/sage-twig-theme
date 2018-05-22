@@ -1,1 +1,52 @@
+body {
+    font-family: $font-light;
+    line-height: 21px;
+    color: $font-base;
+    letter-spacing: 0.25px;
+}
 
+h1, h2, h3 {
+    font-family: $font-medium;
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 45px;
+
+    span {
+        color: $brand;
+    }
+
+    margin-bottom: 35px;
+}
+
+body, p {
+    font-size: 14px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+
+    &.red {
+        color: $brand;
+    }
+}
+
+a {
+    color: $font-base;
+
+    &:hover {
+        color: $font-base;
+        text-decoration: underline;
+    }
+}
+
+ul {
+    padding-left: 0;
+
+    li {
+        list-style: none;
+    }
+}

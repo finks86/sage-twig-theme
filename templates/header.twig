@@ -1,20 +1,43 @@
-<header class="banner">
-    <div class="container">
-        <h1><a class="brand" href="{{ function('home_url', '/') }}">{{ function('bloginfo', 'name') }}</a></h1>
-        <nav class="nav-primary">
-            <ul>
-                {% for item in menu.get_items %}
-                    <li class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="{{item.get_link}}">{{item.title}}</a>
-                        {% if item.get_children %}
-                            <ul class="nav-drop">
-                                {% for child in item.get_children %}
-                                    <li class="nav-drop-item"><a href="{{child.get_link}}">{{child.title}}</a></li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
-</header>
+<header class="container">
+    <div class="row">
+        <div class="header">
+
+            <div class="navigation container">
+                <div class="brand">
+                    <a href="{{ function('home_url', '/') }}" scroll-to="header" offset="200" duration="400" container="html, body" title="Byintention">
+                        {#{{ function('bloginfo', 'name') }}#}
+                        <img class="logo" alt="Byintention Logo" src="{{ theme.link }}/dist/images/Byintention-Logo.png">
+                    </a>
+                </div>
+
+                <nav>
+                    <div>
+                        <a href="#work" title="Work">Work</a>
+                        <a href="#jobs" title="Work">Jobs</a>
+                        <a href="#contact" title="Contact">Contact</a>
+                    </div>
+                    {#<div>#}
+                    {#<a href="/#/" title="Back">Back</a>#}
+                    {#</div>#}
+                </nav>
+            </div>
+
+            <h1 class="header__headline">
+                We are an individual design / development agency<br>
+                <span>by Intention</span>
+            </h1>
+        </div>
+    </header>
+
+    {#<header class="banner">#}
+    {#<div class="container">#}
+    {#<h1><a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>#}
+    {#<nav role="navigation">#}
+    {#<?php#}
+    {#if (has_nav_menu('primary_navigation')) :#}
+    {#wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);#}
+    {#endif;#}
+    {#?>#}
+    {#</nav>#}
+    {#</div>#}
+    {#</header>#}

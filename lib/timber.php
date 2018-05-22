@@ -25,9 +25,6 @@ class TwigSageTheme extends TimberSite {
     }
     function add_to_context( $context ) {
 
-        /* Add extra data */
-        $context['foo'] = 'I am some other typical value set in your functions.php file, unrelated to the menu';
-
         /* Menu */
         $context['menu'] = new TimberMenu('primary_navigation');
 
@@ -38,7 +35,7 @@ class TwigSageTheme extends TimberSite {
         $context['display_sidebar'] = Setup\display_sidebar();
 
         $context['sidebar_primary'] = Timber::get_widgets('sidebar-primary');
-
+        $context['cookies'] = $_COOKIE;
         return $context;
 
     }

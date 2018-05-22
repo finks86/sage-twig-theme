@@ -1,7 +1,28 @@
-<footer class="content-info">
-    <div class="container">
-        {{ function('dynamic_sidebar', 'sidebar-footer') }}
+<footer role="contentinfo">
+    <div class="container footer">
+        <nav>
+            <a href="/imprint">Imprint</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/cookies">Cookies</a>
+        </nav>
+        &copy;
+        {{ "now"|date("Y") }}
+        by Intention - All Rights Reserved
     </div>
 </footer>
+
+{% if (not cookies.cookie_notification_dismissed or cookies.cookie_notification_dismissed != 'true') %}
+    <div class="cookie-bar">
+        <div class="container">
+            <div class="cookie-bar__text">
+                Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Diese können Sie in Ihren Browsereinstellungen ändern. Weitere Informationen finden Sie auf unseren
+                <a class="" href="/cookies">Cookie-Richtlinien </a>
+            </div>
+                <a class="cookie-bar__button button js-cookie-bar-button" href="#">Akzeptieren</a>
+
+            </div>
+        </div>
+    </div>
+{% endif %}
 
 {{ function('wp_footer') }}

@@ -1,0 +1,73 @@
+.inner {
+    padding: 0 15px;
+}
+
+.contact {
+    margin-top: 110px;
+    margin-bottom: 150px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    &__col {
+        @include make-sm-column(6);
+
+        &--map {
+            margin-top: 60px;
+        }
+    }
+}
+
+.jobs {
+    margin-top: 130px;
+
+    &__description {
+        @include make-sm-column(5);
+
+        .button {
+            margin-top: 30px;
+        }
+    }
+
+    &__items {
+        @include make-sm-column-offset(1);
+        @include make-sm-column(6);
+
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 50px;
+    }
+}
+
+
+@include breakpoint(phablet) {
+    .contact {
+        margin-top: 170px;
+
+        &__col__title {
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        &__col--form {
+            margin-top: 120px;
+
+            @include make-sm-column-push(6);
+        }
+
+        &__col--map {
+            @include make-sm-column-pull(6);
+            margin-top: 0;
+            margin-right: -15px;
+        }
+    }
+
+    .jobs {
+        margin-top: 170px;
+
+        &__items {
+            margin-top: 0;
+        }
+    }
+}

@@ -102,13 +102,36 @@ function display_sidebar()
  */
 function assets()
 {
-    wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+    wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, 1.1);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 
     wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_localize_script('sage/js', 'ajax_url', array('ajax_url' => admin_url('admin-ajax.php')));
 }
 
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+function register_jobs() {
+    $args = array(
+        "labels" => array(
+            'name' => __('Jobs'),
+            'singular_name' => __('Job')
+        ),
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "rewrite" => false,
+        "capability_type" => "post",
+        "hierarchical" => false,
+        "menu_position" => 4,
+        "supports" => array("title", "editor", "thumbnail", 'custom-fields','revisions','page-attributes')
+    );
+    register_post_type('jobs',$args);
+
+}
+
+add_action( 'init', __NAMESPACE__ .'\\register_jobs' );

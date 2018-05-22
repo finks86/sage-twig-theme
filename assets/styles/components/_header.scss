@@ -1,0 +1,75 @@
+.header {
+    margin-bottom: 200px;
+
+    @include make-sm-column(12);
+
+    &__headline {
+        margin-top: 120px;
+        font-family: $font-light;
+        span {
+            font-family: $font;
+        }
+    }
+}
+
+.navigation {
+    padding-top: 45px;
+    position: relative;
+    background: white;
+    z-index: 100;
+
+    nav {
+        float: right;
+
+        a {
+            display: inline-block;
+            margin-right: 40px;
+            padding-bottom: 3px;
+
+            &.active, &:hover, &:focus {
+                border-bottom: 1px solid $font-base;
+                text-decoration: none;
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.brand {
+    float: left;
+
+    .logo {
+        width: 19px;
+        height: 19px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+@include breakpoint(phablet) {
+    .navigation {
+        float: left;
+        position: fixed;
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: rgba(255, 255, 255, 0.9);
+
+        nav  {
+            margin-right: 30px;
+        }
+    }
+
+    .header {
+        margin-bottom: 300px;
+
+        &__headline {
+            margin-top: 230px;
+        }
+    }
+}
